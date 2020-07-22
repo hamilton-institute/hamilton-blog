@@ -1,0 +1,14 @@
+name: "hamilton-institute.github.io"
+title: "Hamilton Blog"
+description: |
+  Hamilton Blog
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Posts"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: 
+  distill::distill_article:
+    css: styles.css

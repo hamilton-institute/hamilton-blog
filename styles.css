@@ -1,0 +1,32 @@
+.distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(25,25,112);
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+@media only screen and (max-width: 100px) {
+  d-title{
+    background-image: url('img/logo2.png');
+    background-repeat: no-repeat;
+    background-position: 95% 70%;
+    background-size: 250px 100px;
+  }
+}
+
+@media only screen and (min-width: 100px) {
+  d-title{
+    background-image: url('img/logo2.png');
+    background-repeat: no-repeat;
+    background-position: 63% 70%;
+    background-size: 250px 100px;
+  }
+}
+
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
