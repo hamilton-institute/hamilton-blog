@@ -43,7 +43,9 @@ library(distill)
 4) Execute the following command to create a new rmarkdown file
 for your post: 
 
-`create_post("Insert the title of you post here")`
+```
+create_post("Insert the title of you post here")
+```
 
 This will create a new folder in the `_posts`, where the content of
 your post will be stored. 
@@ -88,6 +90,7 @@ of the blog without letting the maintainers know first. A small
 change in one of the core files might lead the blog to 
 fully stop working.  
 
-After this, you're done and your post will soon appear in the blog!
 
+After this, you're done and your post will soon appear in the blog!
+If you have any questions, please [raise an issue](https://github.com/hamilton-institute/hamilton-institute.github.io/issues) or get in touch via Slack. 
 ------------------------------------------------------------------------
