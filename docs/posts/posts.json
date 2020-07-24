@@ -1,5 +1,21 @@
 [
   {
+    "path": "posts/2020-07-24-on-how-to-create-a-post/",
+    "title": "On how to create a post!",
+    "description": "Tutorial to create a post",
+    "author": [
+      {
+        "name": "Danilo Sarti",
+        "url": {}
+      }
+    ],
+    "date": "2020-07-24",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-07-24T07:16:20+02:00",
+    "input_file": "on-how-to-create-a-post.utf8.md"
+  },
+  {
     "path": "posts/2020-07-22-the-first-post/",
     "title": "First post?",
     "description": "Welcome to our new blog, Hamilton Blog. We hope you enjoy \nreading what we have to say!",

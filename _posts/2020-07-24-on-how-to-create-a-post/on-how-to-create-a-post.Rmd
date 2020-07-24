@@ -1,0 +1,43 @@
+---
+title: "On how to create a post!"
+description: |
+  Tutorial to create a post
+author:
+  - name: Danilo Sarti 
+    url: 
+date: 07-24-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+## Packages
+
+We recommend using Rstudio and downloading the following packages:
+
+* `knitr`
+* `distill`
+
+If you are interested in publishing a post follow these steps:
+
+1) Install R and Rstudio and the packages (Just copy the uncommented code to you R console and execute it)
+
+
+`#install.packages("knitr","distill")`
+`library(knitr,distill)## loading the packages `
+
+
+
+2) Create a project in Rstudio from the github repository for the blog: https://github.com/hamilton-institute/hamilton-institute.github.io
+
+3) Then execute the following command to create you blog post:
+
+
+`create_post("Insert the title of you post here")`
+
+4) You can use all the functionalities of R Markdown as shown here:
+
+`https://bookdown.org/yihui/rmarkdown/`
+
+Good Writing!
+
