@@ -237,7 +237,7 @@ p4 = ggplot(dat_border %>% filter(direction == 'north'),
   labs(x = 'Date', y = 'Total number of cars per day between 7-10am')
 ggplotly(p4)  %>%
   layout(title = list(text =
-                        paste0('Total cars per day in Donegal with border crossing station at Lifford in blue',
+                        paste0('Total cars per day in border stations with crossings on the N3 shown in blue',
                                '<br>',
                                '<sup>',
                                '(Vertical lines indicate lockdown dates)',
