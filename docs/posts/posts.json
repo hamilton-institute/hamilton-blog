@@ -1,5 +1,21 @@
 [
   {
+    "path": "posts/2020-07-27-traffic-analysis/",
+    "title": "Was there a spike in border COVID-19 cases due to the differently-timed lockdowns between North and South?",
+    "description": "Short answer: no",
+    "author": [
+      {
+        "name": "Andrew Parnell and Bruna Wundervald",
+        "url": "https://hamilton-institute.github.io/docs/"
+      }
+    ],
+    "date": "2020-07-27",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-07-28T15:25:28+01:00",
+    "input_file": "traffic-analysis.utf8.md"
+  },
+  {
     "path": "posts/2020-07-22-the-first-post/",
     "title": "First post?",
     "description": "Welcome to our new blog, Hamilton Blog. We hope you enjoy \nreading what we have to say!",
