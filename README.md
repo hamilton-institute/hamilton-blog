@@ -1,7 +1,7 @@
 # Hamilton Institute Blog <img src='img/logo2.png' align="right" height="139" />
 
 This repository hosts the content of the Hamilton Institute blog 
-[insert link here later], where our research group publishes blog
+(https://hamilton-institute.github.io/docs/), where our research group publishes blog
 posts about a wide variety of topics. Currently, we are focusing
 on our COVID-19 in Ireland project, so the posts will be mainly related
 to our findings regarding this subject
