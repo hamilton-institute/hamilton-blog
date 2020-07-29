@@ -9,9 +9,19 @@ author:
     affiliation: Hamilton Institute
     affiliation_url: https://example.com/spacelysprokets
 date: 07-22-2020
+citation_url: https://www.maynoothuniversity.ie/hamilton
 output:
   distill::distill_article:
     self_contained: false
+site: distill::distill_website  
+collections:
+  posts:
+    citations: true
+    disqus: posts
+    share: [twitter, linkedin]
+    subscribe: _subscribe.html
+categories:
+  - transport
 ---
 
 ```{r setup, include=FALSE}
@@ -22,5 +32,5 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-
+There's some text here
 
