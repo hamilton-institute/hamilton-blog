@@ -1,5 +1,5 @@
 ---
-title: "Was there a spike in border COVID-19 cases due to the differently-timed lockdowns between North and South?"
+title: "Was there a spike in COVID-19 cases due to the differently-timed lockdowns along the Irish border?"
 description: |
   Short answer: no
 author:
@@ -42,24 +42,24 @@ library(data.table)
 library(lubridate)
 ```
 
-# TL:DR
+# tl;dr
 
-  - We downloaded the traffic data from Transport Infrastructure Ireland to look at traffic patterns along the border
-  - There was a slightly higher spike in COVID-19 cases in border counties compared to other counties
-  - There is no evidence that, during the period where the UK/Irish lockdown strategies diverged, or even beyond that period, there was differential travel between North and South
+  - We downloaded the traffic data from Transport Infrastructure Ireland to look at traffic patterns along the border.
+  - There was a slightly higher spike in COVID-19 cases in border counties compared to other counties.
+  - There is no evidence that, during the period where the UK/Irish lockdown strategies diverged, or even beyond that period, there was differential travel between Northern Ireland and Ireland
 
 # Background
 
-Back in April, there was a bit of a media storm over whether a spike in cases along Irish border (notably Cavan) was caused by the differential travel restrictions between North and South. This was most vocally stated by Dr Gabriel Scally, the President of the Epidemiology and Public Health section of the Royal Society of Medicine, in the [Irish News](https://www.irishnews.com/news/northernirelandnews/2020/04/29/news/medic-warns-of-impact-of-coronavirus-spike-in-border-regions-amid-calls-for-northern-ireland-health-service-to-improve-appa-1919605/), but was also picked up in the [Irish Times](https://www.irishtimes.com/news/health/coronavirus-border-county-case-spike-unlikely-to-be-spillover-from-north-says-holohan-1.4239426), and the [Guardian](https://www.theguardian.com/world/2020/apr/29/concerns-raised-as-covid-19-cases-surge-along-irish-border) amongst many others. 
+Back in April, there was a bit of a media storm over whether a spike in cases along Irish border (notably Cavan) was caused by the differential travel restrictions between Northern Ireland (NI) and Ireland This was most vocally stated by Dr Gabriel Scally, the President of the Epidemiology and Public Health section of the Royal Society of Medicine, in the [Irish News](https://www.irishnews.com/news/northernirelandnews/2020/04/29/news/medic-warns-of-impact-of-coronavirus-spike-in-border-regions-amid-calls-for-northern-ireland-health-service-to-improve-appa-1919605/), but was also picked up in the [Irish Times](https://www.irishtimes.com/news/health/coronavirus-border-county-case-spike-unlikely-to-be-spillover-from-north-says-holohan-1.4239426), and the [Guardian](https://www.theguardian.com/world/2020/apr/29/concerns-raised-as-covid-19-cases-surge-along-irish-border) amongst many others. 
 
 The key point raised in the [article]((https://www.irishnews.com/news/northernirelandnews/2020/04/29/news/medic-warns-of-impact-of-coronavirus-spike-in-border-regions-amid-calls-for-northern-ireland-health-service-to-improve-appa-1919605/)) was: 
 
 > "Co. Cavan has the highest incidence rate of coronavirus in the south per 100,000 of the population, followed by Dublin and Monaghan."
 
-At this particular point in the pandemic, there were two slightly different lockdown strategies.The Republic had broadly a [two-stage](https://en.wikipedia.org/wiki/COVID-19_pandemic_in_the_Republic_of_Ireland) strategy, with schools, many workplaces, etc, closed on the 12th March, with everyone advised to stay at home from 27th March. Meanwhile the [UK government](https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Northern_Ireland) closed bars on the 20th March, 
+At this particular point in the pandemic, there were two slightly different lockdown strategies. Ireland had broadly a [two-stage](https://en.wikipedia.org/wiki/COVID-19_pandemic_in_the_Republic_of_Ireland) strategy, with schools, many workplaces, etc, closed on the 12th March, with everyone advised to stay at home from 27th March. Meanwhile the [UK government](https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Northern_Ireland) closed bars on the 20th March, 
 but didn't enter into a 'full' lockdown until 28th March. 
 
-In theory, this means that those who travel to school or work in the North might have been doing so during those weeks between 12th March and 20th March, and so transferring the virus across the border. 
+In theory, this means that those who travel to school or work in NI might have been doing so during those weeks between 12th March and 20th March, and so transferring the virus across the border. 
 
 The issue of the border county spike was downplayed by some of the senior NPHET members, most notably [Tony Holohan](https://www.irishtimes.com/news/health/coronavirus-border-county-case-spike-unlikely-to-be-spillover-from-north-says-holohan-1.4239426) said that it was 'unlikely to be a spillover': 
 
@@ -92,7 +92,7 @@ p = ggplot(county_cases, aes(x  = Day, y = CasesPer100k,
   scale_x_date(date_breaks = "1 month", 
                labels = date_format("%d-%b"),
                limits = as.Date(c('2020-03-01','2020-07-25'))) + 
-  labs(y = 'Cases per hundred thousand residents', 
+  labs(y = 'Cumulative cases per 100k residents', 
        colour = 'County')
 ggplotly(p)
 ```
@@ -110,7 +110,7 @@ p2 = ggplot(county_cases, aes(x  = Day, y = CasesPer100k,
   scale_x_date(date_breaks = "1 month", 
                labels = date_format("%d-%b"),
                limits = as.Date(c('2020-03-01','2020-07-25'))) + 
-  labs(y = 'Cases per hundred thousand residents', 
+  labs(y = 'Cumulative cases per 100k residents', 
        colour = 'Border')
 ggplotly(p2)
 ```
@@ -131,12 +131,11 @@ Each one of these green dots records the number of cars crossing that station in
 To help with the understanding of this analysis, 
 you can imagine a few different hypothetical scenarios:
 
-1. Siobhan lives in Dundalk and is constantly out and about. After the lockdown started she can still see her friends in the North carrying on as normal so she does pretty much the same. So we might expect the traffic stations around Dundalk (e.g. on the M1 or the N52) to record higher traffic activities than normal compared to other non-border counties
-1. Brendan lives in Letterkenny but likes to do his shopping in Strabane. After the lockdown started he carried on doing his shopping there because everything was still open, rather than shopping more locally. The station on the border on the N14 thus might still see a high count throughout the day as people travel back and forth to do their shopping compared to other stations in the same county
-1. Caiomhe lives in Cavan and travels to work every day in Enniskillen. When the lockdown started on 12th March in the South she still had to go to work. The traffic station on the N3 at the border would still be recording a count of her car going to work in the morning and coming home in the evening, but the count of cars going south in the morning would be low, because people in the North are not travelling south to work
+1. Aoife lives in Dundalk and is constantly out and about. After the lockdown started she can still see her friends in Northern Ireland carrying on as normal so she does pretty much the same. So we might expect the traffic stations around Dundalk (e.g. on the M1 or the N52) to record higher traffic activities than normal compared to non-border counties.
+1. Brendan lives in Letterkenny but likes to do his shopping in Strabane. After the lockdown started he carried on doing his shopping there because everything was still open, rather than shopping more locally. The station on the border on the N14 thus might still see a high count throughout the day as people travel back and forth to do their shopping compared to other stations in the same county.
+1. Caiomhe lives in Cavan and travels to work every day in Enniskillen. When the lockdown started on 12th March in Ireland she still had to go to work. The traffic station on the N3 at the border would still be recording a count of her car going to work in the morning and coming home in the evening, but the count of cars going south in the morning would be low, because people in the North are not travelling south to work.
 
-Let's see if we can check if whether Siobhan, Brendan, or Caiomhe were guilty of that later spike in the border counties. Reminder: these are all hypothetical people! Other reminder: all the traffic station data we have (and all the cases by county) are from the Republic of Ireland. 
-Unfortunately we don't have any comparable data right now from the North.  
+Let's see if we can check if whether Aoife, Brendan, or Caiomhe were guilty of that later spike in the border counties. Reminder: these are all hypothetical people! Other reminder: all the traffic station data we have (and all the cases by county) are from Ireland. Unfortunately, right now, we don't have any comparable data from Northern Ireland.  
 
 # Results
 
@@ -160,29 +159,29 @@ dat = dat_raw %>%
 
 p = ggplot(dat, aes(x = date, y = value, colour = location)) + 
   geom_line() + 
-  theme_bw(12) + 
+  theme_bw(8) + 
   geom_vline(xintercept = as.numeric(as.Date("2020-03-13"))) +
   geom_vline(xintercept = as.numeric(as.Date("2020-03-27"))) +
   scale_x_date(breaks = "2 weeks", date_labels = "%d-%b") +
   scale_y_continuous(breaks = scales::pretty_breaks(n = 7))  +
   theme(legend.position = "none", 
         axis.text.x = element_text(size = 10)) + 
-  labs(x = 'Date', y = 'Total number of cars per day', 
-       title = "Total cars per day across all traffic monitoring stations in Ireland, 
+  labs(x = 'Date', y = 'Number of cars per day', 
+       title = "Total cars per day across all traffic monitoring\nstations in Ireland, 
 (Vertical lines indicate lockdown dates)")
 
 ggplotly(p)  %>%
   layout(title = list(text =
-                        paste0('Total cars per day across all traffic monitoring stations in Ireland',
+                        paste0('Total cars per day across all traffic monitoring\nstations in Ireland',
                                '<br>',
                                '<sup>',
                                '(Vertical lines indicate lockdown dates)',
                                '</sup>')))
 ```
 
-### Siobhan
+### Aoife
 
-So was Siobhan and people like her guilty of travelling in the border counties when everyone else was locked down? Let's have a look at her local stations in Louth, compared to say stations in Meath:
+So were Aoife and people like her guilty of travelling in the border counties when everyone else was locked down? Let's have a look at her local stations in Louth, compared to say stations in Meath:
 
 ```{r}
 dat_borders = dat %>% 
@@ -198,7 +197,7 @@ p2 = ggplot(dat_borders, aes(x = date, y = value, group = location,
   scale_y_continuous(breaks = scales::pretty_breaks(n = 7))  +
   theme(legend.position = "none", 
         axis.text.x = element_text(size = 10)) + 
-  labs(x = 'Date', y = 'Total number of cars per day', 
+  labs(x = 'Date', y = 'Number of cars per day', 
        title = "Total cars per day in Louth (red) and Meath (blue)")
 
 ggplotly(p2)  %>%
@@ -212,7 +211,7 @@ ggplotly(p2)  %>%
 
 Whilst there were more cars passing through Louth (likely because of the M1) actually it seems like she was pretty good and stayed home just like everyone else.
 
-Verdict: __Siobhan is not guilty!__
+Verdict: __Aoife is not guilty!__
 
 ### Brendan
 
@@ -228,19 +227,19 @@ dat_brendan = dat %>%
 p3 = ggplot(dat_brendan, aes(x = date, y = value, group = location,
                      colour = N14)) + 
   geom_line() + 
-  theme_bw(12) + 
+  theme_bw(8) + 
   geom_vline(xintercept = as.numeric(as.Date("2020-03-13"))) +
   geom_vline(xintercept = as.numeric(as.Date("2020-03-27"))) +
   scale_x_date(breaks = "2 weeks", date_labels = "%d-%b") +
   scale_y_continuous(breaks = scales::pretty_breaks(n = 7))  +
   theme(legend.position = "none", 
         axis.text.x = element_text(size = 10)) + 
-  labs(x = 'Date', y = 'Total number of cars per day', 
-       title = "Total cars per day in Donegal with border crossing station at Lifford in blue")
+  labs(x = 'Date', y = 'Number of cars per day', 
+       title = "Total cars per day in Donegal with border crossing\nstation at Lifford in blue")
 
 ggplotly(p3)  %>%
   layout(title = list(text =
-                        paste0('Total cars per day in Donegal with border crossing station at Lifford in blue',
+                        paste0('Total cars per day in Donegal with border crossing\nstation at Lifford in blue',
                                '<br>',
                                '<sup>',
                                '(Vertical lines indicate lockdown dates)',
@@ -279,19 +278,19 @@ p4 = ggplot(dat_border %>% filter(direction == 'north'),
             aes(x = date, y = value, group = location,
                      colour = N3)) + 
   geom_line() + 
-  theme_bw(12) + 
+  theme_bw(8) + 
   geom_vline(xintercept = as.numeric(as.Date("2020-03-13"))) +
   geom_vline(xintercept = as.numeric(as.Date("2020-03-27"))) +
   scale_x_date(breaks = "2 weeks", date_labels = "%d-%b") +
   theme(legend.position = "none", 
         axis.text.x = element_text(size = 10)) + 
-  labs(x = 'Date', y = 'Total number of cars per day between 7-10am', 
-       title = "Total cars per day in border stations with crossings on the N3 shown in blue")
+  labs(x = 'Date', y = 'Number of cars per day 7-10am', 
+       title = "Total cars per day in border stations with crossings\non the N3 shown in blue")
 
 
 ggplotly(p4)  %>%
   layout(title = list(text =
-                        paste0('Total cars per day in border stations with crossings on the N3 shown in blue',
+                        paste0('Total cars per day in border stations with crossings\non the N3 shown in blue',
                                '<br>',
                                '<sup>',
                                '(Vertical lines indicate lockdown dates)',
@@ -306,11 +305,11 @@ Verdict: __Caiomhe is not guilty!__
 
 # Summary
 
-In fact, no matter how you slice or dice the data, there is no evidence that border counties, or traffic stations along the border, were any more active than other stations, or continued their activity after the lockdown started. Indeed during that gap of two weeks between the Irish lockdown and the NI lockdown, it looks as though people behaved pretty consistently across the country. So Dr. Scally, you can rest easy that there wasn't a big effect of people travelling through the differential lockdown. We do need to do some more analysis though to work out what else might have caused it. 
+In fact, no matter how you slice or dice the data, we could find no evidence that border counties, or traffic stations along the border, were any more active than other stations, or continued their activity after the lockdown started. Indeed during that gap of two weeks between the Irish lockdown and the NI lockdown, it looks as though people behaved pretty consistently across the country. So Dr. Scally, you can rest easy that there wasn't a big effect of people travelling through the differential lockdown. We do need to do some more analysis though to work out what else might have caused it. 
 
 ### Final note
 
-We've tried to make this article as friendly and open as possible, but we realise that some people reading this will have an interest in playing with the data themselves. Shortly, we'll be making Apps available that allow people to explore more the data, but in the meantime please [contact us](mailto:andrew.parnell@mu.ie) if you want to get access to the data we used to generate this post. The raw code for this post can be found on our [GitHub page](https://github.com/hamilton-institute/hamilton-institute.github.io).
+We've tried to make this article as friendly and open as possible, but we realise that some people reading this will have an interest in playing with the data themselves. Shortly, we'll be making Apps available that allow people to explore the data in more detail, but in the meantime please [contact us](mailto:andrew.parnell@mu.ie) if you want to get access to the data we used to generate this post. The raw code for this post can be found on our [GitHub page](https://github.com/hamilton-institute/hamilton-institute.github.io).
 
 
 

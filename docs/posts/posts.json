@@ -1,7 +1,7 @@
 [
   {
     "path": "posts/2020-07-27-traffic-analysis/",
-    "title": "Was there a spike in border COVID-19 cases due to the differently-timed lockdowns between North and South?",
+    "title": "Was there a spike in COVID-19 cases due to the differently-timed lockdowns along the Irish border?",
     "description": "Short answer: no",
     "author": [
       {
@@ -18,7 +18,8 @@
       "transport"
     ],
     "preview": "posts/2020-07-27-traffic-analysis/TII_web.png",
-    "last_modified": "2020-07-29T10:58:10+01:00"
+    "last_modified": "2020-07-30T15:55:09+01:00",
+    "input_file": "traffic-analysis.utf8.md"
   },
   {
     "path": "posts/welcome/",
