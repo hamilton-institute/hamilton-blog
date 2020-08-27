@@ -6,11 +6,11 @@
     "author": [
       {
         "name": "Andrew Parnell",
-        "url": "https://hamilton-institute.github.io/docs/"
+        "url": "https://www.maynoothuniversity.ie/hamilton"
       },
       {
         "name": "Bruna Wundervald",
-        "url": "https://hamilton-institute.github.io/docs/"
+        "url": "https://www.maynoothuniversity.ie/hamilton"
       }
     ],
     "date": "2020-07-27",
@@ -18,24 +18,6 @@
       "transport"
     ],
     "preview": "posts/2020-07-27-traffic-analysis/TII_web.png",
-    "last_modified": "2020-07-30T15:55:09+01:00",
-    "input_file": "traffic-analysis.utf8.md"
-  },
-  {
-    "path": "posts/welcome/",
-    "title": "Welcome to Hamilton Blog",
-    "description": "Welcome to our new blog, Hamilton Blog. We hope you enjoy \nreading what we have to say!",
-    "author": [
-      {
-        "name": "Bruna Wundervald",
-        "url": "https://example.com/norajones"
-      }
-    ],
-    "date": "2020-07-22",
-    "categories": [
-      "transport"
-    ],
-    "preview": {},
-    "last_modified": "2020-07-29T10:34:57+01:00"
+    "last_modified": "2020-08-27T14:26:56+01:00"
   }
 ]

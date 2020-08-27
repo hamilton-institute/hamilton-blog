@@ -4,13 +4,13 @@ description: |
   Short answer: no
 author:
   - name: Andrew Parnell
-    url: https://hamilton-institute.github.io/docs/
+    url: https://www.maynoothuniversity.ie/hamilton
     affiliation: Hamilton Institute, Maynooth University
     affiliation_url: https://www.maynoothuniversity.ie/hamilton
   - name: Bruna Wundervald
-    url: https://hamilton-institute.github.io/docs/
+    url: https://www.maynoothuniversity.ie/hamilton
 date: 07-27-2020
-citation_url: https://www.maynoothuniversity.ie/hamilton
+citation_url: https://hamilton-institute.github.io/docs/posts/2020-07-27-traffic-analysis/
 collections:
   posts:
     citations: true
