@@ -729,6 +729,16 @@
   }
   
   
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+  
+  
   /* Improve display for browsers without grid (IE/Edge <= 15) */
   
   .downlevel {
@@ -1319,7 +1329,7 @@
 <a href="index.html">Posts</a>
 <a href="about.html">About</a>
 <a href="index.xml">
-<i class="fa fa-rss"></i>
+<i class="fa fa-rss" aria-hidden="true"></i>
 </a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
@@ -1648,10 +1658,23 @@ function init_posts_list() {
 <div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
 <h1 class="posts-list-caption">Hamilton Blog</h1>
+<a href="posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["excess mortality","RIP.ie"]}</script>
+<div class="metadata">
+<div class="publishedDate">Aug. 31, 2020</div>
+</div>
+<div class="thumbnail">
+<img data-src="posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/aggregated_by_routing_key_portlaoise_mod.png"/>
+</div>
+<div class="description">
+<h2>Re-emerging Indictors of Excess Mortality in Ireland</h2>
+<p>At the height of the COVID-19 crisis in Ireland, the death notices website RIP.ie provided a useful, open, and near-realtime indicator of excess mortality associated with the disease. With late summer seeing a rersurgence in cases in Ireland, we ask whether  postings to RIP.ie have risen in certain localities.</p>
+</div>
+</a>
 <a href="posts/2020-07-27-traffic-analysis/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["transport"]}</script>
 <div class="metadata">
-<div class="publishedDate">July 26, 2020</div>
+<div class="publishedDate">July 27, 2020</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2020-07-27-traffic-analysis/TII_web.png"/>
@@ -1666,6 +1689,14 @@ function init_posts_list() {
 <div class="sidebar-section categories">
 <h3>Categories</h3>
 <ul>
+<li>
+<a href="#excess_mortality">excess mortality</a>
+<span class="category-count">(1)</span>
+</li>
+<li>
+<a href="#RIP.ie">RIP.ie</a>
+<span class="category-count">(1)</span>
+</li>
 <li>
 <a href="#transport">transport</a>
 <span class="category-count">(1)</span>
