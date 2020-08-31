@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+  <!--radix_placeholder_meta_tags-->
+<title>Hamilton Blog: Re-emerging Indictors of Excess Mortality in Ireland</title>
+
+<meta property="description" itemprop="description" content="At the height of the COVID-19 crisis in Ireland, the death notices website RIP.ie provided a useful, open, and near-realtime indicator of excess mortality associated with the disease. With late summer seeing a rersurgence in cases in Ireland, we ask whether  postings to RIP.ie have risen in certain localities."/>
+
+
+<!--  https://schema.org/Article -->
+<meta property="article:published" itemprop="datePublished" content="2020-08-31"/>
+<meta property="article:created" itemprop="dateCreated" content="2020-08-31"/>
+<meta name="article:author" content="Gerard D McCarthy"/>
+<meta name="article:author" content="Rebecca L Dempsey"/>
+<meta name="article:author" content="Amin Shoari Nejad"/>
+<meta name="article:author" content="Pádraig MacCarron"/>
+<meta name="article:author" content="Andrew Parnell"/>
+
+<!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+<meta property="og:title" content="Hamilton Blog: Re-emerging Indictors of Excess Mortality in Ireland"/>
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="At the height of the COVID-19 crisis in Ireland, the death notices website RIP.ie provided a useful, open, and near-realtime indicator of excess mortality associated with the disease. With late summer seeing a rersurgence in cases in Ireland, we ask whether  postings to RIP.ie have risen in certain localities."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="Hamilton Blog"/>
+
+<!--  https://dev.twitter.com/cards/types/summary -->
+<meta property="twitter:card" content="summary"/>
+<meta property="twitter:title" content="Hamilton Blog: Re-emerging Indictors of Excess Mortality in Ireland"/>
+<meta property="twitter:description" content="At the height of the COVID-19 crisis in Ireland, the death notices website RIP.ie provided a useful, open, and near-realtime indicator of excess mortality associated with the disease. With late summer seeing a rersurgence in cases in Ireland, we ask whether  postings to RIP.ie have risen in certain localities."/>
+
+<!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+<script type="text/json" id="radix-rmarkdown-metadata">
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["Re-emerging Indictors of Excess Mortality in Ireland"]},{"type":"character","attributes":{},"value":["At the height of the COVID-19 crisis in Ireland, the death notices website RIP.ie provided a useful, open, and near-realtime indicator of excess mortality associated with the disease. With late summer seeing a rersurgence in cases in Ireland, we ask whether  postings to RIP.ie have risen in certain localities."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Gerard D McCarthy"]},{"type":"character","attributes":{},"value":["https://www.maynoothuniversity.ie/icarus/our-people/gerard-mccarthy"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Rebecca L Dempsey"]},{"type":"character","attributes":{},"value":["https://www.maynoothuniversity.ie/geography/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Amin Shoari Nejad"]},{"type":"character","attributes":{},"value":["https://www.maynoothuniversity.ie/hamilton/our-people/amin-shoari-nejad"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Pádraig MacCarron"]},{"type":"character","attributes":{},"value":["https://www.ul.ie/dafinet/p%C3%A1draig-mac-carron"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Andrew Parnell"]},{"type":"character","attributes":{},"value":["https://hamilton-institute.github.io/docs/"]}]}]},{"type":"character","attributes":{},"value":["08-31-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["excess mortality","RIP.ie"]}]}
+</script>
+<!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["2020-08-indictorsofexcessmortalityfromripie_files/bowser-1.9.3/bowser.min.js","2020-08-indictorsofexcessmortalityfromripie_files/distill-2.2.21/template.v2.js","2020-08-indictorsofexcessmortalityfromripie_files/figure-html5/unnamed-chunk-1-1.png","2020-08-indictorsofexcessmortalityfromripie_files/figure-html5/unnamed-chunk-3-1.png","2020-08-indictorsofexcessmortalityfromripie_files/figure-html5/unnamed-chunk-4-1.png","2020-08-indictorsofexcessmortalityfromripie_files/jquery-1.11.3/jquery.min.js","2020-08-indictorsofexcessmortalityfromripie_files/webcomponents-2.0.0/webcomponents.js","aggregated_by_routing_key_cavan_subplots_proportion.png","aggregated_by_routing_key_portlaoise_mod.png","higgins_lokdown_map.png","mean_posts_by_routing_key_LOK_mod.png","stacked_aggregated_by_routing_key_LOK.png","town_in_rk_count_geo_merged_lok.Rdata"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+
+<script type="application/javascript">
+
+  window.headroom_prevent_pin = false;
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // initialize headroom for banner
+    var header = $('header').get(0);
+    var headerHeight = header.offsetHeight;
+    var headroom = new Headroom(header, {
+      onPin : function() {
+        if (window.headroom_prevent_pin) {
+          window.headroom_prevent_pin = false;
+          headroom.unpin();
+        }
+      }
+    });
+    headroom.init();
+    if(window.location.hash)
+      headroom.unpin();
+    $(header).addClass('headroom--transition');
+
+    // offset scroll location for banner on hash change
+    // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+    window.addEventListener("hashchange", function(event) {
+      window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+    });
+
+    // responsive menu
+    $('.distill-site-header').each(function(i, val) {
+      var topnav = $(this);
+      var toggle = topnav.find('.nav-toggle');
+      toggle.on('click', function() {
+        topnav.toggleClass('responsive');
+      });
+    });
+
+    // nav dropdowns
+    $('.nav-dropbtn').click(function(e) {
+      $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+      $(this).parent().siblings('.nav-dropdown')
+         .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $("body").click(function(e){
+      $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $(".nav-dropdown").click(function(e){
+      e.stopPropagation();
+    });
+  });
+</script>
+
+<style type="text/css">
+
+/* Theme (user-documented overrideables for nav appearance) */
+
+.distill-site-nav {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #455a64;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.distill-site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.distill-site-nav a:hover {
+  color: white;
+}
+
+@media print {
+  .distill-site-nav {
+    display: none;
+  }
+}
+
+.distill-site-header {
+
+}
+
+.distill-site-footer {
+
+}
+
+
+/* Site Header */
+
+.distill-site-header {
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.distill-site-header .nav-left {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header .nav-left {
+    margin-left: 0;
+  }
+}
+
+
+.distill-site-header .nav-right {
+  float: right;
+  margin-right: 8px;
+}
+
+.distill-site-header a,
+.distill-site-header .title {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 10px 14px 10px;
+}
+
+.distill-site-header .title {
+  font-size: 18px;
+}
+
+.distill-site-header .logo {
+  padding: 0;
+}
+
+.distill-site-header .logo img {
+  display: none;
+  max-height: 20px;
+  width: auto;
+  margin-bottom: -4px;
+}
+
+.distill-site-header .nav-image img {
+  max-height: 18px;
+  width: auto;
+  display: inline-block;
+  margin-bottom: -3px;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+  .distill-site-header .logo img {
+    display: inline-block;
+  }
+  .distill-site-header .nav-left {
+    margin-left: 20px;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 20px;
+  }
+  .distill-site-header .title {
+    padding-left: 12px;
+  }
+}
+
+
+.distill-site-header .nav-toggle {
+  display: none;
+}
+
+.nav-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-dropdown .nav-dropbtn {
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 16px 10px;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  margin-top: 1px;
+  z-index: 2;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+  margin-top: 2px;
+  white-space: nowrap;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.nav-dropdown-content hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-dropdown-active {
+  display: block;
+}
+
+.nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+  color: black;
+  padding: 6px 24px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.nav-dropdown-content .nav-dropdown-header {
+  display: block;
+  padding: 5px 24px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #999999;
+  white-space: nowrap;
+}
+
+.nav-dropdown:hover .nav-dropbtn {
+  color: white;
+}
+
+.nav-dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav-right .nav-dropdown-content {
+  margin-left: -45%;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+  .distill-site-header a.nav-toggle {
+    float: right;
+    display: block;
+  }
+  .distill-site-header .title {
+    margin-left: 0;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 0;
+  }
+  .distill-site-header {
+    overflow: hidden;
+  }
+  .nav-right .nav-dropdown-content {
+    margin-left: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-header.responsive {position: relative;}
+  .distill-site-header.responsive a.nav-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .distill-site-header.responsive a,
+  .distill-site-header.responsive .nav-dropdown {
+    display: block;
+    text-align: left;
+  }
+  .distill-site-header.responsive .nav-left,
+  .distill-site-header.responsive .nav-right {
+    width: 100%;
+  }
+  .distill-site-header.responsive .nav-dropdown {float: none;}
+  .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+  .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Site Footer */
+
+.distill-site-footer {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 3;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+/* Headroom */
+
+d-title {
+  padding-top: 6rem;
+}
+
+@media print {
+  d-title {
+    padding-top: 4rem;
+  }
+}
+
+.headroom {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.headroom--transition {
+  transition: all .4s ease-in-out;
+}
+
+.headroom--unpinned {
+  top: -100px;
+}
+
+.headroom--pinned {
+  top: 0;
+}
+
+</style>
+
+<link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+<link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+<script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
+<!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+<style type="text/css">
+
+body {
+  background-color: white;
+}
+
+.pandoc-table {
+  width: 100%;
+}
+
+.pandoc-table>caption {
+  margin-bottom: 10px;
+}
+
+.pandoc-table th:not([align]) {
+  text-align: left;
+}
+
+.pagedtable-footer {
+  font-size: 15px;
+}
+
+.html-widget {
+  margin-bottom: 2.0em;
+}
+
+.l-screen-inset {
+  padding-right: 16px;
+}
+
+.l-screen .caption {
+  margin-left: 10px;
+}
+
+.shaded {
+  background: rgb(247, 247, 247);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .html-widget {
+  margin-bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .shaded-content {
+  background: white;
+}
+
+.text-output {
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+d-article {
+  padding-bottom: 30px;
+}
+
+d-appendix {
+  padding-top: 30px;
+}
+
+d-article>p>img {
+  width: 100%;
+}
+
+d-article iframe {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.0em;
+  width: 100%;
+}
+
+figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+/* CSS for table of contents */
+
+.d-toc {
+  color: rgba(0,0,0,0.8);
+  font-size: 0.8em;
+  line-height: 1em;
+}
+
+.d-toc-header {
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 1.3em;
+}
+
+.d-toc a {
+  border-bottom: none;
+}
+
+.d-toc ul {
+  padding-left: 0;
+}
+
+.d-toc li>ul {
+  padding-top: 0.8em;
+  padding-left: 16px;
+  margin-bottom: 0.6em;
+}
+
+.d-toc ul,
+.d-toc li {
+  list-style-type: none;
+}
+
+.d-toc li {
+  margin-bottom: 0.9em;
+}
+
+.d-toc-separator {
+  margin-top: 20px;
+  margin-bottom: 2em;
+}
+
+.d-article-with-toc {
+  border-top: none;
+  padding-top: 0;
+}
+
+
+
+/* Tweak code blocks (note that this CSS is repeated above in an injection
+   into the d-code shadow dom) */
+
+d-code {
+  overflow-x: auto !important;
+}
+
+pre.d-code code.d-code {
+  padding-left: 10px;
+  font-size: 12px;
+  border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+pre.text-output {
+
+  font-size: 12px;
+  color: black;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+@media(min-width: 768px) {
+
+d-code {
+  overflow-x: visible !important;
+}
+
+pre.d-code code.d-code  {
+    padding-left: 18px;
+    font-size: 14px;
+}
+pre.text-output {
+  font-size: 14px;
+}
+}
+
+/* Figure */
+
+.figure {
+  position: relative;
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+}
+
+.figure img {
+  width: 100%;
+}
+
+.figure .caption {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.figure .caption a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.figure .caption b,
+.figure .caption strong, {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1.0);
+}
+
+
+
+/* Tweak 1000px media break to show more text */
+
+@media(min-width: 1000px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 16px;
+  }
+
+  .grid {
+    grid-column-gap: 16px;
+  }
+
+  d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+  }
+  figure .caption, .figure .caption, figure figcaption {
+    font-size: 13px;
+  }
+}
+
+@media(min-width: 1180px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 32px;
+  }
+
+  .grid {
+    grid-column-gap: 32px;
+  }
+}
+
+
+/* Get the citation styles for the appendix (not auto-injected on render since
+   we do our own rendering of the citation appendix) */
+
+d-appendix .citation-appendix,
+.d-appendix .citation-appendix {
+  font-size: 11px;
+  line-height: 15px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 18px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.02);
+  padding: 10px 18px;
+  border-radius: 3px;
+  color: rgba(150, 150, 150, 1);
+  overflow: hidden;
+  margin-top: -12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+/* Social footer */
+
+.social_footer {
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.67);
+}
+
+.disqus-comments {
+  margin-right: 30px;
+}
+
+.disqus-comment-count {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+#disqus_thread {
+  margin-top: 30px;
+}
+
+.article-sharing a {
+  border-bottom: none;
+  margin-right: 8px;
+}
+
+.article-sharing a:hover {
+  border-bottom: none;
+}
+
+.sidebar-section.subscribe {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.subscribe p {
+  margin-bottom: 0.5em;
+}
+
+
+.article-footer .subscribe {
+  font-size: 15px;
+  margin-top: 45px;
+}
+
+
+.sidebar-section.custom {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.custom p {
+  margin-bottom: 0.5em;
+}
+
+
+/* Improve display for browsers without grid (IE/Edge <= 15) */
+
+.downlevel {
+  line-height: 1.6em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+.downlevel .d-title {
+  padding-top: 6rem;
+  padding-bottom: 1.5rem;
+}
+
+.downlevel .d-title h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.1em;
+  margin: 0 0 0.5rem;
+}
+
+.downlevel .d-title p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.55em;
+  margin-top: 0;
+}
+
+.downlevel .d-byline {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  font-size: 0.8rem;
+  line-height: 1.8em;
+}
+
+.downlevel .section-separator {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.downlevel .d-article {
+  font-size: 1.06rem;
+  line-height: 1.7em;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+
+.downlevel .d-appendix {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.5);
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+
+.downlevel .footnotes ol {
+  padding-left: 13px;
+}
+
+.downlevel .base-grid,
+.downlevel .distill-header,
+.downlevel .d-title,
+.downlevel .d-abstract,
+.downlevel .d-article,
+.downlevel .d-appendix,
+.downlevel .distill-appendix,
+.downlevel .d-byline,
+.downlevel .d-footnote-list,
+.downlevel .d-citation-list,
+.downlevel .distill-footer,
+.downlevel .appendix-bottom,
+.downlevel .posts-container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media(min-width: 768px) {
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+  padding-left: 150px;
+  padding-right: 150px;
+  max-width: 900px;
+}
+}
+
+.downlevel pre code {
+  display: block;
+  border-left: 2px solid rgba(0, 0, 0, .1);
+  padding: 0 0 0 20px;
+  font-size: 14px;
+}
+
+.downlevel code, .downlevel pre {
+  color: black;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+</style>
+
+<script type="application/javascript">
+
+function is_downlevel_browser() {
+  if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                 window.navigator.userAgent)) {
+    return true;
+  } else {
+    return window.load_distill_framework === undefined;
+  }
+}
+
+// show body when load is complete
+function on_load_complete() {
+
+  // set body to visible
+  document.body.style.visibility = 'visible';
+
+  // force redraw for leaflet widgets
+  if (window.HTMLWidgets) {
+    var maps = window.HTMLWidgets.findAll(".leaflet");
+    $.each(maps, function(i, el) {
+      var map = this.getMap();
+      map.invalidateSize();
+      map.eachLayer(function(layer) {
+        if (layer instanceof L.TileLayer)
+          layer.redraw();
+      });
+    });
+  }
+
+  // trigger 'shown' so htmlwidgets resize
+  $('d-article').trigger('shown');
+}
+
+function init_distill() {
+
+  init_common();
+
+  // create front matter
+  var front_matter = $('<d-front-matter></d-front-matter>');
+  $('#distill-front-matter').wrap(front_matter);
+
+  // create d-title
+  $('.d-title').changeElementType('d-title');
+
+  // create d-byline
+  var byline = $('<d-byline></d-byline>');
+  $('.d-byline').replaceWith(byline);
+
+  // create d-article
+  var article = $('<d-article></d-article>');
+  $('.d-article').wrap(article).children().unwrap();
+
+  // move posts container into article
+  $('.posts-container').appendTo($('d-article'));
+
+  // create d-appendix
+  $('.d-appendix').changeElementType('d-appendix');
+
+  // create d-bibliography
+  var bibliography = $('<d-bibliography></d-bibliography>');
+  $('#distill-bibliography').wrap(bibliography);
+
+  // flag indicating that we have appendix items
+  var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+  // replace citations with <d-cite>
+  $('.citation').each(function(i, val) {
+    appendix = true;
+    var cites = $(this).attr('data-cites').split(" ");
+    var dt_cite = $('<d-cite></d-cite>');
+    dt_cite.attr('key', cites.join());
+    $(this).replaceWith(dt_cite);
+  });
+  // remove refs
+  $('#refs').remove();
+
+  // replace footnotes with <d-footnote>
+  $('.footnote-ref').each(function(i, val) {
+    appendix = true;
+    var href = $(this).attr('href');
+    var id = href.replace('#', '');
+    var fn = $('#' + id);
+    var fn_p = $('#' + id + '>p');
+    fn_p.find('.footnote-back').remove();
+    var text = fn_p.html();
+    var dtfn = $('<d-footnote></d-footnote>');
+    dtfn.html(text);
+    $(this).replaceWith(dtfn);
+  });
+  // remove footnotes
+  $('.footnotes').remove();
+
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    var id = $(this).attr('id');
+    $('.d-toc a[href="#' + id + '"]').parent().remove();
+    appendix = true;
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+  });
+
+  // show d-appendix if we have appendix content
+  $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+  // replace code blocks with d-code
+  $('pre>code').each(function(i, val) {
+    var code = $(this);
+    var pre = code.parent();
+    var clz = "";
+    var language = pre.attr('class');
+    if (language) {
+      // map unknown languages to "clike" (without this they just dissapear)
+      if ($.inArray(language, ["bash", "clike", "css", "go", "html",
+                               "javascript", "js", "julia", "lua", "markdown",
+                               "markup", "mathml", "python", "svg", "xml"]) == -1)
+        language = "clike";
+      language = ' language="' + language + '"';
+      var dt_code = $('<d-code block' + language + clz + '></d-code>');
+      dt_code.text(code.text());
+      pre.replaceWith(dt_code);
+    } else {
+      code.addClass('text-output').unwrap().changeElementType('pre');
+    }
+  });
+
+  // localize layout chunks to just output
+  $('.layout-chunk').each(function(i, val) {
+
+    // capture layout
+    var layout = $(this).attr('data-layout');
+
+    // apply layout to markdown level block elements
+    var elements = $(this).children().not('d-code, pre.text-output, script');
+    elements.each(function(i, el) {
+      var layout_div = $('<div class="' + layout + '"></div>');
+      if (layout_div.hasClass('shaded')) {
+        var shaded_content = $('<div class="shaded-content"></div>');
+        $(this).wrap(shaded_content);
+        $(this).parent().wrap(layout_div);
+      } else {
+        $(this).wrap(layout_div);
+      }
+    });
+
+
+    // unwrap the layout-chunk div
+    $(this).children().unwrap();
+  });
+
+  // load distill framework
+  load_distill_framework();
+
+  // wait for window.distillRunlevel == 4 to do post processing
+  function distill_post_process() {
+
+    if (!window.distillRunlevel || window.distillRunlevel < 4)
+      return;
+
+    // hide author/affiliations entirely if we have no authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+    if (!have_authors)
+      $('d-byline').addClass('hidden');
+
+    // table of contents
+    if (have_authors) // adjust border if we are in authors
+      $('.d-toc').parent().addClass('d-article-with-toc');
+
+    // strip links that point to #
+    $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+    // hide elements of author/affiliations grid that have no value
+    function hide_byline_column(caption) {
+      $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+    }
+
+    // affiliations
+    var have_affiliations = false;
+    for (var i = 0; i<front_matter.authors.length; ++i) {
+      var author = front_matter.authors[i];
+      if (author.affiliation !== "&nbsp;") {
+        have_affiliations = true;
+        break;
+      }
+    }
+    if (!have_affiliations)
+      $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+    // published date
+    if (!front_matter.publishedDate)
+      hide_byline_column("Published");
+
+    // document object identifier
+    var doi = $('d-byline').find('h3:contains("DOI")');
+    var doi_p = doi.next().empty();
+    if (!front_matter.doi) {
+      // if we have a citation and valid citationText then link to that
+      if ($('#citation').length > 0 && front_matter.citationText) {
+        doi.html('Citation');
+        $('<a href="#citation"></a>')
+          .text(front_matter.citationText)
+          .appendTo(doi_p);
+      } else {
+        hide_byline_column("DOI");
+      }
+    } else {
+      $('<a></a>')
+         .attr('href', "https://doi.org/" + front_matter.doi)
+         .html(front_matter.doi)
+         .appendTo(doi_p);
+    }
+
+     // change plural form of authors/affiliations
+    if (front_matter.authors.length === 1) {
+      var grid = $('.authors-affiliations');
+      grid.children('h3:contains("Authors")').text('Author');
+      grid.children('h3:contains("Affiliations")').text('Affiliation');
+    }
+
+    // inject pre code styles (can't do this with a global stylesheet b/c a shadow root is used)
+    $('d-code').each(function(i, val) {
+      var style = document.createElement('style');
+      style.innerHTML = 'pre code { padding-left: 10px; font-size: 12px; border-left: 2px solid rgba(0,0,0,0.1); } ' +
+                        '@media(min-width: 768px) { pre code { padding-left: 18px; font-size: 14px; } }';
+      if (this.shadowRoot)
+        this.shadowRoot.appendChild(style);
+    });
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // clear polling timer
+    clearInterval(tid);
+
+    // show body now that everything is ready
+    on_load_complete();
+  }
+
+  var tid = setInterval(distill_post_process, 50);
+  distill_post_process();
+
+}
+
+function init_downlevel() {
+
+  init_common();
+
+   // insert hr after d-title
+  $('.d-title').after($('<hr class="section-separator"/>'));
+
+  // check if we have authors
+  var front_matter = JSON.parse($("#distill-front-matter").html());
+  var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+  // manage byline/border
+  if (!have_authors)
+    $('.d-byline').remove();
+  $('.d-byline').after($('<hr class="section-separator"/>'));
+  $('.d-byline a').remove();
+
+  // remove toc
+  $('.d-toc-header').remove();
+  $('.d-toc').remove();
+  $('.d-toc-separator').remove();
+
+  // move appendix elements
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+  });
+
+
+  // inject headers into references and footnotes
+  var refs_header = $('<h3></h3>');
+  refs_header.text('References');
+  $('#refs').prepend(refs_header);
+
+  var footnotes_header = $('<h3></h3');
+  footnotes_header.text('Footnotes');
+  $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+  // move appendix-bottom entries to the bottom
+  $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+  $('.appendix-bottom').remove();
+
+  // remove appendix if it's empty
+  if ($('.d-appendix').children().length === 0)
+    $('.d-appendix').remove();
+
+  // prepend separator above appendix
+  $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+  // trim code
+  $('pre>code').each(function(i, val) {
+    $(this).html($.trim($(this).html()));
+  });
+
+  // move posts-container right before article
+  $('.posts-container').insertBefore($('.d-article'));
+
+  $('body').addClass('downlevel');
+
+  on_load_complete();
+}
+
+
+function init_common() {
+
+  // jquery plugin to change element types
+  (function($) {
+    $.fn.changeElementType = function(newType) {
+      var attrs = {};
+
+      $.each(this[0].attributes, function(idx, attr) {
+        attrs[attr.nodeName] = attr.nodeValue;
+      });
+
+      this.replaceWith(function() {
+        return $("<" + newType + "/>", attrs).append($(this).contents());
+      });
+    };
+  })(jQuery);
+
+  // prevent underline for linked images
+  $('a > img').parent().css({'border-bottom' : 'none'});
+
+  // mark non-body figures created by knitr chunks as 100% width
+  $('.layout-chunk').each(function(i, val) {
+    var figures = $(this).find('img, .html-widget');
+    if ($(this).attr('data-layout') !== "l-body") {
+      figures.css('width', '100%');
+    } else {
+      figures.css('max-width', '100%');
+      figures.filter("[width]").each(function(i, val) {
+        var fig = $(this);
+        fig.css('width', fig.attr('width') + 'px');
+      });
+
+    }
+  });
+
+  // auto-append index.html to post-preview links in file: protocol
+  // and in rstudio ide preview
+  $('.post-preview').each(function(i, val) {
+    if (window.location.protocol === "file:")
+      $(this).attr('href', $(this).attr('href') + "index.html");
+  });
+
+  // get rid of index.html references in header
+  if (window.location.protocol !== "file:") {
+    $('.distill-site-header a[href]').each(function(i,val) {
+      $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+    });
+  }
+
+  // add class to pandoc style tables
+  $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+  $('.kable-table').children('table').addClass('pandoc-table');
+
+  // add figcaption style to table captions
+  $('caption').parent('table').addClass("figcaption");
+
+  // initialize posts list
+  if (window.init_posts_list)
+    window.init_posts_list();
+
+  // implmement disqus comment link
+  $('.disqus-comment-count').click(function() {
+    window.headroom_prevent_pin = true;
+    $('#disqus_thread').toggleClass('hidden');
+    if (!$('#disqus_thread').hasClass('hidden')) {
+      var offset = $(this).offset();
+      $(window).resize();
+      $('html, body').animate({
+        scrollTop: offset.top - 35
+      });
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (is_downlevel_browser())
+    init_downlevel();
+  else
+    window.addEventListener('WebComponentsReady', init_distill);
+});
+
+</script>
+
+<!--/radix_placeholder_distill-->
+  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+<style type="text/css">
+.distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(25,25,112);
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+@media only screen and (max-width: 100px) {
+  d-title{
+    background-image: url('img/logo2.png');
+    background-repeat: no-repeat;
+    background-position: 95% 70%;
+    background-size: 250px 100px;
+  }
+}
+
+@media only screen and (min-width: 100px) {
+  d-title{
+    background-image: url('img/logo2.png');
+    background-repeat: no-repeat;
+    background-position: 63% 70%;
+    background-size: 250px 100px;
+  }
+}
+
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+</style>
+<!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Re-emerging Indictors of Excess Mortality in Ireland","description":"At the height of the COVID-19 crisis in Ireland, the death notices website RIP.ie provided a useful, open, and near-realtime indicator of excess mortality associated with the disease. With late summer seeing a rersurgence in cases in Ireland, we ask whether  postings to RIP.ie have risen in certain localities.","authors":[{"author":"Gerard D McCarthy","authorURL":"https://www.maynoothuniversity.ie/icarus/our-people/gerard-mccarthy","affiliation":"&nbsp;","affiliationURL":"#"},{"author":"Rebecca L Dempsey","authorURL":"https://www.maynoothuniversity.ie/geography/","affiliation":"&nbsp;","affiliationURL":"#"},{"author":"Amin Shoari Nejad","authorURL":"https://www.maynoothuniversity.ie/hamilton/our-people/amin-shoari-nejad","affiliation":"&nbsp;","affiliationURL":"#"},{"author":"Pádraig MacCarron","authorURL":"https://www.ul.ie/dafinet/p%C3%A1draig-mac-carron","affiliation":"&nbsp;","affiliationURL":"#"},{"author":"Andrew Parnell","authorURL":"https://hamilton-institute.github.io/docs/","affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2020-08-31T00:00:00.000+01:00","citationText":"McCarthy, et al., 2020"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="../../index.html" class="title">Hamilton Blog</a>
+</div>
+<div class="nav-right">
+<a href="../../index.html">Posts</a>
+<a href="../../about.html">About</a>
+<a href="../../index.xml">
+<i class="fa fa-rss" aria-hidden="true"></i>
+</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Re-emerging Indictors of Excess Mortality in Ireland</h1>
+<p>At the height of the COVID-19 crisis in Ireland, the death notices website RIP.ie provided a useful, open, and near-realtime indicator of excess mortality associated with the disease. With late summer seeing a rersurgence in cases in Ireland, we ask whether postings to RIP.ie have risen in certain localities.</p>
+</div>
+
+<div class="d-byline">
+  Gerard D McCarthy <a href="https://www.maynoothuniversity.ie/icarus/our-people/gerard-mccarthy" class="uri">https://www.maynoothuniversity.ie/icarus/our-people/gerard-mccarthy</a> 
+  
+,   Rebecca L Dempsey <a href="https://www.maynoothuniversity.ie/geography/" class="uri">https://www.maynoothuniversity.ie/geography/</a> 
+  
+,   Amin Shoari Nejad <a href="https://www.maynoothuniversity.ie/hamilton/our-people/amin-shoari-nejad" class="uri">https://www.maynoothuniversity.ie/hamilton/our-people/amin-shoari-nejad</a> 
+  
+,   Pádraig MacCarron <a href="https://www.ul.ie/dafinet/p%C3%A1draig-mac-carron" class="uri">https://www.ul.ie/dafinet/p%C3%A1draig-mac-carron</a> 
+  
+,   Andrew Parnell <a href="https://hamilton-institute.github.io/docs/" class="uri">https://hamilton-institute.github.io/docs/</a> 
+  
+<br/>08-31-2020
+</div>
+
+<div class="d-article">
+<p>There is growing unease and concern in Ireland about the recent increase in cases of COVID-19 in Ireland. Three counties—Laois, Offaly, Kildare (LOK)—endured renewed lockdown, clusters have been identified in meat processing plants and Direct Provision centres, generational divisions are sharpening, with the perception that young people are flouting the rules, and, against this backdrop, schools are returning. Some consolation perhaps is that while case numbers have risen, fatalities associated with the disease are not rising at comparable levels. But could this be a false sense of security? Using postings of death notices to RIP.ie, we identify the Eircode regions that have shown high levels of posting through the summer. The highest by far is in the heart of the LOKdown counties: the Porlaoise Eircode (R32), where posts reached almost double their normal levels at the start of July.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="aggregated_by_routing_key_portlaoise_mod.png" alt="The Portlaoise Eircode (beginning R32) experienced excess postings to RIP.ie in April 2020 when posts topped 70 in a 28-day total, almost double the normal levels of approximately 45. A second peak occurred near the start of July. This time posts topped 60, when normal levels would typically drop to below 35 for this time of year. These levels were the highest ever recorded in the Portlaoise Eircode for this time of year. The 2020 postings (solid line), previous maxima (dotted line) and mean posts (dashed line) are based on 28-day centered tallies of posts to RIP.ie." width="90%" />
+<p class="caption">
+Figure 1: The Portlaoise Eircode (beginning R32) experienced excess postings to RIP.ie in April 2020 when posts topped 70 in a 28-day total, almost double the normal levels of approximately 45. A second peak occurred near the start of July. This time posts topped 60, when normal levels would typically drop to below 35 for this time of year. These levels were the highest ever recorded in the Portlaoise Eircode for this time of year. The 2020 postings (solid line), previous maxima (dotted line) and mean posts (dashed line) are based on 28-day centered tallies of posts to RIP.ie.
+</p>
+</div>
+</div>
+<blockquote>
+<p>Explore for yourself the number of postings to RIP.ie in your area: <a href="https://aminshn.shinyapps.io/RIP_data/" class="uri">https://aminshn.shinyapps.io/RIP_data/</a></p>
+</blockquote>
+<p>While we note postings to RIP.ie showed peaks above previous maxima in Northwest Cavan (focused around Belturbet), West Mayo (F28, F23), Westmeath (Athlone (N37) and Mullingar(N91)), Carlow (R93, R21), Kilkenny (R95), and Dublin West (D15, K78 LUCAN, D22, D24), the question of whether these increased postings are statistically significant indicators of excess mortality is one we continue to work on. Excess postings to RIP.ie also does not mean that deaths were associated with COVID-19. However, we live in days of suspicion rather than rigor, which is why we present these findings now.</p>
+<!-- From 12th of June to 12th August, N deaths were assigned to COVID-19 in the Republic of Ireland.  -->
+<!-- # Was there a summer increase in postings to RIP.ie?  -->
+<h1 id="did-postings-to-rip.ie-increase-in-summer">Did postings to RIP.ie increase in summer?</h1>
+<p>At a national and county level, the answer is ‘No’. National levels of posting to RIP.ie have remained at a normal level. At county level, the picture is much the same. A number of counties have shown an upturn in the numbers of notices posted. However, this upturn is in a normal range in comparison with previous recent years.</p>
+<p>The initial spread of COVID-19 in Ireland, as elsewhere, was explosive and resulted in 11 of 26 counties in the Republic posting the highest number of death notices for any April—for 7 of these counties, <a href="https://www.rte.ie/brainstorm/2020/0505/1136496-death-notices-ireland-coronavirus/">April 2020 was the month with the highest postings to RIP.ie ever</a>. The unprecedented measures introduced to combat the spread were effective and by May the tide of excess postings had ebbed.</p>
+<!-- The recent rise in the number of coronavirus cases in Ireland has alarmed a public weary after almost six months of restrictions. But there has also been a welcome fall-off in the numbers of people dying and being hospitalised due to the disease.In the period from August 1st to August 26th, there were 2,300 confirmed cases of the disease in the State, but just 13 deaths.(https://www.irishtimes.com/news/health/covid-19-why-are-deaths-and-hospitalisations-falling-so-dramatically-1.4340185) -->
+<p>A resurgence of the disease was always going to appear differently from this initial wave. Clusters were always likely to re-emerge and the battle against the resurgence will take the form of skirmishes, dependent on tracking and tracing. And clusters of cases have re-emerged. Most notably in Laois, Offaly, and Kildare—the counties that were locked down again during July (so-called LOKdown). A pattern of new cases stretching through Laois and Kildare along the N7/M7 emerged during the summer, with Edenderry being the centre of the Offaly outbreak—see map by David Higgins <a href="https://twitter.com/higginsdavidw/status/1295407700222844930?s=20">here</a>.</p>
+<!-- Firstly, it is well worth noting that the disease was never eradicated in Ireland. In fact, even keeping the R number below 1, [there would have been less than 50% chance of eradication this year.](https://aminshn.shinyapps.io/SEIR/) The R number is not at time of writing below 1. -->
+<!-- # ```{r, out.width='80%', fig.align='center', fig.cap='Increase in cases of COVID-19 by Electoral Division in LOKdown counties from 12th of June to the 12th August derived from the [official Government dashboard](https://covid19ireland-geohive.hub.arcgis.com/). Map made by [David Higgins](https://twitter.com/higginsdavidw) based on data from [Tony Kent](https://twitter.com/2NilDown).'} -->
+<!-- # knitr::include_graphics('higgins_lokdown_map.png') -->
+<!-- # ``` -->
+<p>We have looked at the notices posted to RIP.ie in the EirCodes of the LOKdown regions to investigate any evidence for excess postings relative to the time of year. Excess postings to RIP.ie were a potent indicator of the deadliness of COVID-19 in the first wave of the disease at county level but, given the more random and localised nature typical of a resurgence, we wanted to investigate finer scale geographies. We consider the <a href="https://www.autoaddress.ie/blog/autoaddressblog/2017/06/17/it-is-surprisingly-easy-to-determine-an-eircode-routing-key-for-any-address">3-digit Eircodes</a> as a relatable geography. These do not have much geographic fidelity, by which we mean they do not match existing administrative boundaries, such as county bounds, nor do they encompass a consistent areal or population unit. However, they are societally relateable as everyone knows (or can find) their Eircode.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="mean_posts_by_routing_key_LOK_mod.png" alt="The 3-digit Eircodes of the LOKdown counties. These vary widely in size and consequently vary widely in terms of mean posts to RIP.ie. In considering excess postings, we merge Eircodes together to give a minimum average of 20 posts to RIP.ie in a 28-day period. In this instance, it involves combining Edenderry (R45) into Tullamore (R35), and combining Athy (R14), Monasterevin (W34), Kildare (R51), Athy (R14), and Curragh Camp (R56) into a West Kildare grouping. Colour indicates average number of monthly posts to RIP.ie." width="100%" />
+<p class="caption">
+Figure 2: The 3-digit Eircodes of the LOKdown counties. These vary widely in size and consequently vary widely in terms of mean posts to RIP.ie. In considering excess postings, we merge Eircodes together to give a minimum average of 20 posts to RIP.ie in a 28-day period. In this instance, it involves combining Edenderry (R45) into Tullamore (R35), and combining Athy (R14), Monasterevin (W34), Kildare (R51), Athy (R14), and Curragh Camp (R56) into a West Kildare grouping. Colour indicates average number of monthly posts to RIP.ie.
+</p>
+</div>
+</div>
+<p>To compare the excess postings at Eircode level, we needed to combine the Eircodes with low numbers of postings and normalise each area. We targetted an average number of monthly mean postings of 20. In this instance, it involves combining Edenderry (R45) into Tullamore (R35), and combining Athy (R14), Monasterevin (W34), Kildare (R51), and Curragh Camp (R56) into a West Kildare grouping. Normalisation of excess mortality measures is typically done by dividing by population or age-weighted population, this gives an estimate of <a href="https://ourworldindata.org/covid-excess-mortality">P-scores</a>, a percentage excess relative to population. In the case of postings to RIP.ie, there are known biases, with some counties under posting relative to official death notices and others overposting. To normalise, we therefore use an internal measure from RIP.ie and report excess postings relative to the monthly average posts.</p>
+<p>The proportional postings for the six grouped Eircode regions are shown below. Proportions equal to one are typical levels, two incates twice the normal levels. The dotted line shows the maximum previous level of posting. Five out of six of the Eircode regions show peaks above the previous maximum occurring in April. This is the effect of the first wave of mortality related to COVID-19. There is a large geographic contrast between the westernmost Eircode of Birr, which did not exceed previous maxima in April, and Maynooth, which experienced excess postings that almost reached three times the normal level. The Maynooth Eircode, W23, encompases the town of Leixlip where <a href="https://www.irishtimes.com/news/ireland/irish-news/the-human-cost-of-covid-19-ireland-s-care-homes-with-the-most-deaths-revealed-1.4264170">35 deaths were attributed to COVID in one nursing home</a>—the highest in the country.</p>
+<p>We have already seen that in early July, the Portlaoise Eircode (R32) experienced high excess posting. This comparison plot shows the July peak as greater proportionally, relative to the time of year, than the April peak. We should emphasize that this is not focused on the town of Portlaoise and has the highest levels between Portlaoise and Monasterevin. In addition to the Portlaoise Eircode increase, increases at similar times were seen in the Naas and Kildare West Eircodes.</p>
+<!-- ```{r, out.width='90%', fig.align='center', fig.cap='...'} -->
+<!-- knitr::include_graphics('stacked_aggregated_by_routing_key_LOK.png') -->
+<!-- ``` -->
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="2020-08-indictorsofexcessmortalityfromripie_files/figure-html5/unnamed-chunk-3-1.png" alt="Postings to RIP.ie as a proportion of average posts. A 28-day centered sum divided by the mean monthly postings is shown. A proportion equal to 1 indicates normal levels. The dotted line indicates the previous maximum level of posting. Smaller postal regions were merged together. Edenderry (R45) was merged with Tullamore (R35). Kildare, Curragh Camp, Newbridge, Monasterevin, and Athy were merged to the region of West Kildare." width="90%" />
+<p class="caption">
+Figure 3: Postings to RIP.ie as a proportion of average posts. A 28-day centered sum divided by the mean monthly postings is shown. A proportion equal to 1 indicates normal levels. The dotted line indicates the previous maximum level of posting. Smaller postal regions were merged together. Edenderry (R45) was merged with Tullamore (R35). Kildare, Curragh Camp, Newbridge, Monasterevin, and Athy were merged to the region of West Kildare.
+</p>
+</div>
+</div>
+<h1 id="the-limits-of-excess-mortality">The limits of excess mortality</h1>
+<!-- Explore for yourself the number of postings to RIP.ie in your Eircode area: https://aminshn.shinyapps.io/RIP_data/.  -->
+<p>From a decision making perspective, how could you interpret this information? Assuming that the excess postings are a true indicator of actual deaths, it is still not saying that postings above previous maxima are indicative of undiscovered COVID deaths. If you consider a given population, there will be deaths over time, these will have an element of randomness to them. Excess mortality could therefore just appear by chance and be completely unrelated to a consistent single cause such as COVID-19. Yet excess mortality has been a useful indicator of COVID prevalence through this pandemic. My day job is in climate change and we would consider that the excess postings being indicative of undiscovered COVID clusters as a low probability, high impact event. <a href="https://iopscience.iop.org/article/10.1088/1748-9326/ab666c">These are the types of events that have been incorporated into Dutch adaptive planning in response to sea level rise and climate change</a>. This information could be incorporated into decision-making in a way that would be the equivalent of damping the grass to avoid a bushfire.</p>
+<p>Excess, all-cause mortality has been an independent indicator of the deadliness of COVID-19 around the world. Frequently, excess mortality has shown where countries have underestimated deaths associated with the disease. <a href="https://www.ft.com/content/a2901ce8-5eb7-4633-b89c-cbdf5b386938">In Ecuador, more than 10000 excess deaths have been recorded, far higher than officialy reported COVID deaths</a>. In the UK, prompt and open delivery of mortality data charted the tragic rise of the UK to the top of the European COVID mortality charts. Whether a death is attributed to COVID-19 or another cause is not considered by this measure but this doesn’t negate the usefulness of excess mortality in charting the impacts of COVID-19. After all, this is how we measure the deadliness of the seasonal flu.</p>
+<p>In Ireland, we have a problem estimating excess mortality from official data. The requirement to report deaths officially has a much larger lag than elsewhere. The <a href="https://www.euromomo.eu/bulletins/2020-17">European Mortality Monitoring Project, EuroMOMO, noted:</a></p>
+<blockquote>
+<p>“In Ireland, as a result of very significant delays in death registrations during March and April 2020, due to the COVID-19 pandemic, weekly z-scores of excess all-cause mortality do not reflect current COVID-19 (and non-COVID-19) excess mortality in Ireland.”</p>
+</blockquote>
+<p>The lag in official reporting of deaths lead to the use of the death notices website RIP.ie as an indicator for excess mortality. An extensive <a href="https://www.hiqa.ie/reports-and-publications/health-technology-assessment/analysis-excess-all-cause-mortality-ireland">HIQA report</a> outlined the usefulness of postings to RIP.ie as a near realtime, open source of information.</p>
+<!-- As part of a  -->
+<!-- # Further research -->
+<!-- In collaboration with... -->
+<!-- Explore the limits of the geographical breakdown of this dataset. IAs etc.  -->
+<!-- Distill is a publication format for scientific and technical writing, native to the web. -->
+<!-- Learn more about using Distill at <https://rstudio.github.io/distill>. -->
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
