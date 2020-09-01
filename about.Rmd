@@ -18,4 +18,9 @@ This goal of this blog is to be a place where our research group publishes blog 
 If you would like to know more about who we are and the what we do, 
 please visit the Institute's website: https://www.maynoothuniversity.ie/hamilton
 
+```{r}
+knitr::include_graphics("img/both_logos.png")
+```
+
+
 

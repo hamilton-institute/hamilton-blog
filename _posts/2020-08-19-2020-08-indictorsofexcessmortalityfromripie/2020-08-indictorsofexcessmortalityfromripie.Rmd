@@ -13,18 +13,23 @@ author:
     url: https://www.ul.ie/dafinet/p%C3%A1draig-mac-carron
   - name: Andrew Parnell
     url: https://hamilton-institute.github.io/docs/
-    
 date: 08-31-2020
+collections:
+  posts:
+    citations: true
+citation_url: https://hamilton-institute.github.io/docs/posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/
 output:
   distill::distill_article:
     self_contained: false
+    toc: true
+    toc_depth: 2
 categories:
   - excess mortality
   - RIP.ie
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 library(tidyverse)
 library(lubridate)
 ```
@@ -76,7 +81,9 @@ We have already seen that in early July, the Portlaoise Eircode (R32) experience
 
 ```{r, out.width='90%', fig.align='center', fig.cap='Postings to RIP.ie as a proportion of average posts. A 28-day centered sum divided by the mean monthly postings is shown. A proportion equal to 1 indicates normal levels. The dotted line indicates the previous maximum level of posting. Smaller postal regions were merged together. Edenderry (R45) was merged with Tullamore (R35). Kildare, Curragh Camp, Newbridge, Monasterevin, and Athy were merged to the region of West Kildare.'}
 load("town_in_rk_count_geo_merged_lok.Rdata")
-ref_level <- town_in_rk_count_geo_merged %>% filter(Year < 2020 & Year >=2015 ) %>% 
+ref_level <- town_in_rk_count_geo_merged %>% 
+  select(Year, Group, Date, Monthly_Notices) %>% 
+  filter(Year < 2020 & Year >=2015 ) %>% 
   ungroup() %>%
   group_by(Group,Date) %>% 
   summarize(Monthly_Notices = sum(Monthly_Notices)) %>%
@@ -101,7 +108,8 @@ ref_level <- town_in_rk_count_geo_merged %>% filter(Year < 2020 & Year >=2015 ) 
 #   scale_x_date(date_breaks = "1 month", date_labels = "%b",limits=c(as.Date("2020-01-01"),as.Date("2020-08-01")))
 
 # same but by proportion
-prop_plot_data <- as_tibble(town_in_rk_count_geo_merged) %>% 
+prop_plot_data <- town_in_rk_count_geo_merged %>% 
+  select(Year, Group, Date, Monthly_Notices, DOY) %>% 
   filter(Year == 2020) %>%
   left_join(as_tibble(ref_level %>% 
                         select(Group,DOY,Ref_Level,Prev_Max)),

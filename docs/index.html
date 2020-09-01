@@ -19,26 +19,26 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>Hamilton Blog</title>
+  <title>Hamilton Institute Blog: Posts</title>
   
   
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Hamilton Blog"/>
+  <meta property="og:title" content="Hamilton Institute Blog: Posts"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Hamilton Blog"/>
+  <meta property="og:site_name" content="Hamilton Institute Blog"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Hamilton Blog"/>
+  <meta property="twitter:title" content="Hamilton Institute Blog: Posts"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Hamilton Blog"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Posts"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -729,16 +729,6 @@
   }
   
   
-  .sidebar-section.custom {
-    font-size: 12px;
-    line-height: 1.6em;
-  }
-  
-  .custom p {
-    margin-bottom: 0.5em;
-  }
-  
-  
   /* Improve display for browsers without grid (IE/Edge <= 15) */
   
   .downlevel {
@@ -1270,29 +1260,59 @@
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <style type="text/css">
+  /* Import fonts from Google's API */
+  @import url('https://fonts.googleapis.com/css2?family=Georgia');
+  
+  
   .distill-site-nav {
+      font-family: 'Georgia', sans-serif;
       color: rgba(255, 255, 255, 0.8);
-      background-color: rgb(25,25,112);
-      font-size: 15px;
+      background-color: rgb(22, 75, 83);
+      font-size: 20px;
       font-weight: 300;
+  }
+  
+  .distill-site-header {
+      font-family: 'Georgia', sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+  }
+  
+  .distill-site-footer {
+      background-repeat: no-repeat;
+      background-image: url('img/banner.jpeg');
+      background-size: 1344.0px  475.2px
+  }
+  
+  
+  /* Use specific font in the body of the text */
+  html, body, p {
+      
+      font-family: 'Georgia', serif;
+      font-weight: 200;
+      line-height: 1.3; 
+      font-size: 1.075em;
+      font-style: normal;
+      
   }
   
   
   @media only screen and (max-width: 100px) {
     d-title{
-      background-image: url('img/logo2.png');
+      #background-image: url('img/logo_mu.png');
       background-repeat: no-repeat;
-      background-position: 95% 70%;
-      background-size: 250px 100px;
+      background-position: 105% 70%;
     }
   }
   
-  @media only screen and (min-width: 100px) {
+  
+  
+  @media only screen and (min-width: 50px) {
     d-title{
-      background-image: url('img/logo2.png');
+      #background-image: url('img/logo_mu.png');
       background-repeat: no-repeat;
-      background-position: 63% 70%;
-      background-size: 250px 100px;
+      background-position: 78% 70%;
+      background-size: 424px 158px;
     }
   }
   
@@ -1315,7 +1335,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Hamilton Blog","authors":[]}
+{"title":"Posts","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1323,13 +1343,13 @@
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="index.html" class="title">Hamilton Blog</a>
+<a href="index.html" class="title">Hamilton Institute Blog</a>
 </div>
 <div class="nav-right">
 <a href="index.html">Posts</a>
 <a href="about.html">About</a>
 <a href="index.xml">
-<i class="fa fa-rss" aria-hidden="true"></i>
+<i class="fa fa-rss"></i>
 </a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
@@ -1657,7 +1677,7 @@ function init_posts_list() {
 
 <div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
-<h1 class="posts-list-caption">Hamilton Blog</h1>
+<h1 class="posts-list-caption">Posts</h1>
 <a href="posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["excess mortality","RIP.ie"]}</script>
 <div class="metadata">
@@ -1711,7 +1731,7 @@ function init_posts_list() {
 <!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Hamilton Blog</h1>
+<h1>Posts</h1>
 
 </div>
 
@@ -1732,6 +1752,9 @@ function init_posts_list() {
 <div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
+<div class="distill-site-nav distill-site-footer">
+<p>© Copyright 2020 <a href="https://www.maynoothuniversity.ie/hamilton">Hamilton Institute, Maynooth University</a>.</p>
+</div>
 <!--/radix_placeholder_navigation_after_body-->
 
 </body>
