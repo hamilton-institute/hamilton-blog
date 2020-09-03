@@ -40,7 +40,10 @@ There is growing unease and concern in Ireland about the recent increase in case
 knitr::include_graphics('aggregated_by_routing_key_portlaoise_mod.png')
 ```
 
-> Explore for yourself the number of postings to RIP.ie in your area: https://aminshn.shinyapps.io/RIP_data/
+> Explore for yourself the number of postings to RIP.ie in your area, by using the drop-down list below: 
+
+<iframe src="https://aminshn.shinyapps.io/RIP_data/" width=100% height =1000 frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"> </iframe>
+
 
 While we note postings to RIP.ie showed peaks above previous maxima in Northwest Cavan (focused around Belturbet), West Mayo (F28, F23), Westmeath (Athlone (N37) and Mullingar(N91)), Carlow (R93, R21), Kilkenny (R95), and Dublin West (D15, K78 LUCAN, D22, D24), the question of whether these increased postings are statistically significant indicators of excess mortality is one we continue to work on. Excess postings to RIP.ie also does not mean that deaths were associated with COVID-19. However, we live in days of suspicion rather than rigor, which is why we present these findings now.
 
