@@ -19,7 +19,10 @@
 .distill-site-footer {
     background-repeat: no-repeat;
     background-image: url('img/banner.jpeg');
-    background-size: 1344.0px  475.2px
+    background-size: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
 }
 
 

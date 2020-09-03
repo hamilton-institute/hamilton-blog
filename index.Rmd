@@ -1,5 +1,19 @@
 ---
-title: "Posts"
+title: "About this blog"
 site: distill::distill_website
-listing: posts
+#listing: posts
 ---
+
+
+The Hamilton Institute, based in Maynooth University,
+is dedicated to providing a bridge between mathematics and its applications in ICT, biology and other disciplines. Founded in 2001 with support from Science Foundation Ireland, the Hamilton Institute has been internationally recognized for its work across communication networks, mathematical biology and fundamental mathematics. The Institute continues to tackle complex questions across multiple areas of research and industry with a number of significant successes over the last 15 years.
+
+
+This goal of this blog is to be a place where our research group publishes blog posts about a wide variety of topics. Currently, we are focusing on our COVID-19 in Ireland project, so the posts will be mainly related to our findings regarding this subject. 
+
+If you would like to know more about who we are and the what we do, 
+please visit the Institute's website: https://www.maynoothuniversity.ie/hamilton
+
+```{r}
+knitr::include_graphics("img/both_logos.png")
+```

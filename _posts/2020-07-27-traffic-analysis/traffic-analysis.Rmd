@@ -10,7 +10,7 @@ author:
   - name: Bruna Wundervald
     url: https://www.maynoothuniversity.ie/hamilton
 date: 07-27-2020
-citation_url: https://hamilton-institute.github.io/docs/posts/2020-07-27-traffic-analysis/
+citation_url: https://www.hamilton.ie/covid19/posts/2020-07-27-traffic-analysis/
 collections:
   posts:
     citations: true
