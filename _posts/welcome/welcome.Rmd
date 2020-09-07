@@ -33,5 +33,4 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-There's some text here
 

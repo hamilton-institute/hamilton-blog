@@ -19,26 +19,26 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>Hamilton Institute Blog: About this blog</title>
+  <title>Ireland's COVID-19 Data Dive: Welcome to Ireland's COVID-19 Data Dive</title>
   
   
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Hamilton Institute Blog: About this blog"/>
+  <meta property="og:title" content="Ireland&#39;s COVID-19 Data Dive: Welcome to Ireland&#39;s COVID-19 Data Dive"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Hamilton Institute Blog"/>
+  <meta property="og:site_name" content="Ireland&#39;s COVID-19 Data Dive"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Hamilton Institute Blog: About this blog"/>
+  <meta property="twitter:title" content="Ireland&#39;s COVID-19 Data Dive: Welcome to Ireland&#39;s COVID-19 Data Dive"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site"]}},"value":[{"type":"character","attributes":{},"value":["About this blog"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site"]}},"value":[{"type":"character","attributes":{},"value":["Welcome to Ireland's COVID-19 Data Dive"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -729,6 +729,16 @@
   }
   
   
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+  
+  
   /* Improve display for browsers without grid (IE/Edge <= 15) */
   
   .downlevel {
@@ -1279,8 +1289,8 @@
   }
   
   .distill-site-footer {
+      display: inline-block; 
       background-repeat: no-repeat;
-      background-image: url('img/banner.jpeg');
       background-size: 100%;
       width: 100%;
       bottom: 0;
@@ -1290,7 +1300,6 @@
   
   /* Use specific font in the body of the text */
   html, body, p {
-      
       font-family: 'Georgia', serif;
       font-weight: 200;
       line-height: 1.3; 
@@ -1326,6 +1335,22 @@
     height: auto;
   }
   
+  .waterbg
+        {
+          position: relative;
+          top: 0;
+          left: 0;
+        }
+  .hamlogo
+        {
+          width: 13%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 5px;
+          right: 0; 
+        }
   </style>
   <!--/radix_placeholder_site_in_header-->
 
@@ -1338,7 +1363,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About this blog","authors":[]}
+{"title":"Welcome to Ireland's COVID-19 Data Dive","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1347,18 +1372,33 @@
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a class="logo" href="https://www.maynoothuniversity.ie/hamilton">
-<img src="img/logo_small.jpeg"/>
+<img src="img/logo_small.jpeg" alt="Logo"/>
 </a>
-<a href="index.html" class="title">Hamilton Institute Blog</a>
+<a href="index.html" class="title">Ireland's COVID-19 Data Dive</a>
 </div>
 <div class="nav-right">
-<a href="posts.html">Posts</a>
+<a href="index.html">
+<i class="fas fa-home" aria-hidden="true"></i>
+</a>
+<a href="dashboard.html">Dashboard</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Apps
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="dashboard.html">Dashboard</a>
+<a href="howlong.html">How long will COVID-19 last?</a>
+</div>
+</div>
+<a href="posts.html">Blog</a>
 <a href="index.html">About</a>
 <a href="https://github.com/hamilton-institute">
-<i class="fab fa-github"></i>
+<i class="fab fa-github" aria-hidden="true"></i>
 </a>
 <a href="https://twitter.com/MU_Hamilton">
-<i class="fab fa-twitter"></i>
+<i class="fab fa-twitter" aria-hidden="true"></i>
 </a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
@@ -1369,17 +1409,23 @@
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About this blog</h1>
+<h1>Welcome to Ireland’s COVID-19 Data Dive</h1>
 
 </div>
 
 
 <div class="d-article">
-<p>The Hamilton Institute, based in Maynooth University, is dedicated to providing a bridge between mathematics and its applications in ICT, biology and other disciplines. Founded in 2001 with support from Science Foundation Ireland, the Hamilton Institute has been internationally recognized for its work across communication networks, mathematical biology and fundamental mathematics. The Institute continues to tackle complex questions across multiple areas of research and industry with a number of significant successes over the last 15 years.</p>
-<p>This goal of this blog is to be a place where our research group publishes blog posts about a wide variety of topics. Currently, we are focusing on our COVID-19 in Ireland project, so the posts will be mainly related to our findings regarding this subject.</p>
-<p>If you would like to know more about who we are and the what we do, please visit the Institute’s website: <a href="https://www.maynoothuniversity.ie/hamilton" class="uri">https://www.maynoothuniversity.ie/hamilton</a></p>
+<p>We are a group of mathematicians, statisticians, computer scientists, geographers, and infectious disease experts who are analysing data about COVID-19 in Ireland. We are based in the <a href="https://www.maynoothuniversity.ie/hamilton">Hamilton Institute</a> at <a href="https://www.maynoothuniversity.ie">Maynooth University</a></p>
+<p>What would you like to do?</p>
+<ul>
+<li>See the latest figures from our <a href="dashboard.html">dashboard</a></li>
+<li>Read some <a href="posts.html">blog posts</a> about COVID-19 in Ireland</li>
+<li>Play with <a href="apps.html">some apps</a></li>
+<li>Find out more about <a href="about.html">the team and the project</a></li>
+</ul>
+<p>We are very grateful to <a href="https://www.sfi.ie">Science Foundation Ireland</a> for providing us with funding for this project via their emergency COVID-19 funding portal via grant number 20/COV/0081.</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="img/both_logos.png" width="750" /></p>
+<p><img src="img/SFI_logo.jpg" width="30%" /></p>
 </div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
@@ -1396,7 +1442,10 @@
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <div class="distill-site-nav distill-site-footer">
-<p>© Copyright 2020 <a href="https://www.maynoothuniversity.ie/hamilton">Hamilton Institute, Maynooth University</a>.</p>
+<div style="position: relative; left: 0; top: 0; width = 100%; height = 20%">
+      <img src = "img/banner4.png" width = 100% class = "waterbg">
+      <a href = "https://www.maynoothuniversity.ie/hamilton"><img src="img/logo_mu2.png" class="hamlogo"/></a>
+    </div>
 </div>
 <!--/radix_placeholder_navigation_after_body-->
 

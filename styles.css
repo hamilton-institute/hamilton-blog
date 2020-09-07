@@ -17,8 +17,8 @@
 }
 
 .distill-site-footer {
+    display: inline-block; 
     background-repeat: no-repeat;
-    background-image: url('img/banner.jpeg');
     background-size: 100%;
     width: 100%;
     bottom: 0;
@@ -28,7 +28,6 @@
 
 /* Use specific font in the body of the text */
 html, body, p {
-    
     font-family: 'Georgia', serif;
     font-weight: 200;
     line-height: 1.3; 
@@ -63,3 +62,20 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.waterbg
+      {
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+.hamlogo
+      {
+        width: 13%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 5px;
+        right: 0; 
+      }

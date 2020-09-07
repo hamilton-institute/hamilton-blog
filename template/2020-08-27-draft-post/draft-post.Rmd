@@ -1,0 +1,69 @@
+---
+title: "Draft post"
+description: |
+  An example post.
+author:
+  - name: Bruna Wundervald
+    url: https://hamilton-institute.github.io/docs/
+date: 08-27-2020
+categories:
+  - drafts
+site: distill::distill_website  
+collections:
+  posts:
+    citations: true
+    disqus: posts
+citation_url: https://hamilton-institute.github.io/docs
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+draft: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is a draft post for this website. This means 
+that while the option `draft: true` is set in the 
+preambule, the post will not show in the website, even
+if the Rmarkdown file is compiled to html. When
+that's changed, it will come up as a regular post. 
+This option is recommended while your post still isn't
+ready for publication. 
+
+To create a draft post, just run:
+
+```{r, eval = FALSE}
+library(distill)
+create_post("Name of post", draft = TRUE)
+
+```
+
+and add the text and other preambule options to your post. 
+
+Other preambule options that might be useful to add to your post:
+
+  - categories, which is here set to be "drafts", but
+  could be tags such as "transport", "survival analysis", etc
+  - collections, where you can define if you want
+  to generate a bibtex for this post (citations: true). You
+  also need to remember to set a citation URL, to which
+  the citations will refer to
+  - the toc options, which will set a table of contents of the post, just at the top of your post 
+  
+
+After your post is done, just run:
+
+```{r, eval = FALSE}
+library(rmarkdown)
+render_site()
+```
+
+
+and add your changes to the GitHub repository as
+indicated in the contribution guide. Happy writing!
+  
+

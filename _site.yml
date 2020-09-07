@@ -1,5 +1,5 @@
 name: "hamilton-institute.github.io"
-title: "Hamilton Institute Blog"
+title: "Ireland's COVID-19 Data Dive"
 description: |
   The Hamilton Institute Blog
 output_dir: "docs"
@@ -8,7 +8,17 @@ navbar:
     image: img/logo_small.jpeg
     href: https://www.maynoothuniversity.ie/hamilton
   right:
-    - text: "Posts"
+    - icon: fas fa-home
+      href: index.html
+    - text: "Dashboard"
+      href: dashboard.html
+    - text: "Apps"
+      menu:
+        - text: "Dashboard"
+          href: dashboard.html
+        - text: "How long will COVID-19 last?"
+          href: howlong.html
+    - text: "Blog"
       href: posts.html
     - text: "About"
       href: index.html

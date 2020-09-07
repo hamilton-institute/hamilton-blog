@@ -1,0 +1,10 @@
+---
+title: "Hamilton Institute COVID-19 Apps"
+site: distill::distill_website
+#listing: posts
+---
+
+We have some web apps which you might like to play with. These include:
+
+- [How long will COVID-19 last in Ireland?](howlong.html)
+- [Excess deaths in different counties from RIP.ie](excessrip.html)
