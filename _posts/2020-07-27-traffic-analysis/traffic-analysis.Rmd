@@ -16,14 +16,8 @@ collections:
     citations: true
     disqus: posts
     share: [twitter, linkedin]
-site: distill::distill_website  
 categories:
   - transport
-output:
-  distill::distill_article:
-    self_contained: false
-    toc: true
-    toc_depth: 2
 editor_options: 
   chunk_output_type: console
 ---

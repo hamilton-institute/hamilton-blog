@@ -14,15 +14,10 @@ author:
   - name: Andrew Parnell
     url: https://hamilton-institute.github.io/docs/
 date: 08-31-2020
+citation_url: https://www.hamilton.ie/covid19/posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie  
 collections:
   posts:
     citations: true
-citation_url: https://www.hamilton.ie/covid19/posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/
-output:
-  distill::distill_article:
-    self_contained: false
-    toc: true
-    toc_depth: 2
 categories:
   - excess mortality
   - RIP.ie
@@ -36,7 +31,8 @@ library(lubridate)
 
 There is growing unease and concern in Ireland about the recent increase in cases of COVID-19 in Ireland. Three counties---Laois, Offaly, Kildare (LOK)---endured renewed lockdown, clusters have been identified in meat processing plants and Direct Provision centres, generational divisions are sharpening, with the perception that young people are flouting the rules, and, against this backdrop, schools are returning. Some consolation perhaps is that while case numbers have risen, fatalities associated with the disease are not rising at comparable levels. But could this be a false sense of security? Using postings of death notices to RIP.ie, we identify the Eircode regions that have shown high levels of posting through the summer. The highest by far is in the heart of the LOKdown counties: the Porlaoise Eircode (R32), where posts reached almost double their normal levels at the start of July.
 
-```{r, out.width='90%', fig.align='center', fig.cap='The Portlaoise Eircode (beginning R32) experienced excess postings to RIP.ie in April 2020 when posts topped 70 in a 28-day total, almost double the normal levels of approximately 45. A second peak occurred near the start of July. This time posts topped 60, when normal levels would typically drop to below 35 for this time of year. These levels were the highest ever recorded in the Portlaoise Eircode for this time of year. The 2020 postings (solid line), previous maxima (dotted line) and mean posts (dashed line) are based on 28-day centered tallies of posts to RIP.ie.'}
+
+```{r, out.width='90%', fig.align='center', fig.cap="The Portlaoise Eircode (beginning R32) experienced excess postings to RIP.ie in April 2020 when posts topped 70 in a 28-day total, almost double the normal levels of approximately 45. A second peak occurred near the start of July. This time posts topped 60, when normal levels would typically drop to below 35 for this time of year. These levels were the highest ever recorded in the Portlaoise Eircode for this time of year. The 2020 postings (solid line), previous maxima (dotted line) and mean posts (dashed line) are based on 28-day centered tallies of posts to RIP.ie."}
 knitr::include_graphics('aggregated_by_routing_key_portlaoise_mod.png')
 ```
 
@@ -68,7 +64,7 @@ A resurgence of the disease was always going to appear differently from this ini
 
 We have looked at the notices posted to RIP.ie in the EirCodes of the LOKdown regions to investigate any evidence for excess postings relative to the time of year. Excess postings to RIP.ie were a potent indicator of the deadliness of COVID-19 in the first wave of the disease at county level but, given the more random and localised nature typical of a resurgence, we wanted to investigate finer scale geographies. We consider the [3-digit Eircodes](https://www.autoaddress.ie/blog/autoaddressblog/2017/06/17/it-is-surprisingly-easy-to-determine-an-eircode-routing-key-for-any-address) as a relatable geography. These do not have much geographic fidelity, by which we mean they do not match existing administrative boundaries, such as county bounds, nor do they encompass a consistent areal or population unit. However, they are societally relateable as everyone knows (or can find) their Eircode. 
 
-```{r, out.width='100%', fig.align='center', fig.cap='The 3-digit Eircodes of the LOKdown counties. These vary widely in size and consequently vary widely in terms of mean posts to RIP.ie. In considering excess postings, we merge Eircodes together to give a minimum average of 20 posts to RIP.ie in a 28-day period. In this instance, it involves combining Edenderry (R45) into Tullamore (R35), and combining Athy (R14), Monasterevin (W34), Kildare (R51), Athy (R14), and Curragh Camp (R56) into a West Kildare grouping. Colour indicates average number of monthly posts to RIP.ie.'}
+```{r, out.width='100%', fig.align='center', fig.cap="The 3-digit Eircodes of the LOKdown counties. These vary widely in size and consequently vary widely in terms of mean posts to RIP.ie. In considering excess postings, we merge Eircodes together to give a minimum average of 20 posts to RIP.ie in a 28-day period. In this instance, it involves combining Edenderry (R45) into Tullamore (R35), and combining Athy (R14), Monasterevin (W34), Kildare (R51), Athy (R14), and Curragh Camp (R56) into a West Kildare grouping. Colour indicates average number of monthly posts to RIP.ie."}
 knitr::include_graphics('mean_posts_by_routing_key_LOK_mod.png')
 ```
 
@@ -166,4 +162,5 @@ The lag in official reporting of deaths lead to the use of the death notices web
 <!-- Distill is a publication format for scientific and technical writing, native to the web. -->
 
 <!-- Learn more about using Distill at <https://rstudio.github.io/distill>. -->
+
 
