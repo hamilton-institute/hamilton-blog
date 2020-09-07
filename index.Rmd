@@ -4,7 +4,7 @@ site: distill::distill_website
 #listing: posts
 ---
 
-We are a group of mathematicians, statisticians, computer scientists, geographers, and infectious disease experts who are analysing data about COVID-19 in Ireland. We are based in the [Hamilton Institute](https://www.maynoothuniversity.ie/hamilton) at [Maynooth University](https://www.maynoothuniversity.ie)
+We are a group of mathematicians, statisticians, computer scientists, geographers, and infectious disease experts who are analysing data about COVID-19 in Ireland. We are based in the [Hamilton Institute](https://www.maynoothuniversity.ie/hamilton) at [Maynooth University](https://www.maynoothuniversity.ie).
 
 What would you like to do?
 
