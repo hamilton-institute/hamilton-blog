@@ -1,7 +1,6 @@
 ---
 title: "About the team"
 site: distill::distill_website
-#listing: posts
 ---
 
 We have been awarded SFI funding to generate computational tools to help Ireland predict the epidemiological (disease-related) and economic consequences during the path to recovery in the COVID-19 pandemic. Our project will focus on putting computational models for medium term forecasting in place that will enable the state to make evidence-based decisions about the impact of relaxing COVID-19 restrictions. We aim to help the public stay informed about the data being generated 

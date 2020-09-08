@@ -1,7 +1,6 @@
 ---
 title: "Hamilton Institute COVID-19 Apps"
 site: distill::distill_website
-#listing: posts
 ---
 
 We have some web apps which you might like to play with. These include:

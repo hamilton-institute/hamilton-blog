@@ -17,7 +17,6 @@ output:
 collections:
   posts:
     citations: true
-    disqus: posts
     share: [twitter, linkedin]
 categories:
   - transport
