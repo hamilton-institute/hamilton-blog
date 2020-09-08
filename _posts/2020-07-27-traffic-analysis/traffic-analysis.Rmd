@@ -11,6 +11,9 @@ author:
     url: https://www.maynoothuniversity.ie/hamilton
 date: 07-27-2020
 citation_url: https://www.hamilton.ie/covid19/posts/2020-07-27-traffic-analysis/
+output:
+  distill::distill_article:
+    self_contained: false
 collections:
   posts:
     citations: true
