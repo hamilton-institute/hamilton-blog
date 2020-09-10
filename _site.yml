@@ -15,13 +15,13 @@ navbar:
     - text: "Apps"
       menu:
         - text: "Dashboard"
-          href: apps/dashboard.html
+          href: dashboard.html
         - text: "How long will COVID-19 last?"
-          href: apps/howlong.html
+          href: howlong.html
         - text: "Excess deaths in Ireland"
-          href: apps/excessrip.html
+          href: excessrip.html
         - text: "SEIR simulation"
-          href: apps/seirsim.html
+          href: seirsim.html
     - text: "Blog"
       href: posts.html
     - text: "About"

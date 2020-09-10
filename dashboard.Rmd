@@ -1,0 +1,7 @@
+---
+title: "Hamilton Institute COVID-19 Dashboard"
+site: distill::distill_website
+#listing: posts
+---
+
+<iframe src="https://rstudioserver.hamilton.ie:3838/users/aparnell/covid-19" class="l-screen-inset shaded" height = "1250px"></iframe>
