@@ -4,4 +4,4 @@ site: distill::distill_website
 #listing: posts
 ---
 
-<iframe src="https://aminshn.shinyapps.io/SEIR5/" class="l-screen-inset shaded" height = "500px"></iframe>
+<iframe src="https://aminshn.shinyapps.io/SEIR3/" class="l-screen-inset shaded" height = "900px"></iframe>
