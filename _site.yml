@@ -25,7 +25,7 @@ navbar:
     - text: "Blog"
       href: posts.html
     - text: "About"
-      href: index.html
+      href: about.html
     - icon: fab fa-github
       href: https://github.com/hamilton-institute
     - icon: fab fa-twitter
