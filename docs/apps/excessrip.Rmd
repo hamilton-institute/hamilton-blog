@@ -1,0 +1,7 @@
+---
+title: "Excess postings to RIP.ie in Eircode regions"
+site: distill::distill_website
+#listing: posts
+---
+
+<iframe src="https://aminshn.shinyapps.io/RIP_data/" class="l-screen-inset shaded" height = "500px"></iframe>

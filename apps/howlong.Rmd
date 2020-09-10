@@ -1,0 +1,7 @@
+---
+title: "How long will COVID-19 last in Ireland?"
+site: distill::distill_website
+#listing: posts
+---
+
+<iframe src="https://rstudioserver.hamilton.ie:3838/users/aparnell/howlong/" class="l-screen-inset shaded" height = "500px"></iframe>

@@ -729,6 +729,16 @@
   }
   
   
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+  
+  
   /* Improve display for browsers without grid (IE/Edge <= 15) */
   
   .downlevel {
@@ -1362,13 +1372,13 @@
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a class="logo" href="https://www.maynoothuniversity.ie/hamilton">
-<img src="img/logo_small.jpeg"/>
+<img src="img/logo_small.jpeg" alt="Logo"/>
 </a>
 <a href="index.html" class="title">Ireland's COVID-19 Data Dive</a>
 </div>
 <div class="nav-right">
 <a href="index.html">
-<i class="fas fa-home"></i>
+<i class="fas fa-home" aria-hidden="true"></i>
 </a>
 <a href="dashboard.html">Dashboard</a>
 <div class="nav-dropdown">
@@ -1378,17 +1388,19 @@ Apps
 <span class="down-arrow">&#x25BE;</span>
 </button>
 <div class="nav-dropdown-content">
-<a href="dashboard.html">Dashboard</a>
-<a href="howlong.html">How long will COVID-19 last?</a>
+<a href="apps/dashboard.html">Dashboard</a>
+<a href="apps/howlong.html">How long will COVID-19 last?</a>
+<a href="apps/excessrip.html">Excess deaths in Ireland</a>
+<a href="apps/seirsim.html">SEIR simulation</a>
 </div>
 </div>
 <a href="posts.html">Blog</a>
 <a href="index.html">About</a>
 <a href="https://github.com/hamilton-institute">
-<i class="fab fa-github"></i>
+<i class="fab fa-github" aria-hidden="true"></i>
 </a>
 <a href="https://twitter.com/MU_Hamilton">
-<i class="fab fa-twitter"></i>
+<i class="fab fa-twitter" aria-hidden="true"></i>
 </a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
@@ -1726,7 +1738,7 @@ function init_posts_list() {
 <img data-src="posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/distill-preview.png"/>
 </div>
 <div class="description">
-<h2>Re-emerging Indictors of Excess Mortality in Ireland</h2>
+<h2>Re-emerging Indicators of Excess Mortality in Ireland</h2>
 <p>At the height of the COVID-19 crisis in Ireland, the death notices website RIP.ie provided a useful, open, and near-realtime indicator of excess mortality associated with the disease. With late summer seeing a rersurgence in cases in Ireland, we ask whether  postings to RIP.ie have risen in certain localities.</p>
 </div>
 </a>

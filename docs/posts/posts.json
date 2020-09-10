@@ -1,7 +1,7 @@
 [
   {
     "path": "posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/",
-    "title": "Re-emerging Indictors of Excess Mortality in Ireland",
+    "title": "Re-emerging Indicators of Excess Mortality in Ireland",
     "description": "At the height of the COVID-19 crisis in Ireland, the death notices website RIP.ie provided a useful, open, and near-realtime indicator of excess mortality associated with the disease. With late summer seeing a rersurgence in cases in Ireland, we ask whether  postings to RIP.ie have risen in certain localities.",
     "author": [
       {
@@ -31,7 +31,8 @@
       "RIP.ie"
     ],
     "preview": "posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/distill-preview.png",
-    "last_modified": "2020-09-08T14:35:09+01:00"
+    "last_modified": "2020-09-10T11:58:28+01:00",
+    "input_file": {}
   },
   {
     "path": "posts/2020-07-27-traffic-analysis/",
@@ -52,6 +53,7 @@
       "transport"
     ],
     "preview": "posts/2020-07-27-traffic-analysis/TII_web.png",
-    "last_modified": "2020-09-08T14:31:31+01:00"
+    "last_modified": "2020-09-09T09:46:48+01:00",
+    "input_file": {}
   }
 ]

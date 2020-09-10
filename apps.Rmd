@@ -5,5 +5,6 @@ site: distill::distill_website
 
 We have some web apps which you might like to play with. These include:
 
-- [How long will COVID-19 last in Ireland?](howlong.html)
-- [Excess deaths in different counties from RIP.ie](excessrip.html)
+- [How long will COVID-19 last in Ireland?](apps/howlong.html)
+- [Excess deaths in different counties from RIP.ie](apps/excessrip.html)
+- [SEIR simulations](apps/seirsim.html)
