@@ -10,7 +10,7 @@ This goal of this website is to show posts and apps about our work. Where possib
 
 The team includes:
 
-- Prof Andrew Parnell
+- [Prof Andrew Parnell](mailto:andrew.parnell@mu.ie)
 - Prof Ken Duffy
 - Prof Subhra Dey
 - Prof Damien Woods
@@ -21,9 +21,9 @@ The team includes:
 - Dr Rafael De Andrade Moral
 - Dr Gerard McCarthy
 - Dr Danilo Sarti
+- Dr Hoda Binaei
 - Bruna Wundervald
 - Amin Shoari Nejad
-- Hoda Binaei
 - Rebecca Dempsey
 - HoChan Cheon
 

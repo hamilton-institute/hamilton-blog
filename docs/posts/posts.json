@@ -1,5 +1,37 @@
 [
   {
+    "path": "posts/2020-09-11-how-long-will-covid-19-last-in-ireland/",
+    "title": "How long will COVID-19 last in Ireland?",
+    "description": "Short answer: most likely a very long time",
+    "author": [
+      {
+        "name": "Andrew Parnell",
+        "url": "https://www.maynoothuniversity.ie/people/andrew-parnell"
+      },
+      {
+        "name": "Amin Shoari Nejad",
+        "url": "https://www.maynoothuniversity.ie/hamilton/"
+      },
+      {
+        "name": "Ken Duffy",
+        "url": "https://www.maynoothuniversity.ie/hamilton/our-people/ken-duffy"
+      },
+      {
+        "name": "HoChan Cheon",
+        "url": "https://www.maynoothuniversity.ie/hamilton/"
+      },
+      {
+        "name": "Bentelhoda Binaei",
+        "url": "https://www.maynoothuniversity.ie/hamilton/"
+      }
+    ],
+    "date": "2020-09-11",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-09-13T17:15:50+01:00",
+    "input_file": "how-long-will-covid-19-last-in-ireland.utf8.md"
+  },
+  {
     "path": "posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/",
     "title": "Re-emerging Indicators of Excess Mortality in Ireland",
     "description": "At the height of the COVID-19 crisis in Ireland, the death notices website RIP.ie provided a useful, open, and near-realtime indicator of excess mortality associated with the disease. With late summer seeing a rersurgence in cases in Ireland, we ask whether  postings to RIP.ie have risen in certain localities.",
