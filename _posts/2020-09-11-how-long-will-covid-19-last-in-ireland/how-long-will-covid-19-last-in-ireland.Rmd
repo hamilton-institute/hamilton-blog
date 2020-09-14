@@ -13,7 +13,7 @@ author:
     url: https://www.maynoothuniversity.ie/hamilton/
   - name: Bentelhoda Binaei
     url: https://www.maynoothuniversity.ie/hamilton/
-date: 09-11-2020
+date: 09-13-2020
 collections:
   posts:
     citations: true
@@ -60,7 +60,7 @@ The app takes four input values down the left hand side:
   
   - The 'Current number of non-symptomatic spreaders'. This value is the number of people who have the virus but aren't yet showing symptoms (if they ever do). They can pass the virus on to other people (they are infectious), but they might not know or have been tested. This is a really hard value to estimate. I usually set it to the same as the ...
   
-  - ... `Current number of symptomatic infected cases'. This number we do know a little bit better. It's the number of people who currently have the virus and know about it (i.e. have symptoms). They have likely tested positive, and can perhaps be estimated by summing up the number of people over the last two weeks who have had a positive test result. At the time of writing, that's just under 2000 people. 
+  - ... `Current number of symptomatic infected cases'. This number we do know a little bit better. It's the number of people who currently have the virus and know about it (i.e. have symptoms). They have likely tested positive, and can perhaps be estimated by summing up the number of people over the last two weeks who have had a positive test result. At the time of writing, that's just under 2000 people. Our app won't handle values that large right now but we're working on it.
   
   - The 'Current total of immune/recovered/dead'. This number includes all the people who have some kind of natural immunity, or have recovered from the disease, and so very unlikely to get it again, or have unfortunately already died from it. We have put a default value of 300,000 in for this figure, base on a guess that around [6% of the population](https://www.bmj.com/content/370/bmj.m3224) have antibodies to the disease. 
   
