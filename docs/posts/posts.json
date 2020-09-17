@@ -1,5 +1,29 @@
 [
   {
+    "path": "posts/2020-09-17-where-did-ireland-imports-its-covid-19-cases-from/",
+    "title": "Where did Ireland import its COVID-19 cases from?",
+    "description": "It probably wasn't your skiing trip in Italy",
+    "author": [
+      {
+        "name": "Amin Shoari Nejad",
+        "url": "https://www.maynoothuniversity.ie/hamilton/"
+      },
+      {
+        "name": "Andrew Parnell",
+        "url": "https://www.maynoothuniversity.ie/people/andrew-parnell"
+      },
+      {
+        "name": "Danilo Sarti",
+        "url": "https://www.maynoothuniversity.ie/hamilton/"
+      }
+    ],
+    "date": "2020-09-17",
+    "categories": [],
+    "preview": "posts/2020-09-17-where-did-ireland-imports-its-covid-19-cases-from/where-did-ireland-import-its-covid-19-cases-from_files/figure-html5/unnamed-chunk-4-1.png",
+    "last_modified": "2020-09-17T16:51:06+01:00",
+    "input_file": "where-did-ireland-import-its-covid-19-cases-from.utf8.md"
+  },
+  {
     "path": "posts/2020-09-11-how-long-will-covid-19-last-in-ireland/",
     "title": "How long will COVID-19 last in Ireland?",
     "description": "Short answer: most likely a very long time",
@@ -28,7 +52,7 @@
     "date": "2020-09-13",
     "categories": [],
     "preview": {},
-    "last_modified": "2020-09-16T12:29:23+01:00",
+    "last_modified": "2020-09-17T16:43:05+01:00",
     "input_file": "how-long-will-covid-19-last-in-ireland.utf8.md"
   },
   {

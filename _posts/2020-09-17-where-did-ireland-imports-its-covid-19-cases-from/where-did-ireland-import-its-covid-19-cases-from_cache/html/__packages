@@ -1,0 +1,12 @@
+base
+ggplot2
+plotly
+readr
+dplyr
+lubridate
+tidyverse
+tibble
+tidyr
+purrr
+stringr
+forcats

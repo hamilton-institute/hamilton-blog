@@ -1,0 +1,219 @@
+---
+title: "Where did Ireland import its COVID-19 cases from?"
+description: |
+  It probably wasn't your skiing trip in Italy
+author:
+  - name: Amin Shoari Nejad
+    url: https://www.maynoothuniversity.ie/hamilton/
+  - name: Andrew Parnell
+    url: https://www.maynoothuniversity.ie/people/andrew-parnell
+  - name: Danilo Sarti
+    url: https://www.maynoothuniversity.ie/hamilton/
+date: 09-17-2020
+collections:
+  posts:
+    citations: true
+    share: [twitter, linkedin]
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align = 'center', 
+                      fig.width = 8,
+                      fig.show = 'H')
+library(plotly)
+library(readr)
+library(dplyr)
+library(lubridate)
+library(tidyverse)
+```
+
+# tl:dr 
+
+-	By looking at incoming flights to Ireland during the first wave of the pandemic, we try to estimate where Ireland’s COVID-19 cases came from
+-	Whilst most people might think that Ireland’s cases came from people returning from skiing holidays in Italy, we think that the UK and the US were far more likely to be the main contributors
+-	There are A LOT of assumptions in these estimates, and the uncertainties are large
+
+# The App
+
+COVID-19 arrived in Ireland from people flying and sailing into the country at some point in late 2019 or early 2020. But how many people potentially with the virus came here, and where did they come from? We have built an app which tries to calculate this. It's a deeply uncertain science, but might be useful for those wishing to learn more about the origin of the virus. 
+
+See below for the app. Change the values on the left hand side, and you can see the effect on the estimated number of people arriving from different countries who we are guessing have had the disease. Read on to the later sections to learn about how we estimated these values and the potentially uncertainties and caveats associated with our analysis. 
+
+<iframe src="https://aminshn.shinyapps.io/Flight_App/" class="l-screen-inset shaded" height = "600px"></iframe>
+
+
+# Getting data
+
+We downloaded all the flight arrivals into Ireland from [flightradar24.com](http://www.flightradar24.com) since the beginning of the year. This website provided us with useful information about the number of planes flying to Ireland, plane type, travel origin and date of the travel. Here is a plot of all the flights. You can really see where the pandemic kicked in and passenger numbers dropped off the cliff:
+
+```{r}
+df1 <- read_csv("flights_data_15sept.csv")
+
+ df1$country[which(df1$country != "Germany" & df1$country != "United Kingdom" &  df1$country != "France" & df1$country != "Netherlands" & df1$country != "United States")] <- "Others"
+p = ggplot() +
+     geom_col(data = df1, aes(day, Arrivals, fill = country)) +
+     labs(y = "Arrivals", fill = "Country", x = NULL) +
+     theme_bw() +
+     ggtitle("Daily number of flights arriving in Ireland")
+ggplotly(p)
+```
+
+We can also plot where they came from. Here you can see that the vast majority came from UK:
+
+```{r}
+
+df2 <- read_csv("flights_data_15sept.csv")
+
+df3 <- df2 %>% filter(day < as.Date("2020-04-01"))
+df4 <- df2 %>% filter(day >= as.Date("2020-04-01"))
+
+df3 <- df3 %>% group_by(country) %>% summarise(Arrivals = sum(Arrivals))
+df4 <- df4 %>% group_by(country) %>% summarise(Arrivals = sum(Arrivals))
+
+p1 <- ggplot(df3, aes(reorder(country, -Arrivals), Arrivals, fill = "Arrivals")) + 
+    geom_col(show.legend = FALSE) +
+    theme_bw() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = NULL, y = NULL) +
+  theme(legend.position = 'none') +
+    ggtitle("Number of flights arriving in Ireland before 1st April 2020")
+ggplotly(p1, tooltip = "Arrivals")
+```
+
+After the lockdown the US flights still seemed to continue but the other flights were far less regular:
+    
+```{r}
+p2 <- ggplot(df4, aes(reorder(country, -Arrivals),Arrivals, fill = "Arrivals")) + 
+    geom_col(show.legend = FALSE) +
+    theme_bw() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = NULL, y = NULL) +
+    theme(legend.position = 'none') +
+   ggtitle("Number of flights arriving in Ireland after 1st April 2020")
+
+ggplotly(p2, tooltip = "Arrivals")
+
+```
+
+# Getting people from planes
+
+In order to estimate the number of infected passengers coming to Ireland, we assume that passengers are randomly selected from the population of their travel origin. This means that if there are 10% of a population of a country who are infected, we assume that 10% of the plane's passengers would also be infected. 
+
+The next step is to work out how many people are on the planes. 
+
+__Capacity of planes__: we used the plane type from the flight radar website to estimate the plane's passenger capacity. 
+
+__Planes’ occupancy rate__: we estimated this using [CSO data](https://www.cso.ie/en/statistics/transport/aviationstatistics/) which reports the total number of passengers flying to Ireland quarterly. 
+
+Knowing the total number of passengers and the total capacity of the planes flying to Ireland for each quarter we divide the former figure by the latter to estimate the occupancy rate and we assumed this rate is constant for all the flight routes. Our estimated rates are 85% for the first quarter and 35% for the second. The app above allows you to change these if you want to see how sensitive our results are to to these figures. 
+
+To finish off, we combined the plane type/capacity information with the estimates of the number of people in the origin country who had the disease at that time. Rather than rely on official reports of the number of confirmed cases by countries’ authorities (since that is highly dependent on the testing regime in that country) we decided to use excess mortality rates within each country and the COVID-19 fatality rate instead. Mortality rates are regularly reported by countries and one can simply compare these rates for the current year to the average of previous years to estimate the number of deaths associated with Covid-19.  We assumed that the virus fatality rate is constant in all countries and is around 3% which is estimated by dividing the number of deaths over the number of confirmed cases in US and Germany, the two countries with the highest [amount of testing](https://coronavirus.jhu.edu/map.html). 
+
+Having the estimated number of deaths associated with COVID-19 and the virus fatality rates we are able to estimate the number of infected people for each country by dividing the number of deaths by the fatality rate. We make the further assumption that on average it takes 21 days from being exposed to the virus and dying from it. We assumed this 21 days’ lag for estimating the number infected people by looking at the number of deaths for 21 days after the day for which we were trying to do our estimation. 
+
+Multiplying all these figures together enabled us to come up with a plot which shows the number of people having bringing the virus to Ireland by their travel origin:
+
+
+```{r}
+merged3 <- read_csv("merged3.csv") #merged3 dataset in the original code
+merged <- read_csv("virusdata_app.csv") #merged dataset in the original code
+
+merged$country <- as.factor(merged$country) 
+
+merged2 <- merged %>% filter(country == "Austria"|  country == "Belgium" | country == "Switzerland" | country == "Czechia"|
+                               country == "Germany" | country == "Denmark" | country == "Spain" | country == "France"|
+                               country == "United Kingdom" | country == "Hungary" | country == "Iceland" | country == "Italy" |
+                               country == "Malta" | country == "Netherlands" | country == "Norway" | country == "Portugal" |
+                               country == "Russia" | country == "Sweden" | country == "Turkey" | country == "United States")
+
+
+
+#Parameters:
+m <- 0.03 #Mortality rate
+o1 <- 0.85 #Occupancy rate before lockdown
+o2 <- 0.35 #Occupancy rate after lockdown
+
+  
+  merged2 <- merged2 %>% group_by(country) %>% mutate(new_cases = (lead(deaths,21)- deaths)/m) 
+  merged2 <- merged2[,c(3,4,39)]
+  merged2$new_cases[is.na(merged2$new_cases)] <- 0
+  names(merged2)[2] <- "day"
+  
+  ####Adding covid-19 data to flights data:
+  merged4 <- left_join(merged3, merged2)
+  merged4$new_cases[is.na(merged4$new_cases)] <- 0
+  merged4$population <- as.numeric(merged4$population)
+  merged4 <- merged4 %>% mutate(ratio = new_cases/population)
+  merged4 <- merged4 %>% mutate(carriers = capacity*ratio)
+  merged4$carriers[which(merged4$day < "2020-04-01")] <- merged4$carriers[which(merged4$day < "2020-04-01")] *o1
+  merged4$carriers[which(merged4$day >= "2020-04-01")] <- merged4$carriers[which(merged4$day >= "2020-04-01")] *o2
+  
+  merged4 <- na.omit(merged4)
+  
+  
+  x <- merged4 %>% group_by(country) %>% summarise(carriers = sum(carriers))
+  x <- arrange(x,desc(carriers))
+  
+  p <- ggplot(x, aes(reorder(country, -carriers),carriers, fill = "carriers")) + geom_col(show.legend = FALSE) +
+    theme_bw() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = NULL, y = NULL) +
+    ggtitle("Number of infected people coming to Ireland from January until June 2020")
+  
+  
+  #ggplotly(p) Doesn't work!
+  p
+
+```
+
+Our analyses show that UK followed by the US and France are the top three countries with the highest number of infected passengers flying from to Ireland from the start of the pandemic to June 2020. Interestingly Italy, long thought to be a key contributor to Ireland’s cases, seems well down the list. 
+
+We can also plot this by date: 
+
+```{r}
+
+##### Weekly report:
+merged4$country[which(merged4$country != as.character(x[1,1]) & merged4$country != as.character(x[2,1]) &  merged4$country != as.character(x[3,1]) & merged4$country != as.character(x[4,1]))] <- "Others"
+
+ y <- merged4 %>% 
+    group_by(day = floor_date(day, "week"), country) %>% 
+    summarise(carriers = sum(carriers))
+ 
+  ggplot() + 
+    geom_col(data = y, aes(day, carriers, fill = country)) + 
+    labs(x = NULL ,y = "Virus carriers per week", fill = "Country") +
+    ggtitle("Estimated COVID-19 cases per week imported to Ireland") +
+    scale_x_date(date_breaks = "2 week") +
+    theme_bw() +
+    theme(axis.title=element_text(size=15,face="bold"),
+          axis.text.x = element_text(angle = 45, hjust = 1, size = 12))
+
+```
+
+To simplify the visualization, we have shown the top four countries with the highest number of cases imported to Ireland and all other countries categorized as 'Others'. In late February and early March, before the lockdown started, the majority of cases being imported seem to come mainly from the UK. With the start of the lockdown in Ireland in mid-March, the number of passengers drops significantly but the UK and US remained the two major countries contributing the most to the number of infected people flying to Ireland. 
+
+# A reminder of the assumptions
+
+It’s important to remember that we have a number of assumptions in this work, and this is only just a best guess. The uncertainties are large! 
+
+We are assuming that:
+
+1.	The mortality rates across countries are accurate, and that a 3% death toll is a reasonable assumption to estimate the number of cases. This is tunable in the app
+
+2.	That the plane occupancy rates are 85% before the Irish lockdown and 35% after the lockdown. These are both tunable in the app
+
+3.	That the mortality rate does not change over time
+
+4.	That virus carriers boarding planes are randomly sampled from each country's population
+
+5.	That there is a 21 day lag assumed from infection to death.
+
+If you think you have better estimates or superior ways of estimating these quantities, please [get in touch](https://www.hamilton.ie/covid19/about.html). 
+
+
