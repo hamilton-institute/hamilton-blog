@@ -164,7 +164,7 @@ o2 <- 0.35 #Occupancy rate after lockdown
     theme_bw() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
     labs(x = NULL, y = NULL) +
-    ggtitle("Number of infected people coming to Ireland from January until June 2020")
+    ggtitle("Estimated number of infected people coming to Ireland from January until June 2020")
   
   
   #ggplotly(p) Doesn't work!
