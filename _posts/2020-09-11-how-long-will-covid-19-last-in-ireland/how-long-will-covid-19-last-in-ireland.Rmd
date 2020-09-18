@@ -14,6 +14,7 @@ author:
   - name: Bentelhoda Binaei
     url: https://www.maynoothuniversity.ie/hamilton/
 date: 09-13-2020
+citation_url: https://www.hamilton.ie/covid19/posts/2020-09-11-how-long-will-covid-19-last-in-ireland/
 collections:
   posts:
     citations: true

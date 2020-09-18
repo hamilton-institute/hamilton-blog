@@ -1,0 +1,94 @@
+---
+title: "Cases, hospitalisations, and ICU admissions"
+description: |
+  Back in March, cases rose, then hospitalisations, then ICU admissions, then deaths. Is the same thing happening now?
+author:
+  - name: Andrew Parnell
+    url: https://www.maynoothuniversity.ie/people/andrew-parnell
+date: 09-14-2020
+collections:
+  posts:
+    citations: true
+    share: [twitter, linkedin]
+output:
+  distill::distill_article:
+    self_contained: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align = 'center', 
+                      fig.show = 'H')
+library(tidyverse)
+library(plotly)
+library(scales)
+library(data.table)
+library(lubridate)
+library(jsonlite)
+```
+
+When COVID-19 hit first time around, we were all anxiously watching on as the cases rose, with the concern that hospitals and their ICU departments would be over-run. In Ireland, the government, through the National Public Health Emergency Team (NPHET) spotted this concern and, like many other governments, locked down the country. As discussed in a [previous post](https://www.hamilton.ie/covid19/posts/2020-07-27-traffic-analysis/), Ireland had two lockdowns:
+
+>  Ireland had broadly a [two-stage](https://en.wikipedia.org/wiki/COVID-19_pandemic_in_the_Republic_of_Ireland) strategy, with schools, many workplaces, etc, closed on the 12th March, with everyone advised to stay at home from 27th March. 
+
+The effect of that lockdown didn't really hit until about two to three weeks after that point. Up until then, the cases were going up, then the hospitalisations, then the ICU admissions, and then the deaths. Unfortunately our testing strategy wasn't up to scratch at that point. According to the [GeoHIVE official figures](https://opendata.arcgis.com/datasets/f6d6332820ca466999dbd852f6ad4d5a_0.geojson), we were only managing about 2,000 tests per day by the end of March, whereas now we're regularly doing more than 10,000.
+
+So the question this post tries to answer is: given 'the chain', i.e. cases -> hospitalisations -> ICU -> deaths, can we say anything about the wave we're in now compared to what happened in March.
+
+## What did happen in March?
+
+Here's a plot showing the chain data from March:
+
+```{r}
+# Need to download all the cases/deaths data:
+latest_data_file = "https://opendata.arcgis.com/datasets/d8eb52d56273413b84b0187a4e9117be_0.geojson"
+latest_cases = jsonlite::fromJSON(RCurl::getURL(latest_data_file))$features$properties %>%
+    mutate(Date = as.Date(Date),
+           `1. Cases` = c(0, diff(TotalConfirmedCovidCases)),
+           `6. Deaths` =  pmax(0, c(0, diff(TotalCovidDeaths)))) %>%
+  select(Date, `1. Cases`, `6. Deaths`)
+
+latest_hosp_file = "https://opendata.arcgis.com/datasets/fe9bb23592ec4142a4f4c2c9bd32f749_0.geojson" 
+latest_hosp = jsonlite::fromJSON(RCurl::getURL(latest_hosp_file))$features$properties %>% 
+    mutate(Date = as.Date(Date),
+           `4. Hospital admissions` = SUM_no_new_admissions_covid19_p) %>% 
+  select(Date, `4. Hospital admissions`)
+
+latest_ICU_file = "https://opendata.arcgis.com/datasets/c8208a0a8ff04a45b2922ae69e9b2206_0.geojson"
+latest_ICU = jsonlite::fromJSON(RCurl::getURL(latest_ICU_file))$features$properties %>% 
+  mutate(Date = as.Date(extract),
+         `5. ICU admissions` = adcconf) %>% 
+  select(Date, `5. ICU admissions`)
+
+latest_test_file = "https://opendata.arcgis.com/datasets/f6d6332820ca466999dbd852f6ad4d5a_0.geojson"
+latest_test = jsonlite::fromJSON(RCurl::getURL(latest_test_file))$features$properties %>% 
+  mutate(Date = as.Date(Date_HPSC),
+         `2. Daily tests` = pmax(0, c(NA, diff(TotalLabs))),
+         `3. Positive rate` = PRate) %>% 
+  select(Date, `2. Daily tests`, `3. Positive rate`)
+
+latest_data = latest_cases %>% 
+  left_join(latest_hosp, by = 'Date') %>% 
+  left_join(latest_ICU, by = 'Date') %>% 
+  left_join(latest_test, by = 'Date')
+  
+  
+  
+plot_data1 = latest_data %>%
+  pivot_longer(names_to = 'Type', values_to = 'Count', -Date)
+
+p = ggplot(plot_data1, aes(x = Date, y = Count, colour = Type)) + 
+  geom_point() + 
+  #geom_smooth() +
+  scale_x_date(breaks = '2 weeks', date_labels = "%d-%b") +
+  facet_wrap(~Type, ncol=1, scales = 'free_y') + 
+  theme(legend.position = 'none')
+ggplotly(p)
+```
+
+
+

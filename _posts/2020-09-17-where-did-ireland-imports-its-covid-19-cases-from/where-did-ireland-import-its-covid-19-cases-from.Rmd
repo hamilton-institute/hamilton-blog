@@ -10,6 +10,7 @@ author:
   - name: Danilo Sarti
     url: https://www.maynoothuniversity.ie/hamilton/
 date: 09-17-2020
+citation_url: https://www.hamilton.ie/covid19/posts/2020-09-17-where-did-ireland-imports-its-covid-19-cases-from/
 collections:
   posts:
     citations: true
