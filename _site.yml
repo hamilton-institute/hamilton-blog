@@ -3,6 +3,7 @@ title: "Ireland's COVID-19 Data Dive"
 description: |
   The Hamilton Institute Blog
 output_dir: "docs"
+google_analytics: "UA-74593956-3"
 navbar:
   logo:
     image: img/logo_small.jpeg
