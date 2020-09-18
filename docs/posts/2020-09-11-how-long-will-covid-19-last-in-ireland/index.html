@@ -1486,6 +1486,7 @@ Apps
 <li>The use of Exponential/Gamma distributions to model the waiting times in each compartment. There seems to be very little published information as to the proper shape of these distributions</li>
 <li>The parameters we have used in the model may be inaccurate and also may change dynamically throughout the epidemic</li>
 <li>The simulations of the time to extinction can be very noisy. This is especially true when <code>R_0</code> approaches 1 as the behaviour starts to behave like a random walk (with an absorbing boundary) which leads to very large (infinite?) variance in the time to extinction.</li>
+<li>The SEIR model itself might be unrealistic. For example there are versions which allow for re-infection of previously infected individuals. However the <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/faq.html">CDC say this is unlikely</a>.</li>
 <li>The emulation approach we have used introduces noise in the estimates of the time to extinction, and could be reduced with more simulations or a superior machine learning or emulation model.</li>
 </ul>
 <p>If you can think of other caveats or issues with our app please <a href="https://www.hamilton.ie/covid19/about.html">contact us</a>.</p>
