@@ -46,7 +46,7 @@ COVID-19 arrived in Ireland from people flying and sailing into the country at s
 
 See below for the app. Change the values on the left hand side, and you can see the effect on the estimated number of people arriving from different countries who we are guessing have had the disease. Read on to the later sections to learn about how we estimated these values and the potentially uncertainties and caveats associated with our analysis. 
 
-<iframe src="https://aminshn.shinyapps.io/Flight_App/" class="l-screen-inset shaded" height = "600px"></iframe>
+<iframe src="https://rstudioserver.hamilton.ie:3838/users/aparnell/WhereDid/" class="l-screen-inset shaded" height = "600px"></iframe>
 
 
 # Getting data
