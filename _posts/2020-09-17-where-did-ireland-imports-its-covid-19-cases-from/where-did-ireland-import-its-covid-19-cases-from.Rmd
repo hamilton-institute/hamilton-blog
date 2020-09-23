@@ -38,7 +38,7 @@ library(tidyverse)
 
 -	By looking at incoming flights to Ireland during the first wave of the pandemic, we try to estimate where Ireland’s COVID-19 cases came from
 -	Whilst most people might think that Ireland’s cases came from people returning from skiing holidays in Italy, we think that the UK and the US were far more likely to be the main contributors
--	There are A LOT of assumptions in these estimates, and the uncertainties are large
+-	There are A LOT of assumptions in these estimates, and the uncertainties are large. Also, note that we are only using flights data whereas passengers could travel to Ireland through different ways plus we are not including transiting passengers. 
 
 # The App
 
@@ -50,8 +50,7 @@ See below for the app. Change the values on the left hand side, and you can see 
 
 
 # Getting data
-
-We downloaded all the flight arrivals into Ireland from [flightradar24.com](http://www.flightradar24.com) since the beginning of the year. This website provided us with useful information about the number of planes flying to Ireland, plane type, travel origin and date of the travel. Here is a plot of all the flights. You can really see where the pandemic kicked in and passenger numbers dropped off the cliff:
+We downloaded all the flight arrivals into Ireland from [opensky-network.org](https://opensky-network.org/) since the beginning of the year. This website provided us with useful information about the number of planes flying to Ireland, plane type, travel origin and date of the travel. Here is a plot of all the flights. You can really see where the pandemic kicked in and passenger numbers dropped off the cliff:
 
 ```{r}
 df1 <- read_csv("flights_data_15sept.csv")
@@ -114,7 +113,7 @@ __Planes’ occupancy rate__: we estimated this using [CSO data](https://www.cso
 
 Knowing the total number of passengers and the total capacity of the planes flying to Ireland for each quarter we divide the former figure by the latter to estimate the occupancy rate and we assumed this rate is constant for all the flight routes. Our estimated rates are 85% for the first quarter and 35% for the second. The app above allows you to change these if you want to see how sensitive our results are to to these figures. 
 
-To finish off, we combined the plane type/capacity information with the estimates of the number of people in the origin country who had the disease at that time. Rather than rely on official reports of the number of confirmed cases by countries’ authorities (since that is highly dependent on the testing regime in that country) we decided to use excess mortality rates within each country and the COVID-19 fatality rate instead. Mortality rates are regularly reported by countries and one can simply compare these rates for the current year to the average of previous years to estimate the number of deaths associated with Covid-19.  We assumed that the virus fatality rate is constant in all countries and is around 3% which is estimated by dividing the number of deaths over the number of confirmed cases in US and Germany, the two countries with the highest [amount of testing](https://coronavirus.jhu.edu/map.html). 
+To finish off, we combined the plane type/capacity information with the estimates of the number of people in the origin country who had the disease at that time. Rather than rely on official reports of the number of confirmed cases by countries’ authorities (since that is highly dependent on the testing regime in that country) we decided to use excess mortality rates within each country and the COVID-19 fatality rate instead. Mortality rates are regularly reported by countries and one can simply compare these rates for the current year to the average of previous years to estimate the number of deaths associated with Covid-19.  We assumed that the virus infection fatality rate (IFR) is constant in all countries and is around 1% suggested by some serological [surveys](https://www.who.int/news-room/commentaries/detail/estimating-mortality-from-covid-19).
 
 Having the estimated number of deaths associated with COVID-19 and the virus fatality rates we are able to estimate the number of infected people for each country by dividing the number of deaths by the fatality rate. We make the further assumption that on average it takes 21 days from being exposed to the virus and dying from it. We assumed this 21 days’ lag for estimating the number infected people by looking at the number of deaths for 21 days after the day for which we were trying to do our estimation. 
 
