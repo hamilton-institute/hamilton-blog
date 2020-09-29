@@ -45,27 +45,23 @@ Here's a plot showing the chain data from March:
 
 ```{r}
 # Need to download all the cases/deaths data:
-latest_data_file = "https://opendata.arcgis.com/datasets/d8eb52d56273413b84b0187a4e9117be_0.geojson"
-latest_cases = jsonlite::fromJSON(RCurl::getURL(latest_data_file))$features$properties %>%
-    mutate(Date = as.Date(Date),
+latest_cases = read.csv('http://opendata-geohive.hub.arcgis.com/datasets/d8eb52d56273413b84b0187a4e9117be_0.csv') %>% 
+  mutate(Date = as.Date(Date),
            `1. Cases` = c(0, diff(TotalConfirmedCovidCases)),
            `6. Deaths` =  pmax(0, c(0, diff(TotalCovidDeaths)))) %>%
   select(Date, `1. Cases`, `6. Deaths`)
 
-latest_hosp_file = "https://opendata.arcgis.com/datasets/fe9bb23592ec4142a4f4c2c9bd32f749_0.geojson" 
-latest_hosp = jsonlite::fromJSON(RCurl::getURL(latest_hosp_file))$features$properties %>% 
+latest_hosp = read.csv('http://opendata-geohive.hub.arcgis.com/datasets/fe9bb23592ec4142a4f4c2c9bd32f749_0.csv') %>% 
     mutate(Date = as.Date(Date),
            `4. Hospital admissions` = SUM_no_new_admissions_covid19_p) %>% 
   select(Date, `4. Hospital admissions`)
 
-latest_ICU_file = "https://opendata.arcgis.com/datasets/c8208a0a8ff04a45b2922ae69e9b2206_0.geojson"
-latest_ICU = jsonlite::fromJSON(RCurl::getURL(latest_ICU_file))$features$properties %>% 
+latest_ICU = read.csv("https://opendata.arcgis.com/datasets/c8208a0a8ff04a45b2922ae69e9b2206_0.csv") %>% 
   mutate(Date = as.Date(extract),
          `5. ICU admissions` = adcconf) %>% 
   select(Date, `5. ICU admissions`)
 
-latest_test_file = "https://opendata.arcgis.com/datasets/f6d6332820ca466999dbd852f6ad4d5a_0.geojson"
-latest_test = jsonlite::fromJSON(RCurl::getURL(latest_test_file))$features$properties %>% 
+latest_test = read.csv("https://opendata.arcgis.com/datasets/f6d6332820ca466999dbd852f6ad4d5a_0.csv") %>% 
   mutate(Date = as.Date(Date_HPSC),
          `2. Daily tests` = pmax(0, c(NA, diff(TotalLabs))),
          `3. Positive rate` = PRate) %>% 
@@ -75,7 +71,6 @@ latest_data = latest_cases %>%
   left_join(latest_hosp, by = 'Date') %>% 
   left_join(latest_ICU, by = 'Date') %>% 
   left_join(latest_test, by = 'Date')
-  
   
   
 plot_data1 = latest_data %>%
