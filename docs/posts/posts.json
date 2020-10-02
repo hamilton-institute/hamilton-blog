@@ -1,5 +1,28 @@
 [
   {
+    "path": "posts/2020-10-01-how-hard-to-predict-cases/",
+    "title": "How hard is it to predict COVID-19 cases?",
+    "description": "Short answer: very hard!",
+    "author": [
+      {
+        "name": "Rafael Moral",
+        "url": "https://www.maynoothuniversity.ie/people/rafael-de-andrade-moral"
+      },
+      {
+        "name": "Thiago Oliveira",
+        "url": "https://prof-thiagooliveira.netlify.app"
+      },
+      {
+        "name": "Andrew Parnell",
+        "url": "https://www.maynoothuniversity.ie/people/andrew-parnell"
+      }
+    ],
+    "date": "2020-09-29",
+    "categories": [],
+    "preview": "posts/2020-10-01-how-hard-to-predict-cases/distill-preview.png",
+    "last_modified": "2020-09-29T16:33:02+01:00"
+  },
+  {
     "path": "posts/2020-09-17-where-did-ireland-imports-its-covid-19-cases-from/",
     "title": "Where did Ireland import its COVID-19 cases from?",
     "description": "It probably wasn't your skiing trip in Italy",
@@ -20,8 +43,7 @@
     "date": "2020-09-17",
     "categories": [],
     "preview": "posts/2020-09-17-where-did-ireland-imports-its-covid-19-cases-from/where-did-ireland-import-its-covid-19-cases-from_files/figure-html5/unnamed-chunk-4-1.png",
-    "last_modified": "2020-09-24T12:52:57+01:00",
-    "input_file": "where-did-ireland-import-its-covid-19-cases-from.utf8.md"
+    "last_modified": "2020-09-28T12:44:21+01:00"
   },
   {
     "path": "posts/2020-09-11-how-long-will-covid-19-last-in-ireland/",
@@ -52,8 +74,7 @@
     "date": "2020-09-13",
     "categories": [],
     "preview": {},
-    "last_modified": "2020-09-18T11:30:32+01:00",
-    "input_file": "how-long-will-covid-19-last-in-ireland.utf8.md"
+    "last_modified": "2020-09-28T12:44:21+01:00"
   },
   {
     "path": "posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/",
@@ -87,8 +108,7 @@
       "RIP.ie"
     ],
     "preview": "posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/distill-preview.png",
-    "last_modified": "2020-09-23T21:28:41+01:00",
-    "input_file": "2020-08-indictorsofexcessmortalityfromripie.utf8.md"
+    "last_modified": "2020-09-28T12:44:20+01:00"
   },
   {
     "path": "posts/2020-07-27-traffic-analysis/",
@@ -109,7 +129,6 @@
       "transport"
     ],
     "preview": "posts/2020-07-27-traffic-analysis/TII_web.png",
-    "last_modified": "2020-09-09T09:46:48+01:00",
-    "input_file": {}
+    "last_modified": "2020-09-08T14:31:31+01:00"
   }
 ]
