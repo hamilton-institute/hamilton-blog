@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Just a bad flu?</title>
+  
+  <meta property="description" itemprop="description" content="No, Covid-19 killed more in one month than the worst seasonal flu in recent years did in three months"/>
+  
+  
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2020-09-04"/>
+  <meta property="article:created" itemprop="dateCreated" content="2020-09-04"/>
+  <meta name="article:author" content="Gerard D McCarthy"/>
+  <meta name="article:author" content="Rebecca L Dempsey"/>
+  <meta name="article:author" content="Andrew Parnell"/>
+  <meta name="article:author" content="Pádraig MacCarron"/>
+  
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Just a bad flu?"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="No, Covid-19 killed more in one month than the worst seasonal flu in recent years did in three months"/>
+  <meta property="og:locale" content="en_US"/>
+  
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Just a bad flu?"/>
+  <meta property="twitter:description" content="No, Covid-19 killed more in one month than the worst seasonal flu in recent years did in three months"/>
+  
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Just a bad flu?"]},{"type":"character","attributes":{},"value":["No, Covid-19 killed more in one month than the worst seasonal flu in recent years did in three months\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Gerard D McCarthy"]},{"type":"character","attributes":{},"value":["https://www.maynoothuniversity.ie/icarus/our-people/gerard-mccarthy"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Rebecca L Dempsey"]},{"type":"character","attributes":{},"value":["https://www.maynoothuniversity.ie/geography/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Andrew Parnell"]},{"type":"character","attributes":{},"value":["https://hamilton-institute.github.io/docs/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Pádraig MacCarron"]},{"type":"character","attributes":{},"value":["https://www.ul.ie/dafinet/p%C3%A1draig-mac-carron"]}]}]},{"type":"character","attributes":{},"value":["09-04-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["compare_flu_prop.png","cso_vs_rip_w_unc.png","cso_vs_rip.html","just-a-bad-flu_files/bowser-1.9.3/bowser.min.js","just-a-bad-flu_files/distill-2.2.21/template.v2.js","just-a-bad-flu_files/jquery-1.11.3/jquery.min.js","just-a-bad-flu_files/webcomponents-2.0.0/webcomponents.js","mx_covid_map_mod.png","rip_prev_flu_focused_prop.html","rip_prev_flu_focused_prop.png","rip_prev_flu.html"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+  
+  <style type="text/css">
+  
+  body {
+    background-color: white;
+  }
+  
+  .pandoc-table {
+    width: 100%;
+  }
+  
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+  
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+  
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+  
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+  
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+  
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+  
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .shaded .shaded-content {
+    background: white;
+  }
+  
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  d-article {
+    padding-bottom: 30px;
+  }
+  
+  d-appendix {
+    padding-top: 30px;
+  }
+  
+  d-article>p>img {
+    width: 100%;
+  }
+  
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+  
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  /* CSS for table of contents */
+  
+  .d-toc {
+    color: rgba(0,0,0,0.8);
+    font-size: 0.8em;
+    line-height: 1em;
+  }
+  
+  .d-toc-header {
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 1.3em;
+  }
+  
+  .d-toc a {
+    border-bottom: none;
+  }
+  
+  .d-toc ul {
+    padding-left: 0;
+  }
+  
+  .d-toc li>ul {
+    padding-top: 0.8em;
+    padding-left: 16px;
+    margin-bottom: 0.6em;
+  }
+  
+  .d-toc ul,
+  .d-toc li {
+    list-style-type: none;
+  }
+  
+  .d-toc li {
+    margin-bottom: 0.9em;
+  }
+  
+  .d-toc-separator {
+    margin-top: 20px;
+    margin-bottom: 2em;
+  }
+  
+  .d-article-with-toc {
+    border-top: none;
+    padding-top: 0;
+  }
+  
+  
+  
+  /* Tweak code blocks (note that this CSS is repeated above in an injection
+     into the d-code shadow dom) */
+  
+  d-code {
+    overflow-x: auto !important;
+  }
+  
+  pre.d-code code.d-code {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+  
+  pre.text-output {
+  
+    font-size: 12px;
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+  
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  
+  @media(min-width: 768px) {
+  
+  d-code {
+    overflow-x: visible !important;
+  }
+  
+  pre.d-code code.d-code  {
+      padding-left: 18px;
+      font-size: 14px;
+  }
+  pre.text-output {
+    font-size: 14px;
+  }
+  }
+  
+  /* Figure */
+  
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+  
+  .figure img {
+    width: 100%;
+  }
+  
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+  
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+  
+  
+  
+  /* Tweak 1000px media break to show more text */
+  
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+  
+    .grid {
+      grid-column-gap: 16px;
+    }
+  
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+  
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+  
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+  
+  
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+  
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  
+  /* Social footer */
+  
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+  
+  .disqus-comments {
+    margin-right: 30px;
+  }
+  
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  
+  #disqus_thread {
+    margin-top: 30px;
+  }
+  
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+  
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+  
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+  
+  
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+  
+  
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+  
+  
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+  
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+  
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+  
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+  
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  
+  
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+  
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+  
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+  
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+  
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+  
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  
+  </style>
+  
+  <script type="application/javascript">
+  
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+  
+  // show body when load is complete
+  function on_load_complete() {
+  
+    // set body to visible
+    document.body.style.visibility = 'visible';
+  
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+  
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+  
+  function init_distill() {
+  
+    init_common();
+  
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+  
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+  
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+  
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+  
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+  
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+  
+    // create d-bibliography
+    var bibliography = $('<d-bibliography></d-bibliography>');
+    $('#distill-bibliography').wrap(bibliography);
+  
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+  
+    // replace citations with <d-cite>
+    $('.citation').each(function(i, val) {
+      appendix = true;
+      var cites = $(this).attr('data-cites').split(" ");
+      var dt_cite = $('<d-cite></d-cite>');
+      dt_cite.attr('key', cites.join());
+      $(this).replaceWith(dt_cite);
+    });
+    // remove refs
+    $('#refs').remove();
+  
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+  
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-toc a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+  
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+  
+    // replace code blocks with d-code
+    $('pre>code').each(function(i, val) {
+      var code = $(this);
+      var pre = code.parent();
+      var clz = "";
+      var language = pre.attr('class');
+      if (language) {
+        // map unknown languages to "clike" (without this they just dissapear)
+        if ($.inArray(language, ["bash", "clike", "css", "go", "html",
+                                 "javascript", "js", "julia", "lua", "markdown",
+                                 "markup", "mathml", "python", "svg", "xml"]) == -1)
+          language = "clike";
+        language = ' language="' + language + '"';
+        var dt_code = $('<d-code block' + language + clz + '></d-code>');
+        dt_code.text(code.text());
+        pre.replaceWith(dt_code);
+      } else {
+        code.addClass('text-output').unwrap().changeElementType('pre');
+      }
+    });
+  
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+  
+      // capture layout
+      var layout = $(this).attr('data-layout');
+  
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('d-code, pre.text-output, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+  
+  
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+  
+    // load distill framework
+    load_distill_framework();
+  
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+  
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+  
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+  
+      // table of contents
+      if (have_authors) // adjust border if we are in authors
+        $('.d-toc').parent().addClass('d-article-with-toc');
+  
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+  
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+  
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+  
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+  
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+  
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+  
+      // inject pre code styles (can't do this with a global stylesheet b/c a shadow root is used)
+      $('d-code').each(function(i, val) {
+        var style = document.createElement('style');
+        style.innerHTML = 'pre code { padding-left: 10px; font-size: 12px; border-left: 2px solid rgba(0,0,0,0.1); } ' +
+                          '@media(min-width: 768px) { pre code { padding-left: 18px; font-size: 14px; } }';
+        if (this.shadowRoot)
+          this.shadowRoot.appendChild(style);
+      });
+  
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+  
+      // clear polling timer
+      clearInterval(tid);
+  
+      // show body now that everything is ready
+      on_load_complete();
+    }
+  
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+  
+  }
+  
+  function init_downlevel() {
+  
+    init_common();
+  
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+  
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+  
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+  
+    // remove toc
+    $('.d-toc-header').remove();
+    $('.d-toc').remove();
+    $('.d-toc-separator').remove();
+  
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+  
+  
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+  
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+  
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+  
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+  
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+  
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+  
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+  
+    $('body').addClass('downlevel');
+  
+    on_load_complete();
+  }
+  
+  
+  function init_common() {
+  
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+  
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+  
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+  
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+  
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+  
+      }
+    });
+  
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+  
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+  
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+  
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+  
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+  
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+  
+  </script>
+  
+  <!--/radix_placeholder_distill-->
+  <script src="just-a-bad-flu_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="just-a-bad-flu_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="just-a-bad-flu_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="just-a-bad-flu_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Just a bad flu?","description":"No, Covid-19 killed more in one month than the worst seasonal flu in recent years did in three months","authors":[{"author":"Gerard D McCarthy","authorURL":"https://www.maynoothuniversity.ie/icarus/our-people/gerard-mccarthy","affiliation":"&nbsp;","affiliationURL":"#"},{"author":"Rebecca L Dempsey","authorURL":"https://www.maynoothuniversity.ie/geography/","affiliation":"&nbsp;","affiliationURL":"#"},{"author":"Andrew Parnell","authorURL":"https://hamilton-institute.github.io/docs/","affiliation":"&nbsp;","affiliationURL":"#"},{"author":"Pádraig MacCarron","authorURL":"https://www.ul.ie/dafinet/p%C3%A1draig-mac-carron","affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2020-09-04T00:00:00.000+01:00","citationText":"McCarthy, et al., 2020"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Just a bad flu?</h1>
+<p>No, Covid-19 killed more in one month than the worst seasonal flu in recent years did in three months</p>
+</div>
+
+<div class="d-byline">
+  Gerard D McCarthy <a href="https://www.maynoothuniversity.ie/icarus/our-people/gerard-mccarthy" class="uri">https://www.maynoothuniversity.ie/icarus/our-people/gerard-mccarthy</a> 
+  
+,   Rebecca L Dempsey <a href="https://www.maynoothuniversity.ie/geography/" class="uri">https://www.maynoothuniversity.ie/geography/</a> 
+  
+,   Andrew Parnell <a href="https://hamilton-institute.github.io/docs/" class="uri">https://hamilton-institute.github.io/docs/</a> 
+  
+,   Pádraig MacCarron <a href="https://www.ul.ie/dafinet/p%C3%A1draig-mac-carron" class="uri">https://www.ul.ie/dafinet/p%C3%A1draig-mac-carron</a> 
+  
+<br/>09-04-2020
+</div>
+
+<div class="d-article">
+<p>Summary statistics of mortality associated with COVID-19 belie the fact that the effectiveness and compliance with lockdown stopped Covid-19 in its tracks. Still the disease managed to kill in one month as many people as the worst seasonal flu in recent years did over three months.</p>
+<p><a href="https://www.irishtimes.com/news/health/draconian-restrictions-around-covid-19-condemned-by-hse-doctor-1.4352701">Comments by a senior HSE doctor</a> that Covid-19 is “much less severe” than the seasonal flu sparked heated debate about the deadliness of Covid-19 and robust defence of the ongoing restrictions and measures to combat the virus. Analysing excess mortality derived from postings to the death notice website RIP.ie, we clearly observe that excess mortality patterns in Ireland during the first wave of the Covid-19 pandemic were not comparable to recent flu seasons: Covid-19 killed more people in one month than the most recent severe flu season did in three.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="compare_flu_prop.png" alt="Percentage excess postings above normal levels (dashed line) to RIP.ie for Covid-19 and previous flu seasons." width="90%" />
+<p class="caption">
+Figure 1: Percentage excess postings above normal levels (dashed line) to RIP.ie for Covid-19 and previous flu seasons.
+</p>
+</div>
+</div>
+<p>Headline figures can mask the underlying patterns. There were fewer notices posted to RIP.ie during the Covid-19 period of March–May 2020 than either of the severe flu seasons in December–February in 2017/18 and 2016/17. However, it is excess mortality—here estimated by the number of postings higher than the average postings for that time of year taken from 2014–2020—that is the appropriate measure for estimating the deadly impact of virus outbreaks. Excess mortality requires adjustment for typically higher mortality in the winter months. Subsequently despite lower overall postings excess mortality for the Covid-19 period is almost 40% higher than that recorded for the ‘severe’ flu season of 2017/18.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="rip_prev_flu_focused_prop.png" alt="Total numbers of postings to RIP.ie are calibrated to official mortality figures from 2014–2019. Excess numbers of postings are calculated relative to the seasonal average from 2014–2020. 3-Month totals and excess are calculated from December–February inclusive for flu seasons and March–May 2020 for Covid-19. 28–Day is the maximum 28-day total and excess within the respective 3–Month periods." width="1%" />
+<p class="caption">
+Figure 2: Total numbers of postings to RIP.ie are calibrated to official mortality figures from 2014–2019. Excess numbers of postings are calculated relative to the seasonal average from 2014–2020. 3-Month totals and excess are calculated from December–February inclusive for flu seasons and March–May 2020 for Covid-19. 28–Day is the maximum 28-day total and excess within the respective 3–Month periods.
+</p>
+</div>
+</div>
+<p>The measures introduced to combat Covid-19 were unprecedented and touched every element of society. Might we have expected higher excess mortality for Covid-19? The unprecedented measures implemented did in fact do an effective job of curtailing the spike in excess mortality. Narrowing the window to 28 days, highlighted the most pronounced difference between Covid-19 and the previous flu seasons. In this time window, we see that the Covid-related excess mortality was almost double the maximum of the 2017/18 flu season, Covid-19 related mortality peaking at 56% above normal levels, with the flu seasons with 30% and 27% above normal levels in 2017/18 and 2016/17 respectively.</p>
+<p>The trajectory of the excess postings shows the precipitous path that excess mortality associated with Covid-19 was taking. It is clear that this was very different from previous flu seasons that have much lower and broader peaks in excess postings. Each of these previous flu seasons peaked early in the respective new years, following the typical Christmas dip in postings. In the case of the flu season of 2017/18, the excess postings sustained until the end of the season in February, making it the deadliest flu season of recent years, with an estimated 690–900 excess deaths. In the case of Covid-19, little excess mortality was present in March 2020 before a startling jump in April, which quickly dropped off after the lockdown measures were imposed to curtail the impacts of the disease.</p>
+<p>The impact of Covid-19 in terms of excess postings to RIP.ie was experienced differently throughout the country . We have looked at the maximum percentage above normal levels of postings in sub-county regions around the country and from 2014-2020 arranged these in order of occurrence of maximum excess, highlighting the difference between Covid-19 and recent flu seasons. Above normal levels of posting are indicated by red colours. The severe flu seasons of 2017/18 and 2016/17 are visible but one third of the regions registered their maximum postings above normal during the Covid-19 period, with the maxima experienced during this time often recording extremely high percentages.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="mx_covid_map_mod.png" alt="Percentage postings above normal are shown at regional level from 2014–2020. The flu seasons of 2016/17 and 2017/18, and the Covid-19 first wave period are highlighted. The map shows the maximum percentage above normal reached during the Covid–19 period. " width="100%" />
+<p class="caption">
+Figure 3: Percentage postings above normal are shown at regional level from 2014–2020. The flu seasons of 2016/17 and 2017/18, and the Covid-19 first wave period are highlighted. The map shows the maximum percentage above normal reached during the Covid–19 period.
+</p>
+</div>
+</div>
+<p>Of the regions we considered, 20 out of 63 reached their highest level during the first wave of the Covid-19 pandemic. The highest of these was Monaghan North where postings topped 200% their normal levels. The border counties of Cavan and Monaghan have previously been highlighted as <a href="https://www.rte.ie/brainstorm/2020/0505/1136496-death-notices-ireland-coronavirus/">proportionally the worst affected counties</a>. This is followed by Maynooth Eircode W23 where postings reached almost 150% above normal level, including the highest number of fatalities in a single care home. All regions of Dublin experienced their highest percentages on record during the Covid-19 period with an average of 85% above normal, although Dublin South was considerably lower, recording 42% above normal. A number of regions had their maximum peak later than April. Roscommon peaked at the start of June 2020, with Longford, <a href="https://www.hamilton.ie/covid19/posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/">Portlaoise</a>, and Sligo all showing peaks in 2020 later than the first Covid wave. There is a randomness to mortality that is accentuated when it is broken into smaller and smaller regions. The presence of a single regional peak does not necessarily indicate a consistent cause. However, when multiple regions experience peaks at the same time, as is the case with Covid-19, the patterns are indicative of an underlying cause.</p>
+<p>Cases of Covid-19 are rising in Ireland and restrictions are tightening again. We have not, as yet, seen a concurrent rise in deaths. We learned a lot from the first wave of the virus. We know that 95% of the deaths occurred in people over the age of 65 and the vast majority of those in people with underlying health conditions. We are very keenly aware that the virus must be kept out of residential care homes where so many deaths occurred in the first wave. We are wearing masks and socially distancing—concepts that were only emerging in March as the virus took hold in Ireland. But with rising case numbers, the likelihood of infecting these vulnerable groups also rises. In the first wave, we have seen that Covid-19 was far deadlier than the seasonal flu. But we were successful in combating the first wave. Facing an uncertain winter, it is worth remembering that things could have been a lot worse were it not for our collective action.</p>
+<h1 id="methods">Methods</h1>
+<p>Excess mortality is a measure that can assess the impact of respiratory illnesses such as the seasonal flu and coronavirus. Usually this is based on official mortality data. However, death notification in Ireland is not required for a period of 3 months following death and mortality numbers are not finalised for 2 years. Postings to the death notice site RIP.ie is much more rapid that official data as funerary practices in Ireland require the rapid notification of funeral arrangements to family and loved ones. The result is a mean delay of <a href="https://www.cso.ie/en/releasesandpublications/in/vs/informationnoteontheimplicationsofcovid-19ontheprocessingofdeathcertificates/">63 days for official notifications</a> and <a href="https://www.hiqa.ie/reports-and-publications/health-technology-assessment/analysis-excess-all-cause-mortality-ireland">1 day for notifications to RIP.ie</a>.</p>
+<p>The availability and prompt notifications on RIP.ie makes it a valuable resource for monitoring excess mortality. However, <a href="https://www.cso.ie/en/releasesandpublications/br/b-mpds/measuringmortalityusingpublicdatasources/">approximately 7% of notices are people who did not die in the Republic of Ireland</a> and usage amongst minority groups is not widespread. Prior to 2014, RIP.ie postings substantially underestimated the official deaths, and indicated a strong trend as the service reached saturation. For that reason, we only consider the period from 2014 onwards and apply a calibration to available official mortality data. Comparison of the raw unique postings to RIP.ie are shown in the table below. In 2017/18 and 2018/19, postings to RIP.ie have overestimated official (provisional) deaths by between 3% and 4%. Calibrating the RIP.ie figures to the official data with a linear fit to the ratio reduces this difference to below 1%.</p>
+<p>Calculation of excess mortality requires a reference level mortality. The WHO and EuroMOMO suggest using a reference level based on data from the preceding 5 years, adjusted for seasonality. The approach we take is to fit a sinusoidal curve with annual periodicity to the calibrated notices from 2014 to 2020 excluding the flu seasons of 2016/17 and 2017/18, and the Covid-19 period from March–May 2020, to provide an independent and consistent referencing period that maximises use of the RIP.ie dataset.</p>
+<p>Error bounds are derived from the 95% confidence intervals of linear fit to the CSO data and the fit of the sinusoidal curves. These are rounded to the nearest 10 notices for reporting.</p>
+<p>We compared our results with a CSO study that undertook the process of removing overseas and null notices from the database manually before publishing their estimates of excess mortality. The CSO estimated excess mortality of 1125 until the end of May 2020. This is lower than the official death toll associated with confirmed cases of COVID-19 of 1390 (1645 including ‘probables and possibles’). Our final estimate of excess mortality of 960–1170 for the period March–May 2020 agrees with the estimate from the CSO study.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="cso_vs_rip_w_unc.png" width="60%" style="display: block; margin: auto;" /></p>
+</div>
+<p>Distill is a publication format for scientific and technical writing, native to the web.</p>
+<p>Learn more about using Distill at <a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a>.</p>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

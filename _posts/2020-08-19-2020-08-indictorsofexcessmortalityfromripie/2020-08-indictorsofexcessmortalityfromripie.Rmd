@@ -1,7 +1,7 @@
 ---
 title: "Re-emerging Indicators of Excess Mortality in Ireland"
 description: |
-  At the height of the COVID-19 crisis in Ireland, the death notices website RIP.ie provided a useful, open, and near-realtime indicator of excess mortality associated with the disease. With late summer seeing a rersurgence in cases in Ireland, we ask whether  postings to RIP.ie have risen in certain localities. 
+   Postings to RIP.ie indicated excess mortality in northeast Laois hit double normal levels in summer---immediately prior to the county's regional lockdown.
 author:
   - name: Gerard D McCarthy
     url: https://www.maynoothuniversity.ie/icarus/our-people/gerard-mccarthy
@@ -31,6 +31,8 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 library(tidyverse)
 library(lubridate)
 ```
+
+At the height of the COVID-19 crisis in Ireland, the death notices website RIP.ie provided a useful, open, and near-realtime indicator of excess mortality associated with the disease. With late summer seeing a rersurgence in cases in Ireland, we ask whether  postings to RIP.ie have risen in certain localities.
 
 There is growing unease and concern in Ireland about the recent increase in cases of COVID-19 in Ireland. Three counties---Laois, Offaly, Kildare (LOK)---endured renewed lockdown, clusters have been identified in meat processing plants and Direct Provision centres, generational divisions are sharpening, with the perception that young people are flouting the rules, and, against this backdrop, schools are returning. Some consolation perhaps is that while case numbers have risen, fatalities associated with the disease are not rising at comparable levels. But could this be a false sense of security? Using postings of death notices to RIP.ie, we identify the Eircode regions that have shown high levels of posting through the summer. The highest by far is in the heart of the LOKdown counties: the Porlaoise Eircode (R32), where posts reached almost double their normal levels at the start of July.
 

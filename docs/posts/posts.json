@@ -1,5 +1,41 @@
 [
   {
+    "path": "posts/2020-09-30-dublin-differences/",
+    "title": "Covid-related deaths 50% higher in Dublin’s most deprived districts",
+    "description": "Postings to RIP.ie reveal the unequal burden of Covid-19 deaths in Dublin.",
+    "author": [
+      {
+        "name": "Rebecca L Dempsey",
+        "url": "https://www.maynoothuniversity.ie/geography/"
+      },
+      {
+        "name": "Gerard D McCarthy",
+        "url": "https://www.maynoothuniversity.ie/icarus/our-people/gerard-mccarthy"
+      },
+      {
+        "name": "Ronan Foley",
+        "url": "https://www.maynoothuniversity.ie/icarus/our-people/ronan-foley"
+      },
+      {
+        "name": "Andrew Parnell",
+        "url": "https://hamilton-institute.github.io/docs/"
+      },
+      {
+        "name": "Niamh Cahill",
+        "url": "https://hamilton-institute.github.io/docs/"
+      },
+      {
+        "name": "Pádraig MacCarron",
+        "url": "https://www.ul.ie/dafinet/p%C3%A1draig-mac-carron"
+      }
+    ],
+    "date": "2020-09-30",
+    "categories": [],
+    "preview": "posts/2020-09-30-dublin-differences/dublin_prop_change_2.png",
+    "last_modified": "2020-10-05T10:12:46+01:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2020-10-01-how-hard-to-predict-cases/",
     "title": "How hard is it to predict COVID-19 cases?",
     "description": "Short answer: very hard!",
@@ -20,7 +56,8 @@
     "date": "2020-09-29",
     "categories": [],
     "preview": "posts/2020-10-01-how-hard-to-predict-cases/distill-preview.png",
-    "last_modified": "2020-09-29T16:33:02+01:00"
+    "last_modified": "2020-10-05T10:09:06+01:00",
+    "input_file": {}
   },
   {
     "path": "posts/2020-09-17-where-did-ireland-imports-its-covid-19-cases-from/",
@@ -43,7 +80,8 @@
     "date": "2020-09-17",
     "categories": [],
     "preview": "posts/2020-09-17-where-did-ireland-imports-its-covid-19-cases-from/where-did-ireland-import-its-covid-19-cases-from_files/figure-html5/unnamed-chunk-4-1.png",
-    "last_modified": "2020-09-28T12:44:21+01:00"
+    "last_modified": "2020-10-05T10:09:06+01:00",
+    "input_file": {}
   },
   {
     "path": "posts/2020-09-11-how-long-will-covid-19-last-in-ireland/",
@@ -74,12 +112,41 @@
     "date": "2020-09-13",
     "categories": [],
     "preview": {},
-    "last_modified": "2020-09-28T12:44:21+01:00"
+    "last_modified": "2020-10-05T10:09:06+01:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2020-09-04-just-a-bad-flu/",
+    "title": "Just a bad flu?",
+    "description": "No, Covid-19 killed more in one month than the worst seasonal flu in recent years did in three months",
+    "author": [
+      {
+        "name": "Gerard D McCarthy",
+        "url": "https://www.maynoothuniversity.ie/icarus/our-people/gerard-mccarthy"
+      },
+      {
+        "name": "Rebecca L Dempsey",
+        "url": "https://www.maynoothuniversity.ie/geography/"
+      },
+      {
+        "name": "Andrew Parnell",
+        "url": "https://hamilton-institute.github.io/docs/"
+      },
+      {
+        "name": "Pádraig MacCarron",
+        "url": "https://www.ul.ie/dafinet/p%C3%A1draig-mac-carron"
+      }
+    ],
+    "date": "2020-09-04",
+    "categories": [],
+    "preview": "posts/2020-09-04-just-a-bad-flu/compare_flu_prop.png",
+    "last_modified": "2020-10-05T10:12:58+01:00",
+    "input_file": {}
   },
   {
     "path": "posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/",
     "title": "Re-emerging Indicators of Excess Mortality in Ireland",
-    "description": "At the height of the COVID-19 crisis in Ireland, the death notices website RIP.ie provided a useful, open, and near-realtime indicator of excess mortality associated with the disease. With late summer seeing a rersurgence in cases in Ireland, we ask whether  postings to RIP.ie have risen in certain localities.",
+    "description": "Postings to RIP.ie indicated excess mortality in northeast Laois hit double normal levels in summer---immediately prior to the county's regional lockdown.",
     "author": [
       {
         "name": "Gerard D McCarthy",
@@ -108,7 +175,8 @@
       "RIP.ie"
     ],
     "preview": "posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/distill-preview.png",
-    "last_modified": "2020-09-28T12:44:20+01:00"
+    "last_modified": "2020-10-05T10:14:53+01:00",
+    "input_file": {}
   },
   {
     "path": "posts/2020-07-27-traffic-analysis/",
@@ -129,6 +197,7 @@
       "transport"
     ],
     "preview": "posts/2020-07-27-traffic-analysis/TII_web.png",
-    "last_modified": "2020-09-08T14:31:31+01:00"
+    "last_modified": "2020-10-05T10:09:06+01:00",
+    "input_file": {}
   }
 ]
