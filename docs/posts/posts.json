@@ -32,8 +32,7 @@
     "date": "2020-09-30",
     "categories": [],
     "preview": "posts/2020-09-30-dublin-differences/dublin_prop_change_2.png",
-    "last_modified": "2020-10-05T10:12:46+01:00",
-    "input_file": {}
+    "last_modified": "2020-10-05T15:58:04+01:00"
   },
   {
     "path": "posts/2020-10-01-how-hard-to-predict-cases/",
@@ -56,8 +55,7 @@
     "date": "2020-09-29",
     "categories": [],
     "preview": "posts/2020-10-01-how-hard-to-predict-cases/distill-preview.png",
-    "last_modified": "2020-10-05T10:09:06+01:00",
-    "input_file": {}
+    "last_modified": "2020-09-29T16:33:02+01:00"
   },
   {
     "path": "posts/2020-09-17-where-did-ireland-imports-its-covid-19-cases-from/",
@@ -80,8 +78,7 @@
     "date": "2020-09-17",
     "categories": [],
     "preview": "posts/2020-09-17-where-did-ireland-imports-its-covid-19-cases-from/where-did-ireland-import-its-covid-19-cases-from_files/figure-html5/unnamed-chunk-4-1.png",
-    "last_modified": "2020-10-05T10:09:06+01:00",
-    "input_file": {}
+    "last_modified": "2020-09-28T12:44:21+01:00"
   },
   {
     "path": "posts/2020-09-11-how-long-will-covid-19-last-in-ireland/",
@@ -112,8 +109,7 @@
     "date": "2020-09-13",
     "categories": [],
     "preview": {},
-    "last_modified": "2020-10-05T10:09:06+01:00",
-    "input_file": {}
+    "last_modified": "2020-09-28T12:44:21+01:00"
   },
   {
     "path": "posts/2020-09-04-just-a-bad-flu/",
@@ -140,8 +136,7 @@
     "date": "2020-09-04",
     "categories": [],
     "preview": "posts/2020-09-04-just-a-bad-flu/compare_flu_prop.png",
-    "last_modified": "2020-10-05T10:12:58+01:00",
-    "input_file": {}
+    "last_modified": "2020-10-05T15:58:04+01:00"
   },
   {
     "path": "posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/",
@@ -175,8 +170,7 @@
       "RIP.ie"
     ],
     "preview": "posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/distill-preview.png",
-    "last_modified": "2020-10-05T10:14:53+01:00",
-    "input_file": {}
+    "last_modified": "2020-10-05T15:58:04+01:00"
   },
   {
     "path": "posts/2020-07-27-traffic-analysis/",
@@ -197,7 +191,6 @@
       "transport"
     ],
     "preview": "posts/2020-07-27-traffic-analysis/TII_web.png",
-    "last_modified": "2020-10-05T10:09:06+01:00",
-    "input_file": {}
+    "last_modified": "2020-09-08T14:31:31+01:00"
   }
 ]
