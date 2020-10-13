@@ -23,6 +23,8 @@ navbar:
           href: excessrip.html
         - text: "SEIR simulation"
           href: seirsim.html
+        - text: "What will happen tomorrow?"
+          href: pred_app.html
     - text: "Blog"
       href: posts.html
     - text: "About"

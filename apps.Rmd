@@ -9,3 +9,4 @@ We have some web apps which you might like to play with. These include:
 - [Excess deaths in different counties from RIP.ie](excessrip.html)
 - [Where did Ireland import its COVID-19 cases from?](wheredid.html)
 - [SEIR simulations](seirsim.html)
+- [What will happen tomorrow?](pred_app.html)
