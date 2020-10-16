@@ -23,6 +23,8 @@ navbar:
           href: excessrip.html
         - text: "SEIR simulation"
           href: seirsim.html
+        - text: "Where did Ireland import its COVID-19 cases from?"
+          href: WhereDid.html
         - text: "What will happen tomorrow?"
           href: pred_app.html
     - text: "Blog"
