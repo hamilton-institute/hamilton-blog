@@ -28,7 +28,7 @@
     "date": "2020-10-19",
     "categories": [],
     "preview": {},
-    "last_modified": "2020-10-19T14:16:22+01:00",
+    "last_modified": "2020-10-19T16:15:44+01:00",
     "input_file": {}
   },
   {
@@ -64,7 +64,7 @@
     "date": "2020-09-30",
     "categories": [],
     "preview": "posts/2020-09-30-dublin-differences/dublin_prop_change_2.png",
-    "last_modified": "2020-10-13T14:24:43+01:00",
+    "last_modified": "2020-10-19T16:15:44+01:00",
     "input_file": {}
   },
   {
@@ -88,7 +88,7 @@
     "date": "2020-09-29",
     "categories": [],
     "preview": "posts/2020-10-01-how-hard-to-predict-cases/distill-preview.png",
-    "last_modified": "2020-10-13T14:30:41+01:00",
+    "last_modified": "2020-10-19T16:15:44+01:00",
     "input_file": {}
   },
   {
@@ -112,7 +112,7 @@
     "date": "2020-09-17",
     "categories": [],
     "preview": "posts/2020-09-17-where-did-ireland-imports-its-covid-19-cases-from/where-did-ireland-import-its-covid-19-cases-from_files/figure-html5/unnamed-chunk-4-1.png",
-    "last_modified": "2020-09-24T17:30:26+01:00",
+    "last_modified": "2020-10-19T16:20:18+01:00",
     "input_file": {}
   },
   {
@@ -144,7 +144,7 @@
     "date": "2020-09-13",
     "categories": [],
     "preview": {},
-    "last_modified": "2020-09-18T15:25:10+01:00",
+    "last_modified": "2020-09-24T12:52:32+01:00",
     "input_file": {}
   },
   {
@@ -172,7 +172,7 @@
     "date": "2020-09-04",
     "categories": [],
     "preview": "posts/2020-09-04-just-a-bad-flu/compare_flu_prop.png",
-    "last_modified": "2020-10-13T14:24:43+01:00",
+    "last_modified": "2020-10-19T16:15:44+01:00",
     "input_file": {}
   },
   {
@@ -207,7 +207,7 @@
       "RIP.ie"
     ],
     "preview": "posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/distill-preview.png",
-    "last_modified": "2020-10-13T14:24:42+01:00",
+    "last_modified": "2020-10-19T16:15:44+01:00",
     "input_file": {}
   },
   {
@@ -229,7 +229,7 @@
       "transport"
     ],
     "preview": "posts/2020-07-27-traffic-analysis/TII_web.png",
-    "last_modified": "2020-09-09T09:46:48+01:00",
+    "last_modified": "2020-09-11T10:26:09+01:00",
     "input_file": {}
   }
 ]
