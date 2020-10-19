@@ -1,0 +1,60 @@
+---
+title: "Is herd immunity a useful strategy in Ireland?"
+description: |
+  
+author:
+  - name: Claire O'Connell
+    url: https://claireoconnell.wordpress.com
+  - name: Andrew Parnell
+    url: https://www.hamilton.ie/covid19
+  - name: David Malone
+    url: https://www.hamilton.ie/covid19
+  - name: Ken Duffy
+    url: https://www.hamilton.ie/covid19
+  - name: HoChan Cheon
+    url: https://www.hamilton.ie/covid19
+date: 10-19-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+What if we could protect vulnerable people from exposure to the COVID-19 virus by putting them in quarantine, while others who are less at risk of serious illness or death from COVID-19 move and gather and work more freely? It might sound like a reasonable solution if the conditions were strict and if humans weren’t involved.
+ 
+Parking for a moment the considerable individual needs of people who may be more at risk of severe infection or even death from COVID-19, we wanted to model whether and how the idea of keeping at-risk groups separate might affect levels of infection and death from COVID-19 in that vulnerable group.  
+ 
+Spoiler alert: the numbers may be favourable under strict circumstances where populations are kept apart, but even a small crossover between at-risk (quarantined) and less-at-risk (non-quarantined) populations would undermine the protection we want to achieve.
+ 
+To build the model, we created two populations: the over-65s and the under-65s. Immediately you might (correctly) think that this is a bit arbitrary and doesn’t reflect the reality of vulnerability to COVID-19 in the Irish population. Plenty of people under the age of 65 are vulnerable to more serious illness from COVID-19 for a variety of reasons, and within the over-65s there is a spectrum of vulnerability. 
+ 
+Bear with us, we took this approach because of the way the available information on [infection and death rates is broken down](https://covid19ireland-geohive.hub.arcgis.com/datasets/d8eb52d56273413b84b0187a4e9117be_0): the oldest-age bracket starts at 65, so this was where we made the division between vulnerable and less vulnerable.
+ 
+For this exercise, we used a standard model of an epidemic, where an individuals at any point in time can be in one of four states: S, susceptible to infection; E, exposed to the infection, and so infectious, but asymptomatic; I, infectious and symptomatic and R, recovered from the infection and immune to further infection. It is known as an [SEIR model](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SEIR_model).
+ 
+For the visualisation, which you can see below, we created sliding scales to change a number of conditions. The R (reproductive) number of the virus is an important one, because it tells us many people can become infected from one person who spreads the virus. The higher the reproductive number, the faster the virus can spread if infected people are in contact with others.
+ 
+<iframe src="https://rstudioserver.hamilton.ie:3838/users/aparnell/SEIR_over65//" class="l-screen-inset shaded" height = "700px"></iframe>
+ 
+We included the R0 (the average number of infections per infected person) for both over-65s and for under-65s. Crucially, we also included the Cross R0. This is the average number of infections passed between the under-65s and over-65s per infected person, that is to say when people from the two groups mix and potentially pass COVID-19 infection between them.
+ 
+If you play with the sliders for these variables, you can see that even with a small increase in the Cross RO, the infection and mortality rates climb steeply in the over-65s. 
+ 
+What might this mean in practice? That if people over the age of 65 who are quarantining still have contact with the non-quarantining group - perhaps from carers or family coming into their houses, or staff coming to work in residential care settings - this would quickly breach the protection theoretically offered by the quarantine. According to the model, it doesn’t take much mixing of people between the groups to quickly increase infection rates in the over-65s.
+ 
+Then there is the question of how many people would be likely to die following exposure to the virus. For this visualisation we can modify the death rate for over-65s (quarantined) and for under-65s (non-quarantined).
+ 
+If the death rate from exposure is low for over-65s, then we would expect death rates in the over-65s to be low even if the quarantine was not watertight. But as soon as you increase the death rate for either population in the model, the numbers of deaths among the over-65s climb alarmingly quickly.
+ 
+As always, we need to consider the limits of this exercise. The predictive model we are using doesn’t take into account the interventions that we as a society would put in place if quarantining of over-65s wasn’t working out. If we saw an increase in infections and deaths among the quarantined age group, we would take action. 
+ 
+However, the model does show how quickly a small crossover of infections between the vulnerable and less-vulnerable groups could undermine a quarantine, and this makes it a less enticing strategy, even before you consider the personal hardship it would entail for those in quarantine and their loved ones. 
+ 
+## Conclusion:
+ 
+According to the model, quarantining people over-65 and letting the COVID-19 virus run through the under-65s would need a very low death rate in the over 65s, and almost no interaction between over-65s and under-65s to avoid high numbers of deaths. 
+ 
+Please note: the code that runs the model and visualisation discussed here has been written by academics and not by professional coders. It may contain bugs or other mistakes which we have not discovered yet. All the code for the app is available in our [GitHub](https://github.com/hamilton-institute/covid19ireland/tree/master/apps/SEIR_over65) repository, which we encourage you to look at and improve.

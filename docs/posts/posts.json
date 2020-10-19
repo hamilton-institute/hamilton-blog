@@ -1,5 +1,37 @@
 [
   {
+    "path": "posts/2020-10-19-is-herd-immunity-a-useful-strategy-in-ireland/",
+    "title": "Is herd immunity a useful strategy in Ireland?",
+    "description": "Short answer: only if we were extremely strict about isolating the vulnerable",
+    "author": [
+      {
+        "name": "Claire O'Connell",
+        "url": "https://claireoconnell.wordpress.com"
+      },
+      {
+        "name": "Andrew Parnell",
+        "url": "https://www.hamilton.ie/covid19"
+      },
+      {
+        "name": "David Malone",
+        "url": "https://www.hamilton.ie/covid19"
+      },
+      {
+        "name": "Ken Duffy",
+        "url": "https://www.hamilton.ie/covid19"
+      },
+      {
+        "name": "HoChan Cheon",
+        "url": "https://www.hamilton.ie/covid19"
+      }
+    ],
+    "date": "2020-10-19",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-10-19T14:16:22+01:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2020-09-30-dublin-differences/",
     "title": "Covid-related deaths 50% higher in Dublin’s most deprived districts",
     "description": "Postings to RIP.ie reveal the unequal burden of Covid-19 deaths in Dublin.",
