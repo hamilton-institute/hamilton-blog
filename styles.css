@@ -23,6 +23,8 @@
     width: 100%;
     bottom: 0;
     left: 0;
+    height: auto;
+    margin-top: 0 !important;
 }
 
 
@@ -79,3 +81,98 @@ img {
         top: 5px;
         right: 0; 
       }
+
+
+/* footer */
+.footer {
+  background: #164b53;
+  color: white;
+  margin-top: -50px !important;
+  margin-bottom: -80px !important;
+}
+
+.maynooth-logo {
+  width: 50%;
+}
+
+.footer .links  {
+  text-align: left;
+}
+
+
+.footer .links ul {
+  list-style-type: none;
+}
+
+.footer .links li a {
+  color: white;
+  transition: color .2s;
+  font-size: 13px !important;
+}
+
+.footer .links li a:hover {
+  text-decoration: none;
+  color: #4180CB;
+}
+
+.footer .about-company i {
+  font-size: 25px;
+}
+
+.footer .about-company a {
+  color: white;
+  transition: color .2s;
+}
+
+.footer .about-company a:hover {
+  color: #4180CB;
+}
+
+.footer .location i {
+  font-size: 18px;
+}
+
+.footer .copyright p {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Button */
+
+.login-btn {
+  font-family: Hack, monospace;
+  background: #fff;
+  color: #1d1d1d;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0.4rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+  position: relative;
+}
+
+.login-btn::after {
+  font-weight: 400;
+  position: absolute;
+  left: 80%;
+  top: 54%;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+
+.login-btn:hover {
+  background: #01b0a8;
+  transition: all 0.5s;
+  border-radius: 10px;
+  box-shadow: 0px 3px 3px #fff;
+  padding: 0.4rem;;
+  color: #ffffff;
+}
+
+.login-btn:hover::after {
+  opacity: 1;
+  transition: all 0.5s;
+  color: #ffffff;
+}
