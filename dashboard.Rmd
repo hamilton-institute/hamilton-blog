@@ -4,4 +4,4 @@ site: distill::distill_website
 #listing: posts
 ---
 
-<iframe src="https://https://apmuhamilton.shinyapps.io/hamiltonCovid19Dashboard/_w_9f80dad8/" class="l-screen-inset shaded" height = "1250px"></iframe>
+<iframe src="https://apmuhamilton.shinyapps.io/hamiltonCovid19Dashboard/_w_9f80dad8/" class="l-screen-inset shaded" height = "1250px"></iframe>
