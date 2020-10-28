@@ -11,3 +11,5 @@ We have some web apps which you might like to play with. These include:
 - [SEIR simulations](seirsim.html)
 - [What will happen tomorrow?](pred_app.html)
 - [What would herd immunity look like in Ireland?](docs/herdimmunity.html)
+- [R number estimation for the world](R_est_country.html)
+- [R number estimation for Ireland](R_est_Ireland.html)

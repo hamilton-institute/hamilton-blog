@@ -1,0 +1,7 @@
+---
+title: "R estimates for all countries"
+site: distill::distill_website
+#listing: posts
+---
+
+<iframe src="https://apmuhamilton.shinyapps.io/R_est_country/" class="l-screen-inset shaded" height = "1500px"></iframe>

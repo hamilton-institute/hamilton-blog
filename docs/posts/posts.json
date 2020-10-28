@@ -1,5 +1,25 @@
 [
   {
+    "path": "posts/2020-10-25-did-level-3-work-for-ireland/",
+    "title": "Did level 3 work for Ireland?",
+    "description": "We explore whether the level 3 & 4 restrictions, imposed earlier on Dublin, Donegal, Cavan, and   Monaghan, were having an effect before the move of the entire country to level 5",
+    "author": [
+      {
+        "name": "Claire O'Connell",
+        "url": "https://claireoconnell.wordpress.com"
+      },
+      {
+        "name": "Andrew Parnell",
+        "url": "https://www.hamilton.ie/covid19"
+      }
+    ],
+    "date": "2020-10-25",
+    "categories": [],
+    "preview": "posts/2020-10-25-did-level-3-work-for-ireland/did-level-3-work-for-ireland_files/figure-html5/unnamed-chunk-1-1.png",
+    "last_modified": "2020-10-25T15:54:56+00:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2020-10-19-is-herd-immunity-a-useful-strategy-in-ireland/",
     "title": "Is herd immunity a useful strategy in Ireland?",
     "description": "Short answer: only if we were extremely strict about isolating the vulnerable",
@@ -28,7 +48,7 @@
     "date": "2020-10-19",
     "categories": [],
     "preview": {},
-    "last_modified": "2020-10-26T12:46:41-03:00",
+    "last_modified": "2020-10-19T14:16:22+01:00",
     "input_file": {}
   },
   {
@@ -64,7 +84,7 @@
     "date": "2020-09-30",
     "categories": [],
     "preview": "posts/2020-09-30-dublin-differences/dublin_prop_change_2.png",
-    "last_modified": "2020-10-26T12:46:41-03:00",
+    "last_modified": "2020-10-13T14:24:43+01:00",
     "input_file": {}
   },
   {
@@ -88,7 +108,7 @@
     "date": "2020-09-29",
     "categories": [],
     "preview": "posts/2020-10-01-how-hard-to-predict-cases/distill-preview.png",
-    "last_modified": "2020-10-26T12:46:41-03:00",
+    "last_modified": "2020-10-13T14:30:41+01:00",
     "input_file": {}
   },
   {
@@ -112,7 +132,7 @@
     "date": "2020-09-17",
     "categories": [],
     "preview": "posts/2020-09-17-where-did-ireland-imports-its-covid-19-cases-from/where-did-ireland-import-its-covid-19-cases-from_files/figure-html5/unnamed-chunk-4-1.png",
-    "last_modified": "2020-10-26T12:46:41-03:00",
+    "last_modified": "2020-10-26T17:00:57+00:00",
     "input_file": {}
   },
   {
@@ -144,7 +164,7 @@
     "date": "2020-09-13",
     "categories": [],
     "preview": {},
-    "last_modified": "2020-10-26T12:46:40-03:00",
+    "last_modified": "2020-09-18T15:25:10+01:00",
     "input_file": {}
   },
   {
@@ -172,7 +192,7 @@
     "date": "2020-09-04",
     "categories": [],
     "preview": "posts/2020-09-04-just-a-bad-flu/compare_flu_prop.png",
-    "last_modified": "2020-10-26T12:46:40-03:00",
+    "last_modified": "2020-10-13T14:24:43+01:00",
     "input_file": {}
   },
   {
@@ -207,7 +227,7 @@
       "RIP.ie"
     ],
     "preview": "posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/distill-preview.png",
-    "last_modified": "2020-10-26T12:46:40-03:00",
+    "last_modified": "2020-10-13T14:24:42+01:00",
     "input_file": {}
   },
   {
@@ -229,7 +249,7 @@
       "transport"
     ],
     "preview": "posts/2020-07-27-traffic-analysis/TII_web.png",
-    "last_modified": "2020-10-26T12:46:40-03:00",
+    "last_modified": "2020-09-09T09:46:48+01:00",
     "input_file": {}
   }
 ]
