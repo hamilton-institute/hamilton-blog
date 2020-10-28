@@ -1,0 +1,156 @@
+---
+title: "Did level 3 work for Ireland?"
+description: |
+  We explore whether the level 3 & 4 restrictions, imposed earlier on Dublin, Donegal, Cavan, and   Monaghan, were having an effect before the move of the entire country to level 5
+author:
+  - name: Claire O'Connell
+    url: https://claireoconnell.wordpress.com
+  - name: Andrew Parnell
+    url: https://www.hamilton.ie/covid19
+date: 10-25-2020
+output:
+  distill::distill_article:
+    self_contained: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(plotly)
+library(scales)
+library(data.table)
+library(lubridate)
+```
+
+Current [timeline](https://en.wikipedia.org/wiki/COVID-19_pandemic_in_the_Republic_of_Ireland#Second_Wave,_Tightening_of_Restrictions_and_Second_National_Lockdown_(August_2020–present)) of events over the past few months of the 'second wave':
+
+- _15th September_ government introduced the 5 levels with all counties on level 2 except Dublin which was level 2+
+- _19th September_ Dublin moved to level 3 for 3 weeks until 9th October
+- _25th September_ Donegal moved to level 3 for 3 weeks until 16th October
+- (_4th October_ NPHET recommends entire county move to level 5 for 4 weeks - rejected by government)
+- _15th October_ government bans household visits for entire country and moves Cavan Donegal and Monaghan to level 4
+- (_16th October_ NPHET recommends level 5 again)
+- _21st October_ entire country moves to level 5 lockdown for 6 weeks
+
+Context: An article in the [Irish Times](https://www.irishtimes.com/news/ireland/irish-news/dropping-covid-19-positivity-rates-give-grounds-for-hope-says-hse-boss-1.4389828) suggests that the overall positivity rate is dropping and that this might have occurred due to the level 3 restrictions. However [another article](https://www.irishtimes.com/news/health/coronavirus-why-level-3-failed-and-why-level-5-might-too-1.4385342) and [yet another article](https://www.thejournal.ie/sam-mcconkey-ireland-level-3-nphet-level-5-5224236-Oct2020/) suggest that might not be the case. Which of these is supported by the data?
+
+If level 3 worked we would expect to see a levelling off of the number of cases after a month or so (or at least a decrease in rate). There's also the issue of the definition of what you mean by 'worked'. Level 3 might have worked if it decreased the number of cases, or if it actually just slowed the rate down. Though the latter might not be enough if the number of cases is already high.
+ 
+# Task 1: Look at Dublin's level of disease and positivity rate
+
+Let's make a first plot of the daily number of cases reported in Dublin since the 15th September when it entered level 3:
+
+```{r}
+# Load in the county data
+d = read.csv('Covid19CountyStatisticsHPSCIreland.csv') %>% 
+  mutate(Date = as.Date(dmy_hm(TimeStamp)))
+d2 = d %>% filter(CountyName == 'Dublin') %>% 
+  mutate('Daily cases' = c(NA, diff(ConfirmedCovidCases))) %>% 
+  filter(Date >= "2020-09-15")
+ggplot(d2, aes(Date, `Daily cases`)) + 
+  annotate("rect", fill = "blue", alpha = 0.2,
+           xmin = as.Date("2020-09-15"),
+           xmax = as.Date("2020-09-15") + 21,
+           ymin = -Inf, ymax = Inf) +
+  geom_line() +
+  #geom_smooth(se = FALSE) + 
+  theme_bw() +
+  scale_x_date(date_breaks = '1 week', date_labels = "%d/%b") + 
+  labs(title = "Daily cases in Dublin since start of level 3",
+       subtitle = "Shading shows 3 weeks from level 3 lockdown")
+```
+
+This seems to show that Dublin wasn't rising that much in the first place, but that the peak in cases came _after_ three weeks of level 3 ended. But perhaps at the same time the number of tests rose?
+
+```{r}
+d3 = read.csv('https://opendata.arcgis.com/datasets/f6d6332820ca466999dbd852f6ad4d5a_0.csv') %>% 
+  mutate(Date = as.Date(ymd_hms(Date_HPSC)),
+         `Daily tests` = c(NA, diff(TotalLabs))) %>% 
+  filter(Date > as.Date("2020-08-01"))
+d3 %>% ggplot(aes(x = Date, y = `Daily tests`)) + 
+  geom_line() + 
+  scale_x_date(date_breaks = '2 weeks', date_labels = "%d/%b") + 
+  annotate("rect", fill = "blue", alpha = 0.2,
+           xmin = as.Date("2020-09-15"),
+           xmax = as.Date("2020-09-15") + 28,
+           ymin = -Inf, ymax = Inf) + 
+  theme_bw() +
+  scale_y_continuous(expand = expansion(mult = c(0, .1)), limits = c(0, NA)) +
+  labs(title = "Daily tests in Ireland",
+       subtitle = "Shading shows 4 weeks from level 3 lockdown in Dublin")
+```
+
+It seems that the number of tests across the country pretty much follows the positive cases in Dublin; constant over the level 3 period, but then rising a bit afterwards. 
+
+Unfortunately they don't provide the number of tests per county so it's hard to calculate the positive rate for Dublin only. They do provide an estimate of the positivity rate across the last 7 days (again for the whole country):
+
+```{r}
+d3 %>% filter(Date >= "2020-09-15") %>% 
+  ggplot(aes(x = Date, y = PosR7)) + 
+  geom_line() + 
+  scale_x_date(date_breaks = '1 week', date_labels = "%d/%b") + 
+  annotate("rect", fill = "blue", alpha = 0.2,
+           xmin = as.Date("2020-09-15"),
+           xmax = as.Date("2020-09-15") + 28,
+           ymin = -Inf, ymax = Inf) + 
+  scale_y_continuous(expand = expansion(mult = c(0, .1)),limits = c(0, NA)) +
+  theme_bw()+
+  labs(title = "Last 7 days positive test rate in Ireland",
+       subtitle = "Shading shows 4 weeks from level 3 lockdown in Dublin")
+```
+
+This seems to show that the positivity rate rose, and was continuing to rise, all the way through that period. So this shows that, if level 3 worked, it took longer than 4 weeks, nearer 5. Worse, it seems that the number of tests were pretty stable during this period, whilst the number of cases in Dublin seemed to rise during the 5th week.
+
+Finally let's see if the same thing was happening in Cavan, Donegal, and Monaghan. Donegal entered level 3 on 16th October:
+
+```{r}
+d4 = d %>% filter(CountyName == 'Donegal') %>% 
+  mutate('Daily cases' = c(NA, diff(ConfirmedCovidCases))) %>% 
+  filter(Date >= "2020-09-25")
+ggplot(d4, aes(Date, `Daily cases`)) + 
+  annotate("rect", fill = "blue", alpha = 0.2,
+           xmin = as.Date("2020-09-25"),
+           xmax = as.Date("2020-09-25") + 21,
+           ymin = -Inf, ymax = Inf) +
+  geom_line() +
+  #geom_smooth(se = FALSE) + 
+  theme_bw() +
+  scale_x_date(date_breaks = '1 week', date_labels = "%d/%b") + 
+  labs(title = "Daily cases in Donegal since start of level 3",
+       subtitle = "Shading shows 3 weeks from level 3 lockdown")
+```
+
+Cases in Donegal seem to have levelled of throughout the three week period, even falling a little bit. 
+
+What about Cavan, Donegal and Monaghan who all entered level 4 on 15th October?
+
+```{r}
+d5 = d %>% filter(CountyName == 'Donegal' |
+                    CountyName == "Cavan" | 
+                    CountyName == "Monaghan") %>% 
+  group_by(CountyName) %>% 
+  mutate('Daily cases' = c(NA, diff(ConfirmedCovidCases))) %>% 
+  ungroup() %>% 
+  filter(Date >= "2020-09-15")
+ggplot(d5, aes(Date, `Daily cases`, colour = CountyName)) + 
+  annotate("rect", fill = "blue", alpha = 0.2,
+           xmin = as.Date("2020-10-15"),
+           xmax = max(d5$Date),
+           ymin = -Inf, ymax = Inf) +
+  geom_line() +
+  geom_smooth(se = FALSE) + 
+  theme_bw() +
+  scale_x_date(date_breaks = '1 week', date_labels = "%d/%b") + 
+  labs(title = "Daily cases in Donegal, Cavan, Monaghan since mid-September",
+       subtitle = "Shading shows days from level 4 lockdown")
+```
+
+This seems to show that even Cavan has been levelling off, perhaps even before the start of the level 4 introduction, whereas at the start of October there was a big rise in cases. I've included a smooth here to make the longer-term changes clearer. 
+
+# Conclusion
+
+It seems like the border counties were starting to level off before the level 3 restrictions took place; but that Dublin was still rising after the level 3 lockdown. The situation is complicated by the fact that we don't have figures for the number of tests carried out in each county. If we did we could break the positivity rate down by each county and see whether those counties in higher levels were starting to see falls before the level 5 restrictions were introduced. 
+
+A final thing to be aware of is that, when the R number is around 1, the spread of the virus behaves like a random walk with cases shifting up and down without any clear expanding or contracting behaviour. We might be in that situation now, so it will be hard to estimate where the virus is going.
