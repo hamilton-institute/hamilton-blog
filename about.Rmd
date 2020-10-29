@@ -1,37 +1,102 @@
 ---
-title: "About the team"
+title: "About Ireland’s COVID-19 Data Dive"
 site: distill::distill_website
 ---
+
+## The project
 
 We have been awarded SFI funding to generate computational tools to help Ireland predict the epidemiological (disease-related) and economic consequences during the path to recovery in the COVID-19 pandemic. Our project will focus on putting computational models for medium term forecasting in place that will enable the state to make evidence-based decisions about the impact of relaxing COVID-19 restrictions. We aim to help the public stay informed about the data being generated 
 
 This goal of this website is to show posts and apps about our work. Where possible, all our code will be made available in our [GitHub](https://github.com/hamilton-institute) repositories. 
 
+## The team
 
-The team includes:
+```{r}
+`%>%` <- magrittr::`%>%`
 
-- [Prof Andrew Parnell](mailto:andrew.parnell@mu.ie)
-- Prof Ken Duffy
-- Prof Subhra Dey
-- Prof Damien Woods
-- Prof Paul Moynagh
-- Prof David Malone
-- Assoc Prof Catherine Hurley
-- Dr Niamh Cahill
-- Dr Rafael De Andrade Moral
-- Dr Gerard McCarthy
-- Dr Danilo Sarti
-- Dr Hoda Binaei
-- Bruna Wundervald
-- Amin Shoari Nejad
-- Rebecca Dempsey
-- HoChan Cheon
+insert_team_member <- function(name, site, from) {
+  
+  photos <- list.files("img/team", full.names = TRUE)
+  
+  photo_name <- name %>% 
+    stringr::str_replace_all(" ", "_") %>% 
+    stringr::str_to_lower() %>% 
+    paste0("img/team/", .)
+  
+  file <- photos[stringr::str_detect(photos, photo_name)]
+
+  shiny::column(
+    width = 4,
+    htmltools::div(
+      class = "team",
+      htmltools::a(
+      href = site,
+      target = "_blank",
+      htmltools::img(
+        src = file
+      ),
+      htmltools::br(),
+      htmltools::span(name)
+    ),
+    htmltools::br(),
+    htmltools::span(from)
+    )
+    
+  )
+}
+```
+
+
+```{r}
+team <- tibble::tribble(
+  ~name, ~site, ~from,
+  "Prof Andrew Parnell", "mailto:andrew.parnell@mu.ie", "Hamilton Institute",
+  "Prof Ken Duffy", "#", "Hamilton Institute",
+  "Prof Subhra Dey", "#", "Hamilton Institute",
+  "Prof Damien Woods", "#", "Hamilton Institute",
+  "Prof Paul Moynagh", "#", "Hamilton Institute",
+  "Prof David Malone", "#", "Hamilton Institute",
+  "Assoc Prof Catherine Hurley", "#", "Hamilton Institute",
+  "Dr Niamh Cahill", "#", "Hamilton Institute",
+  "Dr Rafael De Andrade Moral", "#", "Hamilton Institute",
+  "Dr Gerard McCarthy", "#", "Hamilton Institute",
+  "Dr Danilo Sarti", "#", "Hamilton Institute",
+  "Dr Hoda Binaei", "#", "Hamilton Institute",
+  "Bruna Wundervald", "#", "Hamilton Institute",
+  "Amin Shoari Nejad", "#", "Hamilton Institute",
+  "Rebecca Dempsey", "#", "Hamilton Institute",
+  "HoChan Cheon", "#", "Hamilton Institute",
+  "Nicole Luduvice", "mailto:consultoria@rseis.com.br", "R6 Consulting",
+  "Dr William Amorim", "mailto:wamorim@rseis.com.br", "R6 Consulting"
+)
+```
+
+
+```{r}
+htmltools::tagList(
+  shiny::fluidRow(
+    purrr::pmap(
+      list(team$name, team$site, team$from),
+      insert_team_member
+    )
+  )
+)
+```
+
 
 If you would like to know more about who we are and the what we do, 
-please visit the Institute's [website](https://www.maynoothuniversity.ie/hamilton)
+please visit the Institute's [website](https://www.maynoothuniversity.ie/hamilton).
+
+[R6 Consulting](https://www.curso-r.com/sobre/) is a Brazilian company specialized in Data Science and R programming.
+
+## Funding
 
 We are very grateful to [Science Foundation Ireland](https://www.sfi.ie) for providing us with funding for this project via their emergency COVID-19 funding portal via grant number 20/COV/0081.
 
 ```{r}
-knitr::include_graphics("img/SFI_logo.jpg")
+htmltools::a(
+  href = "https://www.sfi.ie",
+  target = "_blank",
+  htmltools::img(src = "img/SFI_logo.jpg")
+)
 ```
