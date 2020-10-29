@@ -4,4 +4,4 @@ site: distill::distill_website
 #listing: posts
 ---
 
-<iframe src="https://rstudioserver.hamilton.ie:3838/users/aparnell/SEIR_over65//" class="l-screen-inset shaded" height = "700px"></iframe>
+<iframe src="https://rstudioserver.hamilton.ie:3838/users/aparnell/SEIR_over65//" class="l-screen-inset shaded" height = "1700px"></iframe>
