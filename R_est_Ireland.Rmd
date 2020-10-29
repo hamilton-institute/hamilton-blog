@@ -1,7 +1,7 @@
 ---
-title: "R estimates for Irish counties"
+title: "R estimates for Irish provinces"
 site: distill::distill_website
 #listing: posts
 ---
 
-<iframe src="https://apmuhamilton.shinyapps.io/R_est_ireland/" class="l-screen-inset shaded" height = "1500px"></iframe>
+<iframe src="https://apmuhamilton.shinyapps.io/R_est_province/" class="l-screen-inset shaded" height = "1500px"></iframe>
