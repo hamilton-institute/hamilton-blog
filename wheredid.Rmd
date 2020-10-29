@@ -4,4 +4,4 @@ site: distill::distill_website
 #listing: posts
 ---
 
-<iframe src="https://rstudioserver.hamilton.ie:3838/users/aparnell/WhereDid/" class="l-screen-inset shaded" height = "500px"></iframe>
+<iframe src="https://rstudioserver.hamilton.ie:3838/users/aparnell/WhereDid/" class="l-screen-inset shaded" height = "650px"></iframe>
