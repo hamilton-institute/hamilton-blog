@@ -1,7 +1,7 @@
 ---
-title: "Is herd immunity a useful strategy in Ireland?"
+title: "Is shielding the elderly a useful strategy in Ireland?"
 description: |
-  
+  If we let the virus run through the younger population we are unlikely to halt the wave of deaths that would follow
 author:
   - name: Claire O'Connell
     url: https://claireoconnell.wordpress.com

@@ -982,27 +982,28 @@
 <li><em>19th September</em> Dublin moved to level 3 for 3 weeks until 9th October</li>
 <li><em>25th September</em> Donegal moved to level 3 for 3 weeks until 16th October</li>
 <li>(<em>4th October</em> NPHET recommends entire county move to level 5 for 4 weeks - rejected by government)</li>
-<li><em>15th October</em> government bans household visits for entire country and moves Cavan Donegal and Monaghan to level 4</li>
+<li><em>6th October</em> entire country moves to level 3 for 3 weeks</li>
+<li><em>15th October</em> government bans household visits for entire country and moves Cavan, Donegal, and Monaghan to level 4</li>
 <li>(<em>16th October</em> NPHET recommends level 5 again)</li>
 <li><em>21st October</em> entire country moves to level 5 lockdown for 6 weeks</li>
 </ul>
 <p>Context: An article in the <a href="https://www.irishtimes.com/news/ireland/irish-news/dropping-covid-19-positivity-rates-give-grounds-for-hope-says-hse-boss-1.4389828">Irish Times</a> suggests that the overall positivity rate is dropping and that this might have occurred due to the level 3 restrictions. However <a href="https://www.irishtimes.com/news/health/coronavirus-why-level-3-failed-and-why-level-5-might-too-1.4385342">another article</a> and <a href="https://www.thejournal.ie/sam-mcconkey-ireland-level-3-nphet-level-5-5224236-Oct2020/">yet another article</a> suggest that might not be the case. Which of these is supported by the data?</p>
 <p>If level 3 worked we would expect to see a levelling off of the number of cases after a month or so (or at least a decrease in rate). There’s also the issue of the definition of what you mean by ‘worked’. Level 3 might have worked if it decreased the number of cases, or if it actually just slowed the rate down. Though the latter might not be enough if the number of cases is already high.</p>
-<h1 id="task-1-look-at-dublins-level-of-disease-and-positivity-rate">Task 1: Look at Dublin’s level of disease and positivity rate</h1>
+<h1 id="dublins-level-of-disease-and-positivity-rate">Dublin’s level of disease and positivity rate</h1>
 <p>Let’s make a first plot of the daily number of cases reported in Dublin since the 15th September when it entered level 3:</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="did-level-3-work-for-ireland_files/figure-html5/unnamed-chunk-1-1.png" width="624" /></p>
 </div>
-<p>This seems to show that Dublin wasn’t rising that much in the first place, but that the peak in cases came <em>after</em> three weeks of level 3 ended. But perhaps at the same time the number of tests rose?</p>
+<p>This seems to show that Dublin wasn’t rising that much in the first place, but that the peak in cases came <em>after</em> three weeks of level 3 ended. But perhaps at the same time the number of tests rose? Unfortunately we don’t have the number of tests in Dublin but we do have them for the whole country:</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="did-level-3-work-for-ireland_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
 </div>
 <p>It seems that the number of tests across the country pretty much follows the positive cases in Dublin; constant over the level 3 period, but then rising a bit afterwards.</p>
-<p>Unfortunately they don’t provide the number of tests per county so it’s hard to calculate the positive rate for Dublin only. They do provide an estimate of the positivity rate across the last 7 days (again for the whole country):</p>
+<p>Unfortunately again they don’t provide the positive rate per county. They do provide an estimate of the positivity rate across the last 7 days (again for the whole country):</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="did-level-3-work-for-ireland_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
 </div>
-<p>This seems to show that the positivity rate rose, and was continuing to rise, all the way through that period. So this shows that, if level 3 worked, it took longer than 4 weeks, nearer 5. Worse, it seems that the number of tests were pretty stable during this period, whilst the number of cases in Dublin seemed to rise during the 5th week.</p>
+<p>This seems to show that the positivity rate rose, and was continuing to rise, all the way through that period. So this shows that, if level 3 worked, it took longer than 4 weeks, nearer 5. Worse, it suggests that the whilst the positivity rate nationally was falling the number of cases in Dublin was still rising.</p>
 <p>Finally let’s see if the same thing was happening in Cavan, Donegal, and Monaghan. Donegal entered level 3 on 16th October:</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="did-level-3-work-for-ireland_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
