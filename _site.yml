@@ -27,8 +27,8 @@ navbar:
           href: WhereDid.html
         - text: "What will happen tomorrow?"
           href: pred_app.html
-        - text: "Herd immunity in Ireland"
-          href: herdimmunity.html
+        - text: "Shielding over 65s in Ireland"
+          href: shielding.html
         - text: "R number estimation for the world"
           href: R_est_country.html
         - text: "R number estimation for Ireland"

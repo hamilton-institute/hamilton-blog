@@ -1,5 +1,5 @@
 ---
-title: "What would herd immunity look like in Ireland?"
+title: "What effect would shielding the over 65s have in Ireland?"
 site: distill::distill_website
 #listing: posts
 ---
