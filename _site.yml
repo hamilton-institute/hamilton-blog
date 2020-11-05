@@ -33,6 +33,8 @@ navbar:
           href: R_est_country.html
         - text: "R number estimation for Ireland"
           href: R_est_Ireland.html
+        - text: "Vaccination planning"
+          href: vaccination.html
     - text: "Blog"
       href: posts.html
     - text: "About"
