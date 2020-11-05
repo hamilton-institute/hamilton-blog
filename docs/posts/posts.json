@@ -1,5 +1,33 @@
 [
   {
+    "path": "posts/2020-11-05-vaccination-planning-for-2021/",
+    "title": "Vaccination planning for 2021",
+    "description": "We give you the tools to see how soon we might end the pandemic with a vaccine",
+    "author": [
+      {
+        "name": "Andrew Parnell",
+        "url": "https://www.hamilton.ie/covid19"
+      },
+      {
+        "name": "David Malone",
+        "url": "https://www.maynoothuniversity.ie/hamilton/"
+      },
+      {
+        "name": "Ken Duffy",
+        "url": "https://www.maynoothuniversity.ie/hamilton/our-people/ken-duffy"
+      },
+      {
+        "name": "HoChan Cheon",
+        "url": "https://www.maynoothuniversity.ie/hamilton/"
+      }
+    ],
+    "date": "2020-11-05",
+    "categories": [],
+    "preview": "posts/2020-11-05-vaccination-planning-for-2021/plot_low_R.png",
+    "last_modified": "2020-11-05T22:39:03+00:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2020-10-25-did-level-3-work-for-ireland/",
     "title": "Did level 3 work for Ireland?",
     "description": "We explore whether the level 3 & 4 restrictions imposed on Dublin, Donegal, Cavan, and Monaghan, were having an effect before the entire country moved to to level 5",
