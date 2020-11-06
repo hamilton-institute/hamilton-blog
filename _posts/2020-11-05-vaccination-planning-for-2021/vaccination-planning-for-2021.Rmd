@@ -1,7 +1,7 @@
 ---
-title: "Vaccination planning for 2021"
+title: "Even with an effective vaccine the virus won’t disappear overnight’"
 description: |
-  We give you the tools to see how soon we might end the pandemic with a vaccine
+  Vaccination planning for 2021
 author:
   - name: Andrew Parnell
     url: https://www.hamilton.ie/covid19

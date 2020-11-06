@@ -1,8 +1,8 @@
 [
   {
     "path": "posts/2020-11-05-vaccination-planning-for-2021/",
-    "title": "Vaccination planning for 2021",
-    "description": "We give you the tools to see how soon we might end the pandemic with a vaccine",
+    "title": "Even with an effective vaccine the virus won’t disappear overnight’",
+    "description": "Vaccination planning for 2021",
     "author": [
       {
         "name": "Andrew Parnell",
@@ -28,7 +28,7 @@
     "date": "2020-11-05",
     "categories": [],
     "preview": "posts/2020-11-05-vaccination-planning-for-2021/plot_low_R.png",
-    "last_modified": "2020-11-06T10:29:58+00:00",
+    "last_modified": "2020-11-06T12:22:38+00:00",
     "input_file": "vaccination-planning-for-2021.utf8.md"
   },
   {
