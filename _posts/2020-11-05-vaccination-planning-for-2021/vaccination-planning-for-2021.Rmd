@@ -1,0 +1,52 @@
+---
+title: "Vaccination planning for 2021"
+description: |
+  We give you the tools to see how soon we might end the pandemic with a vaccine
+author:
+  - name: Andrew Parnell
+    url: https://www.hamilton.ie/covid19
+  - name: David Malone
+    url: https://www.maynoothuniversity.ie/hamilton/  
+  - name: Ken Duffy
+    url: https://www.maynoothuniversity.ie/hamilton/our-people/ken-duffy
+  - name: HoChan Cheon
+    url: https://www.maynoothuniversity.ie/hamilton/
+date: 11-05-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Happy new year! Let's suppose it's January 1st 2021 and you've just switched on the news to see that one of the [many many](https://www.nytimes.com/interactive/2020/science/coronavirus-vaccine-tracker.html) vaccines in development has finally been approved. 
+
+Surely this means we can all run out in the street and celebrate? Well, not so fast buddy, because now we have to work out who to give it to and how much vaccine we have to distribute.
+
+(Not to mention all of the other issues with new vaccines such as efficacy, anti-vaxx sentiment, delivery methods, delivery choice, etc, etc).
+
+Let's suppose for a moment that on January 1st 2021 there are about 5,000 people currently in the country with the virus (you can adjust these numbers yourself later), and that about 300,000 people in the country have already had it and recovered or died. Let's similarly suppose that the R number for under 65s is about 1.5 and the R number for over 65s is about 0.8. For further details about this breakdown see [this post](https://www.hamilton.ie/covid19/posts/2020-10-30-is-shielding-the-elderly-a-useful-strategy-for-ireland/).
+
+Exactly how many doses of a successful vaccine Ireland will obtain is hard to know. We've made the initial assumption that we will have about 20,000 doses a day and we can just keep vaccinating until everybody has either had the disease or has been vaccinated.
+
+But how effective will the vaccine be? This again is hard to know, but [a recent article referencing Anthony Fauci](https://www.theatlantic.com/health/archive/2020/09/does-coronavirus-vaccine-need-to-be-perfect/616441/) suggests that perhaps a figure of around 75% would still make for a useful vaccine. We've been optimistic and put in 90%.
+
+As a final assumption, we have assumed that we might want to vaccinate those most vulnerable (i.e. the elderly) as a priority, so we set 18,000 vaccinations per day for those over 65, and 2,000 vaccines per day for the under 65s. 
+
+Following all those assumptions this is the app you get:
+
+<iframe src="https://rstudioserver.hamilton.ie:3838/users/aparnell/SEIR_vaxx/" class="l-screen-inset shaded" height = "800px"></iframe>
+
+You can see the daily number of infections in the graph on the right hand side, starting on the first of January and progressing until the virus is extinct. Hover your mouse over the graph to see the figures for each day. With the default values you end up with very few infections in the over 65s which is great, but the virus really burns through the under 65 group. If you can't the see the numbers clearly click on the log scale option at the bottom of the plot. Those default values suggest the virus will still be with us until the end of the summer.
+
+But what if you disagree with our numbers? Then feel free to change them! If it seems unrealistic to have such a high R number, so that we'll still have some kind of restrictions from January onwards, then reduce the R numbers. Reducing the R number down to 0.6 gives this plot:
+
+```{r}
+knitr::include_graphics('plot_low_R.png')
+```
+
+Now it seems that the number of cases will be low but it will still be May before the virus is completely gone.
+
+It's likely that we will expand this app out in the coming weeks, but if you have suggestions, or better default values we'd really like to [hear from you](mailto:andrew.parnell@mu.ie).
