@@ -13,6 +13,10 @@
         "url": "https://www.maynoothuniversity.ie/hamilton/"
       },
       {
+        "name": "Claire O'Connell",
+        "url": "https://claireoconnell.wordpress.com"
+      },
+      {
         "name": "Ken Duffy",
         "url": "https://www.maynoothuniversity.ie/hamilton/our-people/ken-duffy"
       },
@@ -24,8 +28,8 @@
     "date": "2020-11-05",
     "categories": [],
     "preview": "posts/2020-11-05-vaccination-planning-for-2021/plot_low_R.png",
-    "last_modified": "2020-11-05T22:39:03+00:00",
-    "input_file": {}
+    "last_modified": "2020-11-06T10:29:58+00:00",
+    "input_file": "vaccination-planning-for-2021.utf8.md"
   },
   {
     "path": "posts/2020-10-25-did-level-3-work-for-ireland/",
