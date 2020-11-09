@@ -35,7 +35,7 @@ Let’s similarly suppose that the R number (a measure of how many people one pe
 
 And now, in this imaginary scenario, we can add in a vaccine. We don’t know exactly how many doses of a successful vaccine Ireland will obtain. So we’ve made the initial assumption that we will deliver about 20,000 doses a day to people in Ireland, and we can just keep vaccinating until everybody has either had the disease or has been vaccinated. This seems to be in line with the HSE's purchase of [seasonal flu vaccines](https://www.hse.ie/eng/health/immunisation/news/fluvaccinedelivery.html).
 
-But how effective will the vaccine be? This again is hard to know, but a [ recent article referencing Anthony Fauci](https://www.theatlantic.com/health/archive/2020/09/does-coronavirus-vaccine-need-to-be-perfect/616441/) suggests that perhaps if 75% of the population got immunity through vaccination, this would be useful. We’ve been optimistic and put in 90%.
+But how effective will the vaccine be? This again is hard to know, but a [ recent article referencing Anthony Fauci](https://www.theatlantic.com/health/archive/2020/09/does-coronavirus-vaccine-need-to-be-perfect/616441/) suggests that perhaps if 75% of the population got immunity through vaccination, this would be useful. We’ve been optimistic and put in 90% (UPDATE: [this is no longer optimistic](https://www.bbc.com/news/health-54873105)).
 
 As a final assumption, we have assumed that we might want to vaccinate those most vulnerable (i.e. the elderly) as a priority, so we set 18,000 vaccinations per day for those over 65, and 2,000 vaccines per day for the under 65s.
 
