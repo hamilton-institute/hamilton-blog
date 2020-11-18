@@ -1,7 +1,0 @@
----
-title: "What effect will a vaccine have in Ireland?"
-site: distill::distill_website
-#listing: posts
----
-
-<iframe src="https://rstudioserver.hamilton.ie:3838/users/aparnell/SEIR_vaxx/" class="l-screen-inset shaded" height = "1700px"></iframe>

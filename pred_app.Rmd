@@ -1,7 +1,0 @@
----
-title: "What will happen tomorrow?"
-site: distill::distill_website
-#listing: posts
----
-
-<iframe src="https://rstudioserver.hamilton.ie:3838/users/aparnell/pred_app2/" class="l-screen-inset shaded" height = "1000px"></iframe>

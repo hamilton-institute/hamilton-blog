@@ -1,0 +1,9 @@
+---
+title: "R estimates for Irish provinces"
+output:
+  distill::distill_article:
+    self_contained: true
+collections: apps
+---
+
+<iframe src="https://apmuhamilton.shinyapps.io/R_est_province/" class="l-screen-inset shaded" height = "1500px"></iframe>

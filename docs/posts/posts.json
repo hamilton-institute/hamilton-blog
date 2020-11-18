@@ -28,8 +28,8 @@
     "date": "2020-11-05",
     "categories": [],
     "preview": "posts/2020-11-05-vaccination-planning-for-2021/plot_low_R.png",
-    "last_modified": "2020-11-09T12:47:24+00:00",
-    "input_file": "vaccination-planning-for-2021.utf8.md"
+    "last_modified": "2020-11-18T19:05:06-03:00",
+    "input_file": {}
   },
   {
     "path": "posts/2020-10-25-did-level-3-work-for-ireland/",
@@ -48,7 +48,7 @@
     "date": "2020-10-25",
     "categories": [],
     "preview": "posts/2020-10-25-did-level-3-work-for-ireland/did-level-3-work-for-ireland_files/figure-html5/unnamed-chunk-1-1.png",
-    "last_modified": "2020-11-03T11:54:51+00:00",
+    "last_modified": "2020-11-05T21:09:34-03:00",
     "input_file": {}
   },
   {
@@ -80,7 +80,7 @@
     "date": "2020-10-19",
     "categories": [],
     "preview": {},
-    "last_modified": "2020-11-01T20:49:18+00:00",
+    "last_modified": "2020-11-05T21:09:34-03:00",
     "input_file": {}
   },
   {
@@ -116,7 +116,7 @@
     "date": "2020-09-30",
     "categories": [],
     "preview": "posts/2020-09-30-dublin-differences/dublin_prop_change_2.png",
-    "last_modified": "2020-10-19T16:15:44+01:00",
+    "last_modified": "2020-10-28T14:36:14-03:00",
     "input_file": {}
   },
   {
@@ -140,7 +140,7 @@
     "date": "2020-09-29",
     "categories": [],
     "preview": "posts/2020-10-01-how-hard-to-predict-cases/distill-preview.png",
-    "last_modified": "2020-10-19T16:15:44+01:00",
+    "last_modified": "2020-10-28T14:36:14-03:00",
     "input_file": {}
   },
   {
@@ -164,7 +164,7 @@
     "date": "2020-09-17",
     "categories": [],
     "preview": "posts/2020-09-17-where-did-ireland-imports-its-covid-19-cases-from/where-did-ireland-import-its-covid-19-cases-from_files/figure-html5/unnamed-chunk-4-1.png",
-    "last_modified": "2020-10-19T16:20:18+01:00",
+    "last_modified": "2020-10-28T14:36:14-03:00",
     "input_file": {}
   },
   {
@@ -196,7 +196,7 @@
     "date": "2020-09-13",
     "categories": [],
     "preview": {},
-    "last_modified": "2020-09-24T12:52:32+01:00",
+    "last_modified": "2020-10-28T14:36:14-03:00",
     "input_file": {}
   },
   {
@@ -224,7 +224,7 @@
     "date": "2020-09-04",
     "categories": [],
     "preview": "posts/2020-09-04-just-a-bad-flu/compare_flu_prop.png",
-    "last_modified": "2020-10-19T16:15:44+01:00",
+    "last_modified": "2020-10-28T14:36:14-03:00",
     "input_file": {}
   },
   {
@@ -259,7 +259,7 @@
       "RIP.ie"
     ],
     "preview": "posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/distill-preview.png",
-    "last_modified": "2020-10-19T16:15:44+01:00",
+    "last_modified": "2020-10-28T14:36:14-03:00",
     "input_file": {}
   },
   {
@@ -281,7 +281,7 @@
       "transport"
     ],
     "preview": "posts/2020-07-27-traffic-analysis/TII_web.png",
-    "last_modified": "2020-09-11T10:26:09+01:00",
+    "last_modified": "2020-10-28T14:36:13-03:00",
     "input_file": {}
   }
 ]

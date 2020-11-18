@@ -14,27 +14,28 @@ navbar:
     - text: "Dashboard"
       href: dashboard.html
     - text: "Apps"
+      href: apps.html
       menu:
         - text: "Dashboard"
           href: dashboard.html
         - text: "How long will COVID-19 last?"
-          href: howlong.html
+          href: apps/howlong/index.html
         - text: "Excess deaths in Ireland"
-          href: excessrip.html
+          href: apps/excessrip/index.html
         - text: "SEIR simulation"
-          href: seirsim.html
+          href: apps/seirsim/index.html
         - text: "Where did Ireland import its COVID-19 cases from?"
-          href: WhereDid.html
+          href: apps/WhereDid/index.html
         - text: "What will happen tomorrow?"
-          href: pred_app.html
+          href: apps/pred_app/index.html
         - text: "Shielding over 65s in Ireland"
-          href: shielding.html
+          href: apps/shielding/index.html
         - text: "R number estimation for the world"
-          href: R_est_country.html
+          href: apps/R_est_country/index.html
         - text: "R number estimation for Ireland"
-          href: R_est_Ireland.html
+          href: apps/R_est_Ireland/index.html
         - text: "Vaccination planning"
-          href: vaccination.html
+          href: apps/vaccination/index.html
     - text: "Blog"
       href: posts.html
     - text: "About"
@@ -46,6 +47,8 @@ navbar:
     #- icon: fa fa-rss
     #  href: about.xml
 collections:
+  apps:
+    feed_items_max: 6
   posts:
     feed_items_max: 6
 output: 

@@ -1,0 +1,101 @@
+[
+  {
+    "path": "apps/excessrip/",
+    "title": "Excess postings to RIP.ie in Eircode regions",
+    "description": {},
+    "author": [],
+    "date": "2020-11-18",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-11-18T20:32:59-03:00",
+    "input_file": {}
+  },
+  {
+    "path": "apps/howlong/",
+    "title": "How long will COVID-19 last in Ireland?",
+    "description": {},
+    "author": [],
+    "date": "2020-11-18",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-11-18T20:33:02-03:00",
+    "input_file": {}
+  },
+  {
+    "path": "apps/pred_app/",
+    "title": "What will happen tomorrow?",
+    "description": {},
+    "author": [],
+    "date": "2020-11-18",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-11-18T20:06:52-03:00",
+    "input_file": {}
+  },
+  {
+    "path": "apps/R_est_country/",
+    "title": "R estimates for all countries",
+    "description": {},
+    "author": [],
+    "date": "2020-11-18",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-11-18T20:06:50-03:00",
+    "input_file": {}
+  },
+  {
+    "path": "apps/R_est_Ireland/",
+    "title": "R estimates for Irish provinces",
+    "description": {},
+    "author": [],
+    "date": "2020-11-18",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-11-18T20:06:47-03:00",
+    "input_file": {}
+  },
+  {
+    "path": "apps/seirsim/",
+    "title": "SEIR simulation app",
+    "description": {},
+    "author": [],
+    "date": "2020-11-18",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-11-18T20:32:49-03:00",
+    "input_file": {}
+  },
+  {
+    "path": "apps/shielding/",
+    "title": "What effect would shielding the over 65s have in Ireland?",
+    "description": {},
+    "author": [],
+    "date": "2020-11-18",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-11-18T20:32:52-03:00",
+    "input_file": {}
+  },
+  {
+    "path": "apps/vaccination/",
+    "title": "What effect will a vaccine have in Ireland?",
+    "description": {},
+    "author": [],
+    "date": "2020-11-18",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-11-18T20:32:54-03:00",
+    "input_file": {}
+  },
+  {
+    "path": "apps/wheredid/",
+    "title": "Where did Ireland import its COVID-19 cases from?",
+    "description": {},
+    "author": [],
+    "date": "2020-11-18",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-11-18T20:32:57-03:00",
+    "input_file": {}
+  }
+]

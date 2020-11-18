@@ -1,7 +1,0 @@
----
-title: "Where did Ireland import its COVID-19 cases from?"
-site: distill::distill_website
-#listing: posts
----
-
-<iframe src="https://rstudioserver.hamilton.ie:3838/users/aparnell/WhereDid/" class="l-screen-inset shaded" height = "650px"></iframe>
