@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Ireland's COVID-19 Data Dive"
+title: "Welcome to the Hamilton Institute's COVID-19 Data Dive"
 site: distill::distill_website
 #listing: posts
 ---
