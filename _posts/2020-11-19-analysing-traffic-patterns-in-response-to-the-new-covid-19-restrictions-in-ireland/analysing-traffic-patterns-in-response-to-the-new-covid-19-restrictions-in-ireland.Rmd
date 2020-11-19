@@ -1,9 +1,22 @@
 ---
 title: "Analysing traffic patterns in response to the new COVID-19 restrictions in Ireland"
+description: |
+  A short description of the post.
+author:
+  - name: Amin Shoari Nejad
+    url: https://www.hamilton.ie/covid19
+  - name: Andrew Parnell
+    url: https://www.hamilton.ie/covid19
+  - name: Claire O'Connell
+    url: https://claireoconnell.wordpress.com
+  - name: Bruna Wundervald
+    url: https://www.maynoothuniversity.ie/hamilton/
+date: 11-19-2020
 output:
-  html_document: default
-  word_document: default
+  distill::distill_article:
+    self_contained: false
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, 
