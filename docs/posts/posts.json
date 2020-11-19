@@ -23,10 +23,9 @@
     ],
     "date": "2020-11-19",
     "categories": [],
-    "contents": "\nOn July 27th we published an article in which we tried to answer the question “Was there a spike in COVID-19 cases due to the differently-timed lockdowns along the Irish border?”\nIn that article,, we analysed traffic data to see whether there was a different pattern in people’s movement along the Irish border compared to the rest of the Republic of Ireland. Based on our analysis, we saw no significant difference, and so we cannot blame people living near the border in Northern Ireland for importing the virus into the Republic.\nHowever, the question still remains. Recently the Taoiseach said the Government is “particularly concerned about Northern Ireland” and the consequences of traffic coming from the North. Furthermore, public health expert Dr Gabriel Scally said: “The Irish border has always been porous and people have always moved across it.”\nSo we decided to update our assessments using new data, which had been updated until 27th of October 2020. This time we are also introduced a new approach for visualising the traffic patterns, and this helped us see that the newer restrictions are also linked with less traffic in border counties How did we do it?\nNew Traffic Analyser Application\nWe scraped the Transport Infrastructure Ireland website to update our dataset, which now covers all the days from the beginning of 2019 until the 27th of October 2020. We developed an application that lets you simply select two time periods and compare the daily average number of cars passing by the traffic stations.\nSo let’s check If people’s movement in cars, especially people living alongside the border, was affected by the new restrictions that limit travelling.\nHow the app works:\nChoose two periods. The app will calculate the percentage change in traffic levels for all of the traffic stations. It shows the stations with a reduction in traffic levels in blue dots, while those with an increase in traffic levels appear as red dots. Also, the size of the dots indicates the magnitude of change.\nYou can click on the stations on the map and a popup will show up, stating the percentage change number.\nYou can also check the data used for the percentage calculation just by selecting a station and clicking on the plot button.\n\n\nAssessing Pandemic Effects on Traffic Levels\nIn this section, we’ll try to see how effective the new restrictions have been. We are going to compare two periods: two weeks before and two weeks after the restrictions. Specifically, we will try to answer the below questions -\nWere there more cars than usual (compared to other parts of the country) crossing the border before the recent restrictions on travelling were imposed?\nDid the number of cars crossing the border change after the restrictions were imposed?\nDid a specific level of restrictions stop the spread of traffic across the border?\nCounty Donegal was put on level 3 restriction from September 25th:\nHow effective was this restriction? We can get an idea by comparing the changes in traffic levels before and after the September 25th 2020.\n(You can also try this for 2019 as a benchmark, to get an idea about what it would look like if there was no pandemic or any restrictions. But here we will be focusing only on 2020.)\nSo if we select the first period from September 11th to 25th and the second period from September 26th to October 10th we get the below figure:\n\n\n\n\nFigure1. Percentage change in traffic levels comparing two weeks before the Donegal’s restriction to two weeks after the restriction.\n\nAccording to figure 1, it is obvious that majority of the stations have experienced a drop in traffic levels after the restriction. The most dramatic drop at “N03 Between Belleek and Ballyshannon, Templenew, Co.Donegal” shows a 49% reduction in traffic levels. Furthermore, we can see that all of the stations in Donegal are blue, and have relatively bigger dots compared to other counties’ stations.\nIn other words, the traffic levels declined in all of the traffic stations in Donegal, and the decline was bigger than the decline in other counties during that period.\nAll the counties were put on level 3 restriction from October 6th:\nUsing the same approach, if we set the first period from September 21st to October 5th and the second period from October 6th to 20th and we get the below figure:\n\n\n\n\nFigure2. Percentage change in traffic levels comparing two weeks before the all counties’ level 3 restriction to two weeks after the restriction.\n\nFigure 2 shows that most of the stations experienced a significant drop in traffic levels after the restriction, anda few stations show an increase in traffic levels. We notice that all of the border stations are blue and the percentage changes in those stations show that most of them have values close to the total average of changes.This tells us that the restriction affected them similar to the rest of the country.\nAll the counties were put on level 5 restriction from October 21st:\nThis is the most recent restriction put in place, and we currently have only 5 days of data after this lockdown. So this time we are going to compare 5 days before the lockdown to 5 days after it. Accordingly, we set the first period from October 15th to 20th and the second period from October 21st to 26th. Doing so, we get the below figure:\n\n\n\n\nFigure3. Percentage change in traffic levels comparing five days before the level 5 restriction to five days after the restriction.\n\nFigure 3 clearly shows that most of the stations are showing a substantial drop in traffic levels, except for a few. Again, in line with other stations across the country, border stations experienced a reduction in traffic levels.\nLooking at the bigger picture:\nSo far, we have compared different cross-sections of time with each other. But it is also worth looking at the longitudinal data, or the changes for locations over time\nFor this,we are going to plot the average traffic level time series. And just to see if there were significant differences among border counties compared to the total average of other non-border ones,we are going to separate border counties’ time series from the rest of the country.\n\n\n\n\nFigure4. Top: shows the average traffic levels for the five border counties plus the average traffic level of all other non border counties shown in different colours. Bottom: shows the percentage change in traffic levels relative to the first two months of the year for the same counties. Vertical lines indicate lockdown dates.\n\nIn figure 4, average traffic levels of different counties are plotted over time in different colours. Note that we are using a 7-day moving average to smooth the daily values.\nAccording to the top panel of the figure, none of the border counties except Louth have experienced traffic levels above the total average of the non-border counties since the beginning of the year. County Louth has had slightly more than the average traffic levels, even before the pandemic hitting Ireland.\nIn the bottom panel of the figure, the y-axis represents the percentage change in traffic levels relative to the overall average of traffic levels (including all the stations) in January and Feburary 2020 when there was little sign of COVID-19 in Ireland. As we can see, all of the stations experienced a significant drop or negative change in traffic levels in March and April, but as we get closer to summer an interesting pattern emerges.We see that all the border counties, again except Louth, experience positive percentage changes, e.g. +40% for Donegal in August, as opposed to the average changes of non-border counties that never went above the zero percentage line after the first two lockdowns.\nHowever, we can confirm that border counties have been responsive to the three new lockdowns (see above) and they are converging to the non-border counties by experiencing roughly equal negative percentage changes in October.\nConclusion:\nOur data shows that border traffic stations reported similar trends to other traffic stations across the country in response to governmental restrictions. We showed that all of the recent restrictions were linked with noticeable reductions in traffic levels, including traffic levels in the border counties.\n\n\n\n",
     "preview": "posts/2020-11-19-analysing-traffic-patterns-in-response-to-the-new-covid-19-restrictions-in-ireland/figure1.png",
-    "last_modified": "2020-11-19T11:18:18+00:00",
-    "input_file": "analysing-traffic-patterns-in-response-to-the-new-covid-19-restrictions-in-ireland.utf8.md"
+    "last_modified": "2020-11-19T11:27:20+00:00",
+    "input_file": {}
   },
   {
     "path": "posts/2020-11-05-vaccination-planning-for-2021/",
@@ -57,7 +56,7 @@
     "date": "2020-11-05",
     "categories": [],
     "preview": "posts/2020-11-05-vaccination-planning-for-2021/plot_low_R.png",
-    "last_modified": "2020-11-18T19:05:06-03:00",
+    "last_modified": "2020-11-09T12:47:24+00:00",
     "input_file": {}
   },
   {
@@ -77,7 +76,7 @@
     "date": "2020-10-25",
     "categories": [],
     "preview": "posts/2020-10-25-did-level-3-work-for-ireland/did-level-3-work-for-ireland_files/figure-html5/unnamed-chunk-1-1.png",
-    "last_modified": "2020-11-05T21:09:34-03:00",
+    "last_modified": "2020-11-03T11:54:51+00:00",
     "input_file": {}
   },
   {
@@ -109,7 +108,7 @@
     "date": "2020-10-19",
     "categories": [],
     "preview": {},
-    "last_modified": "2020-11-05T21:09:34-03:00",
+    "last_modified": "2020-11-01T20:49:18+00:00",
     "input_file": {}
   },
   {
@@ -145,7 +144,7 @@
     "date": "2020-09-30",
     "categories": [],
     "preview": "posts/2020-09-30-dublin-differences/dublin_prop_change_2.png",
-    "last_modified": "2020-10-28T14:36:14-03:00",
+    "last_modified": "2020-10-19T16:15:44+01:00",
     "input_file": {}
   },
   {
@@ -169,7 +168,7 @@
     "date": "2020-09-29",
     "categories": [],
     "preview": "posts/2020-10-01-how-hard-to-predict-cases/distill-preview.png",
-    "last_modified": "2020-10-28T14:36:14-03:00",
+    "last_modified": "2020-10-19T16:15:44+01:00",
     "input_file": {}
   },
   {
@@ -193,7 +192,7 @@
     "date": "2020-09-17",
     "categories": [],
     "preview": "posts/2020-09-17-where-did-ireland-imports-its-covid-19-cases-from/where-did-ireland-import-its-covid-19-cases-from_files/figure-html5/unnamed-chunk-4-1.png",
-    "last_modified": "2020-10-28T14:36:14-03:00",
+    "last_modified": "2020-10-19T16:20:18+01:00",
     "input_file": {}
   },
   {
@@ -225,7 +224,7 @@
     "date": "2020-09-13",
     "categories": [],
     "preview": {},
-    "last_modified": "2020-10-28T14:36:14-03:00",
+    "last_modified": "2020-09-24T12:52:32+01:00",
     "input_file": {}
   },
   {
@@ -253,7 +252,7 @@
     "date": "2020-09-04",
     "categories": [],
     "preview": "posts/2020-09-04-just-a-bad-flu/compare_flu_prop.png",
-    "last_modified": "2020-10-28T14:36:14-03:00",
+    "last_modified": "2020-10-19T16:15:44+01:00",
     "input_file": {}
   },
   {
@@ -288,7 +287,7 @@
       "RIP.ie"
     ],
     "preview": "posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/distill-preview.png",
-    "last_modified": "2020-10-28T14:36:14-03:00",
+    "last_modified": "2020-10-19T16:15:44+01:00",
     "input_file": {}
   },
   {
@@ -310,7 +309,7 @@
       "transport"
     ],
     "preview": "posts/2020-07-27-traffic-analysis/TII_web.png",
-    "last_modified": "2020-10-28T14:36:13-03:00",
+    "last_modified": "2020-09-11T10:26:09+01:00",
     "input_file": {}
   }
 ]
