@@ -1,7 +1,7 @@
 ---
 title: "How many COVID-19 cases has Ireland really had?"
 description: |
-  We account for under figures, and show how much larger the first wave was compared to the second
+  We account for under reported figures, and show how much larger the first wave was compared to the second
 author:
   - name: Bruna Wundervald
     url: https://www.maynoothuniversity.ie/hamilton/
@@ -28,7 +28,7 @@ In March and April, the Government of Ireland wasn’t able to put in place wide
 We can assume that this led to under-reporting of cases, and that people who had a COVID-19 infection (asymptomatic)
 were not diagnosed and reported.
 
-But how many cases of COVID-19 were we not detecting in the early months of the pandemic? In this article we use methods developed by the [London School of Hygeine and Tropical Medicine](https://researchonline.lshtm.ac.uk/id/eprint/4658145/) to estimate the real size of the initial wave of COVID-19.
+But how many cases of COVID-19 were we not detected in the early months of the pandemic? In this article we use methods developed by the [London School of Hygeine and Tropical Medicine](https://researchonline.lshtm.ac.uk/id/eprint/4658145/) to estimate the real size of the initial wave of COVID-19.
 
 
 You can read more about how we did it below, but this plot shows our best estimate of the number of cases from March up until early November:
@@ -41,7 +41,7 @@ The Figure suggests that the first wave had massively more cases than that of th
 
 ## How we did it
 
-To infer the level of case under-reporting, we estimated what is known as the case under-reporting ratio. This is the ratio of reported symptomatic cases to the true number of infected[?] individuals. We calculated this from the confirmed number of deaths, the confirmed number of cases, and the case fatality rate of the virus (initially here assumed to be 1.4\%, with a confidence interval of 1.2-1.5\%).
+To infer the level of case under-reporting, we estimated what is known as the case under-reporting ratio. This is the ratio of reported symptomatic cases to the true number of (symptomatic) infected individuals. We calculated this from the confirmed number of deaths, the confirmed number of cases, and the case fatality rate of the virus (initially here assumed to be 1.4\%, with a confidence interval of 1.2-1.5\%).
 
 We start with the estimated case fatality rate and the number of reported deaths. Now, if a person dies of COVID-19 on the 15th May, for example, we can guess that they contracted the virus about 2-3 weeks before that date. If there were 500 cases reported on the 1st May and the case fatality rate was 1%, we would expect there to be around 5 deaths on the 15th May. If there were actually 20 deaths, it means we have under-estimated the number of case by a factor of 4. We have an under-reporting ratio of 25%.
 
@@ -55,9 +55,9 @@ knitr::include_graphics("figure_3_Ireland_no_tests.png")
 ```
 
 
-This estimated percentage stays around 20\% for the period of March to July, which can be considered the beginning of the pandemic. At the same time, we can add in the testing data to see that very few tests were performed per new confirmed case. We really were not doing a good job of testing enough of the population at that point.
+This estimated percentage stays around 20\% for the period of March to July, which can be considered the beginning of the pandemic. We really were not doing a good job of testing enough of the population at that point.
 
-After July, we can see the estimated percentage of symptomatic cases starts to go up, implying that the case counts were getting much closer to reality. In the same way, the number of tests per new case increased until August, and dropped again when the number of cases dropped too. By September, we estimate that most cases in Ireland were being reported.
+After July, we can see the estimated percentage of symptomatic cases starts to go up, implying that the case counts were getting much closer to reality. By September, we estimate that most cases in Ireland were being reported.
 
 Figure 3 shows the official number of cases and the adjusted number of cases at each time point (now in the log scale), calculated using our under-reporting estimates. We can see that the peak dates for the confirmed number of cases and the adjusted number of cases remained the same - so the ‘wave’ has a similar shape.But the numbers are quite different, so the adjusted wave is bigger. Instead of around 1,000 cases, we estimate that there were more than 10,000 cases in Ireland by mid-April. From August and September on, the adjusted number of cases follows the number of confirmed cases closely.
 
@@ -99,14 +99,17 @@ knitr::include_graphics("figure_2_Ireland_ages_filter.png")
 ## Summary
 The second wave in reported COVID-19 cases for Ireland, and almost all other countries, has seemed more severe than earlier in 2020, but this could partly be due to more accurate case reporting in the second wave compared to case reporting in the first wave.
 
-We are seeing fewer numbers of deaths from COVID-19 reported in Ireland the second wave compared to earlier in the pandemic. There are probably many reasons for this, but under-reporting could account for it in part. Our analysis suggests that there were around 10,000 cases per day in Ireland by mid-April, 10 times that which was reported.
+We are seeing fewer numbers of deaths from COVID-19 reported in Ireland in the second wave compared to earlier in the pandemic. There are probably many reasons for this, but under-reporting could account for it in part. Our analysis suggests that there were around 10,000 cases per day in Ireland by mid-April, 10 times that which was reported.
 
 As with all models, there are some caveats to our analysis. These include:
 
 - We assume a constant case fatality rate. In practice this might have decreased over time which would inflate the second wave more
 - We assume that the delayed case fatality rate is a realistic method for converting deaths to cases, and that the delay between cases and deaths is set appropriately
 - We assume that the statistical model we use does an adequate job of smoothing over jumps in the daily delay ratios
-- As with all our models, we provide our code in our [GitHub](https://github.com/hamilton-institute/covid19ireland) repositories for you to be able to play with or check or results.
+- We tend to capture mostly symptomatic cases, and only really find asymptomatic cases when test and tracing is working really well. It's likely that our results are still an underestimate of the total number of symptomatic plus asumptomatic cases.
+
+
+As with all our models, we provide our code in our [GitHub](https://github.com/hamilton-institute/covid19ireland) repositories for you to be able to play with or check or results.
 
 
 
