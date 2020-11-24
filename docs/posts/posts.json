@@ -1,5 +1,30 @@
 [
   {
+    "path": "posts/2020-11-24-estimate-true-number-cases/",
+    "title": "How many COVID-19 cases has Ireland really had?",
+    "description": "We account for under figures, and show how much larger the first wave was compared to the second",
+    "author": [
+      {
+        "name": "Bruna Wundervald",
+        "url": "https://www.maynoothuniversity.ie/hamilton/"
+      },
+      {
+        "name": "Andrew Parnell",
+        "url": "https://www.hamilton.ie/covid19"
+      },
+      {
+        "name": "Claire O'Connell",
+        "url": "https://claireoconnell.wordpress.com"
+      }
+    ],
+    "date": "2020-11-24",
+    "categories": [
+      "under-reporting"
+    ],
+    "preview": "posts/2020-11-24-estimate-true-number-cases/distill-preview.png",
+    "last_modified": "2020-11-24T12:18:02+00:00"
+  },
+  {
     "path": "posts/2020-11-19-analysing-traffic-patterns-in-response-to-the-new-covid-19-restrictions-in-ireland/",
     "title": "Analysing traffic patterns in response to the new COVID-19 restrictions in Ireland",
     "description": "People are still responding to the lockdowns across the country",
@@ -24,8 +49,7 @@
     "date": "2020-11-19",
     "categories": [],
     "preview": "posts/2020-11-19-analysing-traffic-patterns-in-response-to-the-new-covid-19-restrictions-in-ireland/figure1.png",
-    "last_modified": "2020-11-19T11:31:26+00:00",
-    "input_file": "analysing-traffic-patterns-in-response-to-the-new-covid-19-restrictions-in-ireland.utf8.md"
+    "last_modified": "2020-11-24T11:45:37+00:00"
   },
   {
     "path": "posts/2020-11-05-vaccination-planning-for-2021/",
@@ -56,8 +80,7 @@
     "date": "2020-11-05",
     "categories": [],
     "preview": "posts/2020-11-05-vaccination-planning-for-2021/plot_low_R.png",
-    "last_modified": "2020-11-09T12:47:24+00:00",
-    "input_file": {}
+    "last_modified": "2020-11-24T11:45:37+00:00"
   },
   {
     "path": "posts/2020-10-25-did-level-3-work-for-ireland/",
@@ -76,8 +99,7 @@
     "date": "2020-10-25",
     "categories": [],
     "preview": "posts/2020-10-25-did-level-3-work-for-ireland/did-level-3-work-for-ireland_files/figure-html5/unnamed-chunk-1-1.png",
-    "last_modified": "2020-11-03T11:54:51+00:00",
-    "input_file": {}
+    "last_modified": "2020-11-05T11:15:06+00:00"
   },
   {
     "path": "posts/2020-10-30-is-shielding-the-elderly-a-useful-strategy-for-ireland/",
@@ -108,8 +130,7 @@
     "date": "2020-10-19",
     "categories": [],
     "preview": {},
-    "last_modified": "2020-11-01T20:49:18+00:00",
-    "input_file": {}
+    "last_modified": "2020-11-05T11:15:06+00:00"
   },
   {
     "path": "posts/2020-09-30-dublin-differences/",
@@ -144,8 +165,7 @@
     "date": "2020-09-30",
     "categories": [],
     "preview": "posts/2020-09-30-dublin-differences/dublin_prop_change_2.png",
-    "last_modified": "2020-10-19T16:15:44+01:00",
-    "input_file": {}
+    "last_modified": "2020-10-05T15:58:04+01:00"
   },
   {
     "path": "posts/2020-10-01-how-hard-to-predict-cases/",
@@ -168,8 +188,7 @@
     "date": "2020-09-29",
     "categories": [],
     "preview": "posts/2020-10-01-how-hard-to-predict-cases/distill-preview.png",
-    "last_modified": "2020-10-19T16:15:44+01:00",
-    "input_file": {}
+    "last_modified": "2020-11-05T11:15:06+00:00"
   },
   {
     "path": "posts/2020-09-17-where-did-ireland-imports-its-covid-19-cases-from/",
@@ -192,8 +211,7 @@
     "date": "2020-09-17",
     "categories": [],
     "preview": "posts/2020-09-17-where-did-ireland-imports-its-covid-19-cases-from/where-did-ireland-import-its-covid-19-cases-from_files/figure-html5/unnamed-chunk-4-1.png",
-    "last_modified": "2020-10-19T16:20:18+01:00",
-    "input_file": {}
+    "last_modified": "2020-11-05T11:15:06+00:00"
   },
   {
     "path": "posts/2020-09-11-how-long-will-covid-19-last-in-ireland/",
@@ -224,8 +242,7 @@
     "date": "2020-09-13",
     "categories": [],
     "preview": {},
-    "last_modified": "2020-09-24T12:52:32+01:00",
-    "input_file": {}
+    "last_modified": "2020-09-28T12:44:21+01:00"
   },
   {
     "path": "posts/2020-09-04-just-a-bad-flu/",
@@ -252,8 +269,7 @@
     "date": "2020-09-04",
     "categories": [],
     "preview": "posts/2020-09-04-just-a-bad-flu/compare_flu_prop.png",
-    "last_modified": "2020-10-19T16:15:44+01:00",
-    "input_file": {}
+    "last_modified": "2020-10-05T15:58:04+01:00"
   },
   {
     "path": "posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/",
@@ -287,8 +303,7 @@
       "RIP.ie"
     ],
     "preview": "posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/distill-preview.png",
-    "last_modified": "2020-10-19T16:15:44+01:00",
-    "input_file": {}
+    "last_modified": "2020-10-05T15:58:04+01:00"
   },
   {
     "path": "posts/2020-07-27-traffic-analysis/",
@@ -309,7 +324,6 @@
       "transport"
     ],
     "preview": "posts/2020-07-27-traffic-analysis/TII_web.png",
-    "last_modified": "2020-09-11T10:26:09+01:00",
-    "input_file": {}
+    "last_modified": "2020-09-08T14:31:31+01:00"
   }
 ]
