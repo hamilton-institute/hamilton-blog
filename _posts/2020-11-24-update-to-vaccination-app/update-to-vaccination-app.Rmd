@@ -1,0 +1,35 @@
+---
+title: "Update to vaccination app"
+description: |
+  We have improved our vaccination app to now include the ability to identify those who have recovered from the disease and those who have been vaccinated
+author:
+  - name: Andrew Parnell
+    url: https://www.hamilton.ie/covid19
+  - name: David Malone
+    url: https://www.maynoothuniversity.ie/hamilton/  
+date: 11-24-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+The previous version of our [vaccination app](https://www.hamilton.ie/covid19/posts/2020-11-05-vaccination-planning-for-2021/) made a simple (and quite unrealistic) assumption that everybody, even those for whom the vaccine was initially ineffective, would eventually would be vaccinated. 
+
+The new version of our app (below) now removes this assumption, and this post explains how we've done it.
+
+<iframe src="https://rstudioserver.hamilton.ie:3838/users/aparnell/SEIR_vaxx/" class="l-screen-inset shaded" height = "800px"></iframe>
+
+The standard model we have been using is an S(E)IR model where individuals move from the Susceptible (S) stage, through Exposure (E), Infection (I), and then Removal (R; either through recovery or death). Our original version of the vaccination approach simply moved individuals from the S compartment to the R compartment at a given rate, say 20,000 per day. This meant that if, say, 200 people had the vaccince but it was ineffective, they would end up staying in the S group rather than being moved to R. They were, however, still allowed to move to the R group on a subsequent day after being given another vaccination. This was unrealistic.
+
+In this new version, we have split up the S compartment, not only by age group as previously, but also into those who are awaiting vaccination, those who have been vaccinated but are awaiting its effect (which is assumed to take on average 14 days), and those who have either refused vaccination or for whom it has been ineffective. 
+
+The people who have been vaccinated get moved into the R group. The people who go into the new refused/ineffective category have to go through the remaining compartments, E and I, before heading into R. This means that we can also identify those who are in the removed compartment because they have recovered from the disease, against those who are in the removed compartment because they have been vaccinated. 
+
+In the extra options tab (click on Show/hide extra options) we have also introduced the ability to control how many doses of the vaccine can be given out. The default is that the vaccine is given out every day for 1000 days, but this can be reduced to account for potential disruptions to supply. 
+
+The new app still displays many of the same conclusions that we have seen from the previous app; that the virus will be around will into next year even with reasonable levels of vaccination. However, this new version allows much finer control over how the population is affected. 
