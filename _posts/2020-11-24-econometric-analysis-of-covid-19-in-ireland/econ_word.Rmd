@@ -1,0 +1,192 @@
+---
+title: "€2 billion: the money we didn't put on our credit cards due to COVID-19"
+description: |
+  We look at the effect of the lockdowns on credit card spending from March until November
+output: word_document
+always_allow_html: true
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+library(tidyquant)
+library(tidyverse)
+library(plotly)
+#remotes::install_github('nset-ornl/wbstats')
+#remotes::install_github('joachim-gassen/tidycovid19')
+library(tidycovid19)
+library(forecast)
+theme_set(theme_bw())
+```
+
+One of the areas we really wanted to look at in our COVID-19 project was how the Irish economy was affected by the pandemic. It is a challenge, however, to obtain real-time information on the performance of the Irish economy. The oft-used measures such as [unemployment](https://www.cso.ie/en/statistics/labourmarket/monthlyunemployment/) or [GDP](https://www.cso.ie/en/statistics/nationalaccounts/quarterlynationalaccounts/) are only available at monthly or quarterly time resolutions. 
+
+We were hoping that we might be able to identify changes in behaviour at a more instantaneous level. In this post we look at some other indicators and how they might have been affected by lockdown decisions.
+
+## Looking at the Irish stock exchange
+
+Our first idea was to look at stock exchange data to see whether lockdown decisions taken by the government might have led to individual shocks. Below is a plot of the daily closing ISEQ price against the dates of the main socio-economic measures as provided by the [ACAPS service](https://www.acaps.org/covid-19-government-measures-dataset). 
+
+
+```{r, echo = FALSE}
+iseq = tq_get("^ISEQ", get = "stock.prices", from = " 2020-01-01")
+acaps = download_acaps_npi_data(cached = TRUE) 
+
+p = ggplot(iseq,aes(x = date, y = close)) + 
+  geom_line() +
+  theme_bw() + 
+  labs(x = "Date", y = "Closing price", title = 'ISEQ closing price') + 
+  geom_vline(data = acaps %>% filter(country == 'Ireland',
+                                     category == 'Governance and socio-economic measures') %>% 
+               mutate(date2 = as.numeric(date_implemented)),
+             aes(xintercept = date2,
+                 date = date_implemented,
+                 detail = measure), 
+             colour = 'red')
+ggplotly(p)
+```
+
+It's quite clear that the socio-economic measures imposed by the government occurred _after_ the fall in the index happened. If you hover your mouse at the top of the red lines you will see what the measures were. We found repeatedly across different countries that economic measures were introduced after the fall in the market. 
+
+## Plotting against intervention score
+
+An extra data set that might match the econometric data is the Oxford Non-Pharmaceutical Interventions (NPI) data set. They produce stringency indices based on the overall lockdown status, the government degree of intervention, and the containment/health degree of intervention. More details can be found [here](https://joachim-gassen.github.io/tidycovid19/reference/download_oxford_npi_data.html).
+
+```{r}
+npi = download_oxford_npi_data(type = 'index', cached = TRUE)
+
+all_df = iseq %>%
+  left_join(npi %>% filter(country == 'Ireland'), by = "date") %>% 
+  select(date, close, stringency_index) %>% 
+  rename(`1. ISEQ closing price` = close,
+         `2. Oxford stringency index` = stringency_index
+         ) %>% 
+  pivot_longer(names_to = 'Type', values_to = 'Value', -date)
+
+p3 = ggplot(all_df,aes(x = date, y = Value, colour = Type)) + 
+  geom_line() +
+  facet_wrap(Type ~., scales = 'free_y', ncol = 1) + 
+  theme(legend.position = 'None') +
+  ggtitle("Irish stock exchange closing prices and Oxford intervention indices")
+  
+ggplotly(p3) %>% hide_legend()
+```
+
+Like the previous plots, the stringency index increases _after_ the ISEQ fall. 
+
+## Plotting against Google Trends
+
+Yet another alternative to the stringency index is to plot against Google trends data. This measures (via a relative score) how many people are searching for items associated with COVID-19
+
+```{r}
+gtrends = download_google_trends_data(cached = TRUE)
+all_df3 = iseq %>%
+  left_join(gtrends %>% filter(iso3c == 'IRL') %>% 
+              mutate(date = date + 2), by = "date") %>% 
+  select(date, close, gtrends_score) %>% 
+  tidyr::fill(gtrends_score) %>% 
+  rename(`1. ISEQ closing price` = close,
+         `2. Google trends score` = gtrends_score) %>% 
+  pivot_longer(names_to = 'Type', values_to = 'Value', -date)
+
+p5 = ggplot(all_df3,aes(x = date, y = Value, colour = Type)) + 
+  geom_line() +
+  facet_wrap(Type ~., scales = 'free_y', ncol = 1) + 
+  theme(legend.position = 'None') +
+  ggtitle("ISEQ closing prices and Google trends score")
+  
+ggplotly(p5) %>% hide_legend()
+```
+
+This looks like a much closer relationship. But now we're in danger of falling into the [Google Flu trends trap](https://en.wikipedia.org/wiki/Google_Flu_Trends).
+
+## Plotting Irish credit card data
+
+To come to our rescue, the Central Bank provide [information on credit card](https://www.centralbank.ie/statistics/data-and-analysis/credit-and-banking-statistics/credit-and-debit-card-statistics) spending at a daily resolution:
+
+```{r, fig.height = 10}
+library(readxl)
+irish_cc = read_excel(path = 'table-a-13-2-daily-card-payments-data.xlsx',
+                 sheet = 'Data') %>% 
+  filter(str_detect(Category, 'Volumes')) %>% 
+  unite('label', c(`Row Description`, Category), sep = "\n")
+ggplot(irish_cc, aes(x = Date, y = Amount, colour = label)) + 
+  geom_line() + 
+  facet_wrap(~label, ncol = 1, scales = 'free_y') + 
+  theme(legend.position = 'None') + 
+  scale_x_datetime(date_breaks = '4 weeks', date_labels = "%d-%b")
+```
+
+This is a big plot, but it's a fascinating data set. Can we now work out whether these values are affected by e.g. the interventions? 
+
+We can plot, e.g. the total credit card volumes alongside the stringency index
+
+```{r}
+npi2 = npi %>% filter(country == 'Ireland') %>% 
+  select(date, stringency_index) %>% 
+  rename(Date = date,
+         Amount = stringency_index) %>% 
+  mutate(label = "Stringency index",
+         `Row Pos.` = NA)
+irish_cc2 = rbind(irish_cc %>% 
+                    filter(label == "Total gross new spending on all credit cards\nCredit Card Volumes (€000)"), 
+                  npi2)
+
+ggplot(irish_cc2, aes(x = Date, y = Amount, colour = label)) + 
+  geom_line() + 
+  facet_wrap(~label, ncol = 1, scales = 'free_y') + 
+  theme(legend.position = 'None') + 
+  scale_x_datetime(date_breaks = '4 weeks', date_labels = "%d-%b")
+
+```
+
+The [`forecast`](https://www.jstatsoft.org/article/view/v027i03) package has some neat functions to work out the effect of interventions. We can then plot the counterfactual: what would the credit card spend be if the lockdown hadn't occurred?
+
+We do this by fitting a statistical model to the data which estimates the effect of the intervention score for each day's spending. We then use that model fit to estimate what the series would have looked like if all the lockdown measures were 0 each day. 
+
+```{r}
+irish_cc_merge = irish_cc %>% 
+  filter(label == "Total gross new spending on all credit cards\nCredit Card Volumes (€000)") %>% 
+  select(Date, Amount) %>% 
+  left_join(npi2 %>% select(Date, Amount), by = "Date") %>% 
+  rename(Amount = Amount.x,
+         `Stringency index` = Amount.y)
+  
+irish_cc_ts = ts(irish_cc_merge %>% 
+                   select(Amount) %>% pull, 
+                    frequency = 7,)
+
+npi_ts = irish_cc_merge %>% select(`Stringency index`) %>% pull
+
+#irish_cc_decom = irish_cc_ts %>% decompose
+#autoplot(irish_cc_decom)
+
+fit = auto.arima(irish_cc_ts, xreg = npi_ts)
+
+irish_cc_merge$counter_factual = fit$fitted - fit$coef['xreg']*npi_ts
+
+irish_cc_merge2 = irish_cc_merge %>% 
+  select(-`Stringency index`) %>% 
+  rename(`Total Irish CC\nSpending (€000s)` = Amount,
+         `Counterfactual Irish\nCC Spending (€000)` = counter_factual) %>% 
+  pivot_longer(names_to = "Type", values_to = "Values", -Date)
+
+p = ggplot(irish_cc_merge2, aes(x = Date, y = Values, colour = Type)) + 
+  geom_line() + 
+  labs(y = "Daily spend (€000)") + 
+  scale_x_datetime(date_breaks = '4 weeks', date_labels = "%d-%b") + 
+  ggtitle("Effect of intervention scores on Irish credit spending")
+ggplotly(p)
+
+```
+
+So how much did it cost the Irish Economy?
+
+```{r, echo = TRUE}
+diff = irish_cc_merge$counter_factual - irish_cc_merge$Amount
+print(sum(diff))
+```
+
+Answer 2 billion euro!!!
+
+### Postscript: 
+
+If you want to see the code behind this plot see our [GitHub repository](https://github.com/hamilton-institute/hamilton-institute.github.io).
