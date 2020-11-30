@@ -1,35 +1,99 @@
 [
   {
-    "path": "apps/vaccination/",
-    "title": "What effect will a vaccine have in Ireland?",
-    "description": {},
-    "author": [],
-    "date": "2020-11-24",
-    "categories": [],
-    "contents": "\nDo you want to know more about this app? Click here to read the blog post.\n\n\nd\n\n\n\n",
-    "preview": {},
-    "last_modified": "2020-11-24T15:35:41+00:00",
-    "input_file": "vaccination.utf8.md"
-  },
-  {
     "path": "apps/excessrip/",
     "title": "Excess postings to RIP.ie in Eircode regions",
     "description": {},
     "author": [],
-    "date": "2020-11-18",
+    "date": "2020-11-30",
     "categories": [],
+    "contents": "\nDo you want to know more about this app? Click here to read the blog post.\n\n\n\n\n\n",
     "preview": {},
-    "last_modified": "2020-11-24T11:45:36+00:00"
+    "last_modified": "2020-11-30T11:39:48-03:00",
+    "input_file": "excessrip.utf8.md"
   },
   {
     "path": "apps/howlong/",
     "title": "How long will COVID-19 last in Ireland?",
     "description": {},
     "author": [],
-    "date": "2020-11-18",
+    "date": "2020-11-30",
     "categories": [],
+    "contents": "\nDo you want to know more about this app? Click here to read the blog post.\n\n\n\n\n\n",
     "preview": {},
-    "last_modified": "2020-11-24T11:45:36+00:00"
+    "last_modified": "2020-11-30T11:36:22-03:00",
+    "input_file": {}
+  },
+  {
+    "path": "apps/R_est_country/",
+    "title": "R estimates for all countries",
+    "description": {},
+    "author": [],
+    "date": "2020-11-30",
+    "categories": [],
+    "contents": "\n\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2020-11-30T11:36:28-03:00",
+    "input_file": {}
+  },
+  {
+    "path": "apps/R_est_Ireland/",
+    "title": "R estimates for Irish provinces",
+    "description": {},
+    "author": [],
+    "date": "2020-11-30",
+    "categories": [],
+    "contents": "\n\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2020-11-30T11:43:03-03:00",
+    "input_file": "R_est_Ireland.utf8.md"
+  },
+  {
+    "path": "apps/seirsim/",
+    "title": "SEIR simulation app",
+    "description": {},
+    "author": [],
+    "date": "2020-11-30",
+    "categories": [],
+    "contents": "\nDo you want to know more about this app? Click here to read the blog post.\n\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2020-11-30T11:36:36-03:00",
+    "input_file": {}
+  },
+  {
+    "path": "apps/shielding/",
+    "title": "What effect would shielding the over 65s have in Ireland?",
+    "description": {},
+    "author": [],
+    "date": "2020-11-30",
+    "categories": [],
+    "contents": "\nDo you want to know more about this app? Click here to read the blog post.\n\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2020-11-30T11:36:40-03:00",
+    "input_file": {}
+  },
+  {
+    "path": "apps/vaccination/",
+    "title": "What effect will a vaccine have in Ireland?",
+    "description": {},
+    "author": [],
+    "date": "2020-11-30",
+    "categories": [],
+    "contents": "\nDo you want to know more about this app? Click here to read the blog post.\n\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2020-11-30T11:44:01-03:00",
+    "input_file": "vaccination.utf8.md"
+  },
+  {
+    "path": "apps/wheredid/",
+    "title": "Where did Ireland import its COVID-19 cases from?",
+    "description": {},
+    "author": [],
+    "date": "2020-11-30",
+    "categories": [],
+    "contents": "\nDo you want to know more about this app? Click here to read the blog post.\n\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2020-11-30T11:41:05-03:00",
+    "input_file": "wheredid.utf8.md"
   },
   {
     "path": "apps/pred_app/",
@@ -38,57 +102,9 @@
     "author": [],
     "date": "2020-11-18",
     "categories": [],
+    "contents": "\n\n\n\n\n",
     "preview": {},
-    "last_modified": "2020-11-24T11:45:36+00:00"
-  },
-  {
-    "path": "apps/R_est_country/",
-    "title": "R estimates for all countries",
-    "description": {},
-    "author": [],
-    "date": "2020-11-18",
-    "categories": [],
-    "preview": {},
-    "last_modified": "2020-11-24T11:45:36+00:00"
-  },
-  {
-    "path": "apps/R_est_Ireland/",
-    "title": "R estimates for Irish provinces",
-    "description": {},
-    "author": [],
-    "date": "2020-11-18",
-    "categories": [],
-    "preview": {},
-    "last_modified": "2020-11-24T11:45:36+00:00"
-  },
-  {
-    "path": "apps/seirsim/",
-    "title": "SEIR simulation app",
-    "description": {},
-    "author": [],
-    "date": "2020-11-18",
-    "categories": [],
-    "preview": {},
-    "last_modified": "2020-11-24T11:45:36+00:00"
-  },
-  {
-    "path": "apps/shielding/",
-    "title": "What effect would shielding the over 65s have in Ireland?",
-    "description": {},
-    "author": [],
-    "date": "2020-11-18",
-    "categories": [],
-    "preview": {},
-    "last_modified": "2020-11-24T11:45:36+00:00"
-  },
-  {
-    "path": "apps/wheredid/",
-    "title": "Where did Ireland import its COVID-19 cases from?",
-    "description": {},
-    "author": [],
-    "date": "2020-11-18",
-    "categories": [],
-    "preview": {},
-    "last_modified": "2020-11-24T11:45:37+00:00"
+    "last_modified": "2020-11-18T20:06:52-03:00",
+    "input_file": {}
   }
 ]
