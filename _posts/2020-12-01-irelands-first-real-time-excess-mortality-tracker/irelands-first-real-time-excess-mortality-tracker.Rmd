@@ -1,0 +1,158 @@
+---
+title: "Ireland’s first real-time excess mortality tracker"
+description: |
+  Our new app provides always up-to-date information on how many people are dying in Ireland compared to previous years' levels
+author:
+  - name: Amin Shoari Nejad
+    url: https://www.maynoothuniversity.ie/hamilton/
+  - name: Bruna Wundervald
+    url: https://www.maynoothuniversity.ie/hamilton/
+  - name: Andrew Parnell
+    url: https://www.hamilton.ie/covid19
+  - name: Gerard McCarthy
+    url: https://www.maynoothuniversity.ie/people/gerard-mccarthy
+  - name: Claire O'Connell
+    url: https://claireoconnell.wordpress.com
+date: 12-01-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align = 'center', 
+                      fig.show = 'H')
+
+library(tidyverse)
+library(dplyr)
+library(plotly)
+library(lubridate)
+library(zoo)
+library(ggplot2)
+library(gridExtra)
+library(cowplot)
+
+rm(list= ls())
+```
+
+
+In a [previous post](https://www.hamilton.ie/covid19/posts/2020-08-19-2020-08-indictorsofexcessmortalityfromripie/) we covered how important excess mortality is to accurately measuring death rates. In this post, we give a recap on the definition and provide an app that gives real time excess mortality estimates for Ireland.
+
+You can read more about the details below, but here is the app:
+
+<iframe src="https://aminshn2.shinyapps.io/RIP_app/" class="l-screen-inset shaded" height = "1200px"></iframe>
+
+## What is excess mortality and how is it calculated? 
+
+In epidemiology and public health, excess mortality refers to the number of deaths from all causes over and above what we would have expected under usual conditions. Here, we are interested in how deaths during the COVID-19 pandemic differ from the average number of deaths in previous years during the same period.
+
+In particular, we don’t want to only count deaths that have been officially attributed to COVID-19, because that often misses deaths that occurred outside of hospitals, or because of the knock-on effects of COVID-19, such as [increased waiting times for other treatments](https://www.irishtimes.com/news/ireland/irish-news/almost-850-000-people-waiting-for-hospital-care-due-to-covid-19-delays-1.4376947).
+
+There are various ways of evaluating excess mortality, but here are the steps we followed to estimate it and visualise the results: \
+
+1. We collected death notices published on the [RIP.ie website](https://rip.ie/) as the input data to our excess mortality calculations. The obvious drawback of using RIP.ie postings is that it does not include all the deaths happening in the country, but as we are only looking at the ratio of the postings in 2020 to the average of previous years, we think the data allows us to provide a reasonable estimation. Meanwhile, a benefit of RIP.ie is that it  can provide us with sub-county level data that is recorded near real time. 
+
+2. After collecting the data, it is possible to calculate the ratio of the total postings for any specific time period in 2020 to the average of the same period over the past five years. More specifically we define excess mortality from date *a* to *b* as: 
+\
+\
+$$Excess~Mortality\mbox{%} = \frac{Deaths_{2020}(a,b) - Average~Deaths_{2015 -2019}(a,b)}{Average~Deaths_{2015-2019}(a,b)} $$
+\
+3. We calculated the above excess mortality rate for the whole country as well as many sub-areas. The app above displays the results of these calculations.
+
+## Excess mortality tracking app
+
+Our excess mortality tracking app above allows you to visualise the severity of the excess mortality across the country on a map of Ireland. You can simply hover your pointer over the map to open a pop-up that includes the ratio of excess mortality (compared to the average for the last five years) for your selected region for the past 28 days. 
+
+Furthermore, you can observe the excess mortality rate changing over time. If you click on a region from the map, a time series plot for that specific region will be shown.
+
+You have the option to visualise both the percentage change and the absolute values of the excess mortality by selecting between the “Percentage” and “Absolute” buttons. 
+
+The app is updated on a daily basis, and the national excess mortality rate is shown in the second tab for the past 28 days. Again you can observe the excess mortality rate changing overtime on the national level just by clicking on the “Show complete data” button. Finally, by selecting the “Heat map” tab you can visualise the excess mortality changing over time for all of the regions clustered by their similarities in excess mortality conditions.
+
+## Linking excess mortality to confirmed cases
+
+As we mentioned at the beginning of this post, excess mortality in 2020 is expected to be caused mostly by the COVID-19 pandemic and its knock-on effects. Accordingly, we expect to see a high correlation between the number of COVID-19 cases and excess mortality over time. This is likely to occur at a lagged rate, as it can take several weeks for those who catch COVID-19 to die from it.
+
+In an [earlier post](https://www.hamilton.ie/covid19/posts/2020-11-24-estimate-true-number-cases/) we estimated the ‘true’ number of cases in Ireland. We can now plot that estimate of the number of cases against our excess mortality percentage. This gives the following plot:
+
+
+```{r}
+
+adjusted_cases <- readRDS("adjusted_cases.rds")
+
+strt = as.Date("2020-01-01")
+end = as.Date("2020-11-29")
+#adjusted_cases <- adjusted_cases %>% complete(date = seq.Date(strt, end, by="day"))
+
+
+p1 <- ggplot(adjusted_cases) +  geom_line(aes(x=date, y=new_cases_adjusted_smooth_mid), colour="black") + xlab("Date") + ylab("Adjusted Cases")  
+
+
+peak1 <- adjusted_cases$date[which.max(adjusted_cases$new_cases_adjusted_smooth_mid)]
+
+
+plt1 <- p1+
+  geom_line(data=adjusted_cases, aes(x = date, y = new_cases_adjusted_smooth_mid )) +
+  geom_ribbon(data=adjusted_cases, aes(x=date, ymin=new_cases_adjusted_smooth_low, ymax=new_cases_adjusted_smooth_high), alpha=0.5, inherit.aes=F, fill="blue")+
+  scale_x_date(date_breaks = "1 month", date_labels = "%b",limits=c(as.Date("2020-01-01"),as.Date("2020-11-15"))) +
+  geom_vline(xintercept = peak1,linetype="dotted") +
+  theme_classic()
+
+
+
+######### Adding excess data:
+
+load("RIP_rk_aggregated_data_merged_12Nov.RData")
+
+ref_level <- merged_rk_data %>% filter(Year < 2020 & Year >=2015 ) %>%
+  ungroup() %>%
+  group_by(Group,Date) %>%
+  summarize(Monthly_Notices = sum(Monthly_Notices)) %>%
+  mutate(DOY=yday(Date)) %>%
+  group_by(Group,DOY) %>%
+  mutate(Ref_Level = mean(Monthly_Notices),
+         Prev_Max = max(Monthly_Notices))
+
+df2020 <- merged_rk_data %>% filter(Year == 2020)
+df_ref <- ref_level %>% ungroup() %>% filter(year(Date) == 2019) %>% select(Group,DOY, Ref_Level) 
+
+merged_df <- left_join(df2020, df_ref)
+merged_df <- merged_df %>% mutate(value = round(100*(Monthly_Notices - Ref_Level)/Ref_Level)) #Mortality rate change
+
+total <- merged_df %>% group_by(Date) %>% 
+  summarise(Monthly_Notices = sum(Monthly_Notices, na.rm = T), Ref_Level = sum(Ref_Level)) %>% 
+  mutate(value = round(100*(Monthly_Notices - Ref_Level)/Ref_Level))
+
+#total <- total %>% complete(Date = seq.Date(strt, end, by="day"))
+
+
+p2 <- ggplot(total) +  geom_line(aes(x=Date, y=value), colour="black") + xlab("Date") + ylab("Excess mortality %")  
+
+peak2 <- total$Date[which.max(total$value)]
+
+plt2 <- p2+
+  geom_line(data=total, aes(x = Date, y = value )) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b",limits=c(as.Date("2020-01-01"),as.Date("2020-11-15"))) +
+  geom_vline(xintercept = peak2,linetype="dotted") +
+  geom_hline(yintercept = 0, linetype="dotted") +
+  theme_classic()
+
+#grid.arrange(plt1,plt2, nrow = 2)
+plot_grid(plt1, plt2, align = "v", nrow = 2)
+
+```
+
+The top panel shows our estimate of the true number of cases, the bottom panel the excess mortality. Remember excess mortality is measured as a percentage above normal levels. We can clearly see that the two peaks in the adjusted number of COVID-19 cases and that the excess mortality rate happened in April, with the peak of the adjusted number of cases being 17 days ahead of the excess mortality’s peak. It seems that Ireland has been running at a slight increase of 5-10% of excess mortality from September to November, compared to previous years.
+ 
+
+## Summary
+
+As in our other posts, it certainly seems that the second wave has been much milder than the first for mortality, though the slight increase in excess mortality between September and November is worrying.
+
+Ireland currently has no way of tracking official excess mortality. The [Eurostat website](https://ec.europa.eu/eurostat) gives estimates for many European countries but not Ireland. Even HIQA, the government organisation, [relies on RIP.ie to estimate excess mortality](https://www.hiqa.ie/sites/default/files/2020-07/Analysis-of-excess-all-cause-mortality-in-Ireland-during-the-COVID-19-epidemic.pdf), which seems very surprising. Hopefully with this new app we can more quickly spot future trends and changes in excess mortality.
+
+As with all our work, we have put the code in our [GitHub repositories](https://github.com/hamilton-institute) so that others can check and improve our code. If you spot any mistakes please get in contact.
+
