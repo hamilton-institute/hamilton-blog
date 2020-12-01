@@ -26,7 +26,7 @@ navbar:
           href: apps/seirsim/index.html
         - text: "Where did Ireland import its COVID-19 cases from?"
           href: apps/WhereDid/index.html
-        - text: "What will happen tomorrow?"
+        - text: "COVID-19 forecast app"
           href: apps/pred_app/index.html
         - text: "Shielding over 65s in Ireland"
           href: apps/shielding/index.html

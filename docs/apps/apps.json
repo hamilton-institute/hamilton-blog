@@ -85,13 +85,15 @@
   },
   {
     "path": "apps/pred_app/",
-    "title": "What will happen tomorrow?",
+    "title": "COVID-19 forecast app",
     "description": {},
     "author": [],
-    "date": "2020-11-18",
+    "date": "2020-12-01",
     "categories": [],
+    "contents": "\nDo you want to know more about this app? Click here to read the blog post\n\n\n\n\n\n",
     "preview": {},
-    "last_modified": "2020-11-24T11:45:36+00:00"
+    "last_modified": "2020-12-01T20:51:07+00:00",
+    "input_file": "pred_app.utf8.md"
   },
   {
     "path": "apps/R_est_country/",
