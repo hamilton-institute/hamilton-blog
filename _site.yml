@@ -20,8 +20,8 @@ navbar:
           href: dashboard.html
         - text: "How long will COVID-19 last?"
           href: apps/howlong/index.html
-        - text: "Excess deaths in Ireland"
-          href: apps/excessrip/index.html
+        - text: "Excess mortality in Ireland"
+          href: apps/excessrip2/index.html
         - text: "SEIR simulation"
           href: apps/seirsim/index.html
         - text: "Where did Ireland import its COVID-19 cases from?"
