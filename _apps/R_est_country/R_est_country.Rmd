@@ -6,4 +6,4 @@ output:
 collections: apps
 ---
 
-<iframe src="https://apmuhamilton.shinyapps.io/R_est_country/" class="l-screen-inset shaded" height = "700px"></iframe>
+<iframe src="https://apmuhamilton.shinyapps.io/hamiltonrestcountry/" class="l-screen-inset shaded" height = "700px"></iframe>

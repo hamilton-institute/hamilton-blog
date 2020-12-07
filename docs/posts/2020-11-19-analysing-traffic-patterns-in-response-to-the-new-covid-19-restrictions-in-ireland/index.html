@@ -68,7 +68,6 @@
     var header = $('header').get(0);
     var headerHeight = header.offsetHeight;
     var headroom = new Headroom(header, {
-      tolerance: 5,
       onPin : function() {
         if (window.headroom_prevent_pin) {
           window.headroom_prevent_pin = false;
@@ -416,19 +415,22 @@ function offsetURL(url) {
   return offset ? offset + '/' + url : url;
 }
 
+function createIndex() {
+  var options = {
+    keys: [
+      "title",
+      "categories",
+      "description",
+      "contents"
+    ]
+  };
+  return new window.Fuse([],options);
+}
+
 function createFuseIndex() {
 
   // create fuse index
-  var options = {
-    keys: [
-      { name: 'title', weight: 20 },
-      { name: 'categories', weight: 15 },
-      { name: 'description', weight: 10 },
-      { name: 'contents', weight: 5 },
-    ],
-    ignoreLocation: true,
-    threshold: 0
-  };
+  var options = { keys: ["title", "description", "contents"] };
   var fuse = new window.Fuse([], options);
 
   // fetch the main search.json
@@ -496,6 +498,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             shouldSort: true,
             minMatchCharLength: 2,
             limit: 10,
+            keys: [
+              { name: 'title', weight: 20 },
+              { name: 'categories', weight: 15 },
+              { name: 'description', weight: 10 },
+              { name: 'contents', weight: 5 },
+            ],
           };
           var results = fuse.search(query, searchOptions);
           callback(results
@@ -793,7 +801,7 @@ d-article pre code {
 d-article pre,
 d-article div.sourceCode,
 d-article div.sourceCode pre {
-  overflow: auto;
+  overflow: hidden;
 }
 
 d-article div.sourceCode {
@@ -2158,7 +2166,7 @@ img {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Analysing traffic patterns in response to the new COVID-19 restrictions in Ireland","description":"People are still responding to the lockdowns across the country","authors":[{"author":"Amin Shoari Nejad","authorURL":"https://www.hamilton.ie/covid19","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""},{"author":"Andrew Parnell","authorURL":"https://www.hamilton.ie/covid19","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""},{"author":"Claire O'Connell","authorURL":"https://claireoconnell.wordpress.com","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""},{"author":"Bruna Wundervald","authorURL":"https://www.maynoothuniversity.ie/hamilton/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-11-19T00:00:00.000+00:00","citationText":"Nejad, et al., 2020"}
+{"title":"Analysing traffic patterns in response to the new COVID-19 restrictions in Ireland","description":"People are still responding to the lockdowns across the country","authors":[{"author":"Amin Shoari Nejad","authorURL":"https://www.hamilton.ie/covid19","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""},{"author":"Andrew Parnell","authorURL":"https://www.hamilton.ie/covid19","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""},{"author":"Claire O'Connell","authorURL":"https://claireoconnell.wordpress.com","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""},{"author":"Bruna Wundervald","authorURL":"https://www.maynoothuniversity.ie/hamilton/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-11-19T00:00:00.000-03:00","citationText":"Nejad, et al., 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
