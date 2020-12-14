@@ -5,48 +5,48 @@
       "title": "About Ireland’s COVID-19 Data Dive",
       "author": [],
       "contents": "\nThe project\nWe have been awarded SFI funding to generate computational tools to help Ireland predict the epidemiological (disease-related) and economic consequences during the path to recovery in the COVID-19 pandemic. Our project will focus on putting computational models for medium term forecasting in place that will enable the state to make evidence-based decisions about the impact of relaxing COVID-19 restrictions. We aim to help the public stay informed about the data being generated\nThis goal of this website is to show posts and apps about our work. Where possible, all our code will be made available in our GitHub repositories.\nThe team\n\n\n\n\n\n\n\n\n\n\n\nProf Andrew Parnell\n\nHamilton Institute\n\n\n\n\n\nProf Ken Duffy\n\nHamilton Institute\n\n\n\n\n\nProf Subhra Dey\n\nHamilton Institute\n\n\n\n\n\nProf Damien Woods\n\nHamilton Institute\n\n\n\n\n\nProf Paul Moynagh\n\nHamilton Institute\n\n\n\n\n\nProf David Malone\n\nHamilton Institute\n\n\n\n\n\nAssoc Prof Catherine Hurley\n\nHamilton Institute\n\n\n\n\n\nDr Niamh Cahill\n\nHamilton Institute\n\n\n\n\n\nDr Rafael De Andrade Moral\n\nHamilton Institute\n\n\n\n\n\nDr Gerard McCarthy\n\nHamilton Institute\n\n\n\n\n\nDr Danilo Sarti\n\nHamilton Institute\n\n\n\n\n\nDr Hoda Binaei\n\nHamilton Institute\n\n\n\n\n\nBruna Wundervald\n\nHamilton Institute\n\n\n\n\n\nAmin Shoari Nejad\n\nHamilton Institute\n\n\n\n\n\nRebecca Dempsey\n\nHamilton Institute\n\n\n\n\n\nHoChan Cheon\n\nHamilton Institute\n\n\n\n\n\nNicole Luduvice\n\nR6 Consulting\n\n\n\n\n\nDr William Amorim\n\nR6 Consulting\n\n\n\n\nIf you would like to know more about who we are and the what we do, please visit the Institute’s website.\nR6 Consulting is a Brazilian company specialized in Data Science and R programming.\nFunding\nWe are very grateful to Science Foundation Ireland for providing us with funding for this project via their emergency COVID-19 funding portal via grant number 20/COV/0081.\n\n\n\n\n\n\n\n",
-      "last_modified": "2020-12-07T12:34:21-03:00"
+      "last_modified": "2020-12-14T11:39:10-03:00"
     },
     {
       "path": "apps.html",
       "title": "Hamilton Institute COVID-19 Apps",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2020-12-07T12:34:22-03:00"
+      "last_modified": "2020-12-14T11:39:11-03:00"
     },
     {
       "path": "dashboard.html",
       "title": "Hamilton Institute COVID-19 Dashboard",
       "author": [],
       "contents": "\n\n\n\n\n\n",
-      "last_modified": "2020-12-07T12:34:22-03:00"
+      "last_modified": "2020-12-14T11:39:11-03:00"
     },
     {
       "path": "index.html",
       "title": "Welcome to the Hamilton Institute's COVID-19 Data Dive",
       "author": [],
       "contents": "\nWe are a group of mathematicians, statisticians, computer scientists, geographers, and infectious disease experts who are analysing data about COVID-19 in Ireland. We are based in the Hamilton Institute at Maynooth University.\nWhat would you like to do?\nSee the latest figures from our dashboard\nRead some blog posts about COVID-19 in Ireland\nPlay with some apps\nFind out more about the team and the project\nWe are very grateful to Science Foundation Ireland for providing us with funding for this project via their emergency COVID-19 funding portal via grant number 20/COV/0081.\n\n\n\n\n\n\n",
-      "last_modified": "2020-12-07T12:34:23-03:00"
+      "last_modified": "2020-12-14T11:39:12-03:00"
     },
     {
       "path": "posts.html",
       "title": "Posts",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2020-12-07T12:34:23-03:00"
+      "last_modified": "2020-12-14T11:39:13-03:00"
     },
     {
       "path": "README.html",
       "author": [],
       "contents": "\nThis repository hosts the content of the Hamilton Institute blog (https://hamilton-institute.github.io/docs/), where our research group publishes blog posts about a wide variety of topics. Currently, we are focusing on our COVID-19 in Ireland project, so the posts will be mainly related to our findings regarding this subject\n## Contribution guide\nThis is a jekyll based website, but if you have any familiarity with R/Rmarkdown, the contribution will be very simple. First, two main R packages need to be installed:\nknitr\ndistill\nThey’re both available from CRAN. If you are interested in publishing a post in this blog, follow these steps:\nClone this repository in your local machine. If you don’t know how to do that, please follow this guide or ask another member of the group for help.\nIf this is not your first time writing a blog post, please pull the repository changes first, also described in the previous link. Not doing this will generate conflicts between your local folder and the current state of the repository.\nAssuming R and RStudio to be already installed, open a new RStudio session in the repository you just cloned. Preferably, you can use an RStudio project.\nIn your RStudio session, check if your directory is set to be your local folder of the blog repository and load the two packages:\n# install.packages(\"knitr\",\"distill\")\nlibrary(knitr)\nlibrary(distill)\nRun the following command to create a new rmarkdown file for your post:\ncreate_post(\"Insert the title of you post here\")\nThis will create a new folder in the _posts folder, where the content of your post will be stored.\nOpen the new rmarkdown file and write the post. You can follow the guidelines at this link for more details on how to write a distill rmarkdown post.\nSince the post is rmarkdown based, it will accept pretty much everything that rmarkdown uses: R code, python code, images, html tags, etc. For guidelines on how to use rmarkdown, please see this link.\nKnit your rmarkdown file, by either clicking the ‘knit’ button on RStudio or using the command + enter + k shortcut. Please verify that an .html file was created in your post folder, and check that everything is as you expected it to be in that file.\nAt last, run the following in your RStudio session:\nlibrary(rmarkdown)\nrender_site()\nAnd check how your post looks like in the blog, by opening the docs/index.html and going to the Posts section of the blog.\nUpload your new post to the GitHub repository, as described at this link. At this step, please avoid uploading objects such as\nThe .DS_Store objects\nThe .Rproj file, in case you created one in your local machine\nThose objects are not part of the blog and shouldn’t be uploaded. In addition, since this repository belongs to a big group, please avoid changing other features of the blog without letting the maintainers know first. A small change in one of the core files might lead the blog to fully stop working.\nAfter this, you’re done and your post will soon appear in the blog! If you have any questions, please raise an issue or get in touch via Slack.\n\n\n\n",
-      "last_modified": "2020-12-07T12:34:24-03:00"
+      "last_modified": "2020-12-14T11:39:13-03:00"
     },
     {
       "path": "README.html",
       "title": "Hamilton Institute Blog",
       "author": [],
       "contents": "\nThis repository hosts the content of the Hamilton Institute blog (https://hamilton-institute.github.io/docs/), where our research group publishes blog posts about a wide variety of topics. Currently, we are focusing on our COVID-19 in Ireland project, so the posts will be mainly related to our findings regarding this subject\n## Contribution guide\nThis is a jekyll based website, but if you have any familiarity with R/Rmarkdown, the contribution will be very simple. First, two main R packages need to be installed:\nknitr\ndistill\nThey’re both available from CRAN. If you are interested in publishing a post in this blog, follow these steps:\nClone this repository in your local machine. If you don’t know how to do that, please follow this guide or ask another member of the group for help.\nIf this is not your first time writing a blog post, please pull the repository changes first, also described in the previous link. Not doing this will generate conflicts between your local folder and the current state of the repository.\nAssuming R and RStudio to be already installed, open a new RStudio session in the repository you just cloned. Preferably, you can use an RStudio project.\nIn your RStudio session, check if your directory is set to be your local folder of the blog repository and load the two packages:\n# install.packages(\"knitr\",\"distill\")\nlibrary(knitr)\nlibrary(distill)\nRun the following command to create a new rmarkdown file for your post:\ncreate_post(\"Insert the title of you post here\")\nThis will create a new folder in the _posts folder, where the content of your post will be stored.\nOpen the new rmarkdown file and write the post. You can follow the guidelines at this link for more details on how to write a distill rmarkdown post.\nSince the post is rmarkdown based, it will accept pretty much everything that rmarkdown uses: R code, python code, images, html tags, etc. For guidelines on how to use rmarkdown, please see this link.\nKnit your rmarkdown file, by either clicking the ‘knit’ button on RStudio or using the command + enter + k shortcut. Please verify that an .html file was created in your post folder, and check that everything is as you expected it to be in that file.\nAt last, run the following in your RStudio session:\nlibrary(rmarkdown)\nrender_site()\nAnd check how your post looks like in the blog, by opening the docs/index.html and going to the Posts section of the blog.\nUpload your new post to the GitHub repository, as described at this link. At this step, please avoid uploading objects such as\nThe .DS_Store objects\nThe .Rproj file, in case you created one in your local machine\nThose objects are not part of the blog and shouldn’t be uploaded. In addition, since this repository belongs to a big group, please avoid changing other features of the blog without letting the maintainers know first. A small change in one of the core files might lead the blog to fully stop working.\nAfter this, you’re done and your post will soon appear in the blog! If you have any questions, please raise an issue or get in touch via Slack.\n\n\n\n",
-      "last_modified": "2020-12-07T12:34:24-03:00"
+      "last_modified": "2020-12-14T11:39:13-03:00"
     }
   ],
   "collections": ["apps/apps.json", "posts/posts.json"]
