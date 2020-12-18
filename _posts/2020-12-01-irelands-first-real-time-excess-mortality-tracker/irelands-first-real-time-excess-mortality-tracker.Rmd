@@ -43,7 +43,7 @@ In a [previous post](https://www.hamilton.ie/covid19/posts/2020-08-19-2020-08-in
 
 You can read more about the details below, but here is the app:
 
-<iframe src="https://aminshn2.shinyapps.io/RIP_app/" class="l-screen-inset shaded" height = "1200px"></iframe>
+<iframe src="https://apmuhamilton.shinyapps.io/hamiltonRIPnew/" class="l-screen-inset shaded" height = "1200px"></iframe>
 
 ## What is excess mortality and how is it calculated? 
 
