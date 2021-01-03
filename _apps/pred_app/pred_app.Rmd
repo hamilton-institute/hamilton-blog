@@ -6,4 +6,6 @@ output:
 collections: apps
 ---
 
-<iframe src="https://rstudioserver.hamilton.ie:3838/users/aparnell/pred_app2/" class="l-screen-inset shaded" height = "1000px"></iframe>
+Do you want to know more about this app? [Click here](https://www.hamilton.ie/covid19/posts/2020-10-01-how-hard-to-predict-cases/) to read the blog post
+
+<iframe src="https://apmuhamilton.shinyapps.io/HamiltonPredApp3/" class="l-screen-inset shaded" height = "1000px"></iframe>
