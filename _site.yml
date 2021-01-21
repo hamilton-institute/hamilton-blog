@@ -18,16 +18,12 @@ navbar:
       menu:
         - text: "Dashboard"
           href: dashboard.html
-        - text: "How long will COVID-19 last?"
-          href: apps/howlong/index.html
         - text: "Excess mortality in Ireland"
           href: apps/excessrip2/index.html
         - text: "SEIR simulation"
           href: apps/seirsim/index.html
         - text: "Where did Ireland import its COVID-19 cases from?"
           href: apps/wheredid/index.html
-        - text: "COVID-19 forecast app"
-          href: apps/pred_app/index.html
         - text: "Shielding over 65s in Ireland"
           href: apps/shielding/index.html
         - text: "R number estimation for the world"

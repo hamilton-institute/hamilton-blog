@@ -1,17 +1,5 @@
 [
   {
-    "path": "apps/pred_app/",
-    "title": "What will happen tomorrow?",
-    "description": {},
-    "author": [],
-    "date": "2021-01-03",
-    "categories": [],
-    "contents": "\nDo you want to know more about this app? Click here to read the blog post\n\n\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-01-03T17:51:31-03:00",
-    "input_file": {}
-  },
-  {
     "path": "apps/excessrip2/",
     "title": "Real time excess mortality tracker",
     "description": {},
@@ -33,18 +21,6 @@
     "contents": "\nDo you want to know more about this app? Click here to read the blog post.\n\n\n\n\n\n",
     "preview": {},
     "last_modified": "2020-11-30T11:39:48-03:00",
-    "input_file": {}
-  },
-  {
-    "path": "apps/howlong/",
-    "title": "How long will COVID-19 last in Ireland?",
-    "description": {},
-    "author": [],
-    "date": "2020-11-30",
-    "categories": [],
-    "contents": "\nDo you want to know more about this app? Click here to read the blog post.\n\n\n\n\n\n",
-    "preview": {},
-    "last_modified": "2020-11-30T11:47:19-03:00",
     "input_file": {}
   },
   {
