@@ -4,12 +4,12 @@
     "title": "Real time excess mortality tracker",
     "description": {},
     "author": [],
-    "date": "2020-12-05",
+    "date": "2021-04-08",
     "categories": [],
     "contents": "\nDo you want to know more about this app? Click here to read the blog post.\n\n\n\n\n\n",
     "preview": {},
-    "last_modified": "2020-12-07T10:57:42-03:00",
-    "input_file": {}
+    "last_modified": "2021-04-08T12:46:29+01:00",
+    "input_file": "excessrip2.utf8.md"
   },
   {
     "path": "apps/excessrip/",
