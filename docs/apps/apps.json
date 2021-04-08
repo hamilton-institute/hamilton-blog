@@ -1,5 +1,17 @@
 [
   {
+    "path": "apps/seirsim/",
+    "title": "SEIR simulation app",
+    "description": {},
+    "author": [],
+    "date": "2021-04-08",
+    "categories": [],
+    "contents": "\nDo you want to know more about this app? Click here to read the blog post.\n\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-04-08T12:55:18+01:00",
+    "input_file": "seirsim.utf8.md"
+  },
+  {
     "path": "apps/excessrip2/",
     "title": "Real time excess mortality tracker",
     "description": {},
@@ -8,7 +20,7 @@
     "categories": [],
     "contents": "\nDo you want to know more about this app? Click here to read the blog post.\n\n\n\n\n\n",
     "preview": {},
-    "last_modified": "2021-04-08T12:46:29+01:00",
+    "last_modified": "2021-04-08T12:59:00+01:00",
     "input_file": "excessrip2.utf8.md"
   },
   {
@@ -45,18 +57,6 @@
     "contents": "\n\n\n\n\n\n",
     "preview": {},
     "last_modified": "2020-11-30T11:43:03-03:00",
-    "input_file": {}
-  },
-  {
-    "path": "apps/seirsim/",
-    "title": "SEIR simulation app",
-    "description": {},
-    "author": [],
-    "date": "2020-11-30",
-    "categories": [],
-    "contents": "\nDo you want to know more about this app? Click here to read the blog post.\n\n\n\n\n\n",
-    "preview": {},
-    "last_modified": "2020-11-30T11:36:36-03:00",
     "input_file": {}
   },
   {
